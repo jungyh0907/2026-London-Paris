@@ -68,8 +68,12 @@
 
   function isFoldHeading(title,level){
     if(document.body.dataset.document==='trip')
-      return (level===1&&title==='1. 전체 일정표') ||
-        (level===2&&(/^\d{2}\/\d{2}\b/.test(title)||title.startsWith('참고: 파리 숙소')));
+      return level===2&&(
+        title==='1) 런던 일정표' ||
+        title==='2) 파리 일정표' ||
+        /^\d{2}\/\d{2}\b/.test(title) ||
+        title.startsWith('참고: 파리 숙소')
+      );
     return level===1&&/^[12]-[1-4]\./.test(title)
   }
 
@@ -97,7 +101,7 @@
       const end=boundary<headings.length?headings[boundary].index:clean.length;
       const body=clean.slice(section.end,end).replace(/^\n+/,'');
       const id='toggle-'+start;
-      const titleOnly=document.body.dataset.document==='trip'&&section.level===2&&((section.title.length>=6&&section.title[2]==='/'&&section.title[5]===' ')||section.title.includes('파리 숙소 근처 한식/중식당'));
+      const titleOnly=document.body.dataset.document==='trip'&&section.level===2&&((section.title.length>=6&&section.title[2]==='/'&&section.title[5]===' ')||section.title.includes('파리 숙소 근처 한식/중식당')||section.title==='1) 런던 일정표'||section.title==='2) 파리 일정표');
       const separator=document.body.dataset.document==='trip'&&section.title.startsWith('11/24 화 — 런던 → 파리')?'<hr class="country-separator">':'';
       html+=separator+'<section class="fold'+(titleOnly?' title-only-fold':'')+'"><div class="fold-title"><div class="fold-heading">'+md(section.marks+' '+section.title)+'</div>'
         +'<button class="fold-toggle fold-toggle-top" type="button" aria-expanded="false" aria-controls="'+id+'">펼쳐보기</button></div>'
@@ -186,6 +190,9 @@
       toggle.setAttribute('aria-expanded',String(open));
       toggle.textContent=open?'접기':(toggle.classList.contains('fold-toggle-top')?'펼쳐보기':'전체 내용 펼쳐보기')
     })
+    if(!open&&button.classList.contains('fold-toggle-bottom')){
+      fold.scrollIntoView({block:'start',behavior:'smooth'});
+    }
   });
 
   const dialog=document.querySelector('.viewer'),viewerImage=dialog?.querySelector('img');
