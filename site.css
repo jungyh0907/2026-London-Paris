@@ -153,3 +153,19 @@ body[data-document="trip"] .fold:not(.expanded) .fold-content .table-scroll{
   display:block;max-width:100%;overflow-x:auto;overflow-y:hidden;
   -webkit-overflow-scrolling:touch
 }
+
+/* Keep the section preview action beside its heading on both pages. */
+.fold-title{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.fold-heading{flex:1;min-width:0}
+.fold-toggle-top{
+  display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;width:auto;
+  margin:0;padding:8px 12px;border:1px solid #d7e3d9;border-radius:999px;
+  background:#fffefa;color:#315b49;font-size:14px;line-height:1.25;font-weight:700;
+  white-space:nowrap
+}
+.fold-toggle-top:before{width:18px;height:18px;margin-right:6px;font-size:13px}
+@media(max-width:640px){
+  .fold-title{gap:6px;padding:12px 9px}
+  .fold-toggle-top{padding:8px 9px;font-size:13px}
+  .fold-toggle-top:before{width:17px;height:17px;margin-right:5px}
+}
