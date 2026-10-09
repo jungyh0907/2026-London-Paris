@@ -59,6 +59,9 @@
     .then(source=>{
       root.innerHTML=draw(source);
       root.querySelectorAll('table').forEach(table=>{
+        const rows=[...table.rows],labels=rows[0]?[...rows[0].cells].map(cell=>cell.textContent.trim()):[];
+        rows[0]?.classList.add('table-label-row');
+        rows.slice(1).forEach(row=>[...row.cells].forEach((cell,index)=>cell.dataset.label=labels[index]||''));
         const wrap=document.createElement('div');wrap.className='table-scroll';table.before(wrap);wrap.append(table)
       });
       root.querySelectorAll('img').forEach(image=>{
