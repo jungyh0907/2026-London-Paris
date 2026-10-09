@@ -192,3 +192,19 @@ body[data-document="trip"] .fold:not(.expanded) .fold-content .table-scroll{
   body[data-document="trip"] #document-content table.itinerary-table td,
   body[data-document="trip"] #document-content table.itinerary-table th{padding:7px 5px}
 }
+
+/* Fit each itinerary table to the viewport; keep all three cells in the same row. */
+body[data-document="trip"] #document-content .table-scroll{
+  width:100%;max-width:100%;overflow-x:hidden;overflow-y:visible
+}
+body[data-document="trip"] #document-content table.itinerary-table{
+  display:table;width:100%;min-width:0;max-width:100%;table-layout:fixed;box-sizing:border-box
+}
+body[data-document="trip"] #document-content table.itinerary-table td,
+body[data-document="trip"] #document-content table.itinerary-table th{
+  display:table-cell;min-width:0;white-space:normal;word-break:normal;
+  overflow-wrap:anywhere;box-sizing:border-box
+}
+body[data-document="trip"] #document-content table.itinerary-table tr{display:table-row}
+body[data-document="trip"] #document-content table.itinerary-table td:first-child br,
+body[data-document="trip"] #document-content table.itinerary-table th:first-child br{display:block}
