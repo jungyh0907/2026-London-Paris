@@ -1,0 +1,50 @@
+[
+  {
+    "time": "08:00~\n09:00",
+    "activity": "**선택: 아침**\n**풀 잉글리시 브렉퍼스트** (돌치 카페, Dolci Cafe)",
+    "transport": "🚶 구역 내",
+    "shaded": true
+  },
+  {
+    "time": "09:30~\n11:30",
+    "activity": "**근위병 교대식** (버킹엄궁, 세인트제임스 파크, 빅벤, 국회의사당)",
+    "transport": "🚇 District Line 직행: 얼스코트역 (Earl's Court) → 세인트제임스 파크역 (St James's Park)\n🚶 구역 내",
+    "shaded": false
+  },
+  {
+    "time": "11:30~\n13:00",
+    "activity": "**점심: 미정**",
+    "transport": "🚶 웨스트민스터 구역 내",
+    "shaded": true
+  },
+  {
+    "time": "13:30~\n16:00",
+    "activity": "**선택 1. 켄싱턴 가든, 하이드파크 + 메종베르토**\n13:30~14:30 켄싱턴 가든, 하이드파크 산책\n15:00~16:00 메종베르토 크림티",
+    "transport": "🚇 13:00 웨스트민스터역 (Westminster) → 하이 스트리트 켄싱턴역 (High Street Kensington), 이동 + 여유시간 포함\n🚇 14:30 켄싱턴, 하이드파크 → 소호, 메종베르토 (Maison Bertaux)",
+    "shaded": false
+  },
+  {
+    "time": "14:00~\n15:30",
+    "activity": "**선택 2. 버버리 아울렛**\n14:00~15:30 버버리 채텀 플레이스 아울렛 (Burberry Chatham Place Outlet) 쇼핑",
+    "transport": "🚇 13:00 웨스트민스터 (Westminster) → 해크니 센트럴 (Hackney Central), 환승 및 여유시간 포함 → 버버리 채텀 플레이스 아울렛",
+    "shaded": false
+  },
+  {
+    "time": "16:30~\n17:30",
+    "activity": "**스카이 가든** (전망대)",
+    "transport": "선택 1: 15:30 메종베르토 (Maison Bertaux) → 스카이 가든 (Sky Garden)\n선택 2: 15:30 버버리 아울렛 → 스카이 가든 (Sky Garden)\n대중교통 + 여유시간 포함",
+    "shaded": false
+  },
+  {
+    "time": "18:00~\n20:00",
+    "activity": "**저녁**\n**스테이크** (블랙록 시티, Blacklock City)",
+    "transport": "🚶 스카이가든 (Sky Garden) → 블랙록 시티 (Blacklock City), 도보 약 5분 + 여유시간 포함 30분",
+    "shaded": true
+  },
+  {
+    "time": "21:00~\n22:00",
+    "activity": "**선택: 웨스트민스터 야경** \n(빅벤, 국회의사당, 런던아이 야경)",
+    "transport": "🚇 District/Circle Line: 모뉴먼트역 (Monument) → 웨스트민스터역 (Westminster)\n🚇 District Line: 웨스트민스터역 (Westminster) → 얼스코트역 (Earl's Court)",
+    "shaded": false
+  }
+]

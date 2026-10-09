@@ -1,0 +1,20 @@
+[
+  {
+    "time": "16:30~\n19:30",
+    "activity": "**도착** \n(Presidential Apartments Kensington 체크인)",
+    "transport": "🚇 Piccadilly Line: 히드로 터미널 4역 (Heathrow Terminal 4) → 얼스코트역 (Earl's Court)",
+    "shaded": false
+  },
+  {
+    "time": "19:30~\n20:30",
+    "activity": "**선택: 저녁**\n**쌀국수** (메드 살레 비엣 얼스코트, Med Salleh Viet Earl's Court)",
+    "transport": "🚶 구역 내",
+    "shaded": true
+  },
+  {
+    "time": "20:30~\n21:30",
+    "activity": "**장보기** (M&S Simply Food Earl's Court, 식료품)",
+    "transport": "🚶 구역 내",
+    "shaded": false
+  }
+]

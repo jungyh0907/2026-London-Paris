@@ -1,0 +1,38 @@
+[
+  {
+    "time": "09:00~\n10:00",
+    "activity": "**선택: 아침**\n**베이글, 커피** (비 베이글 뉴 옥스퍼드 스트리트, B Bagel New Oxford Street)",
+    "transport": "🚇 Piccadilly Line: 얼스코트역 (Earl's Court) → 홀본역 (Holborn)\n🚶 B Bagel New Oxford Street",
+    "shaded": true
+  },
+  {
+    "time": "10:00~\n12:30",
+    "activity": "**대영박물관**\n(11:30 이건희 컬렉션)",
+    "transport": "🚶 B Bagel New Oxford Street → 대영박물관 (British Museum)",
+    "shaded": false
+  },
+  {
+    "time": "13:30~\n14:30",
+    "activity": "**점심**\n**피시앤칩스** (더 메이페어 치피 나이츠브리지, The Mayfair Chippy Knightsbridge)",
+    "transport": "🚶 대영박물관 → 러셀 스퀘어역 (Russell Square)\n🚇 Piccadilly Line: 러셀 스퀘어역 → 나이츠브리지역 (Knightsbridge), 여유시간 포함",
+    "shaded": true
+  },
+  {
+    "time": "15:00~\n16:30",
+    "activity": "**해롯 백화점** (Harrods 쇼핑)",
+    "transport": "🚶 The Mayfair Chippy Knightsbridge → Harrods",
+    "shaded": false
+  },
+  {
+    "time": "17:00~\n19:30",
+    "activity": "**웨스트엔드 산책**\n(코벤트가든, 트라팔가 광장, 레스터 스퀘어, 소호, 피카딜리 서커스, 버버리 리젠트 스트리트, 카나비)",
+    "transport": "🚇 Piccadilly Line: 나이츠브리지역 (Knightsbridge) → 레스터 스퀘어역 (Leicester Square)\n🚶 구역 내",
+    "shaded": false
+  },
+  {
+    "time": "19:30~\n21:30",
+    "activity": "**저녁**\n**선택 1. 인도 커리** (디슘 카나비, Dishoom Carnaby)\n**선택 2. 한식, 바비큐** (올레 코리안 바비큐, Olle Korean Barbecue)\n**선택 3. 한식** (코앤코, Co&Ko)\n**선택 4. 쌀국수** (포 소호, Pho Soho)\n**선택 5. 나폴리 피자** (피자 필그림스 소호, Pizza Pilgrims Soho)",
+    "transport": "🚶 구역 내\n귀가: 🚇 Piccadilly Line 피카딜리 서커스역 (Piccadilly Circus) → 얼스코트역 (Earl's Court)",
+    "shaded": true
+  }
+]

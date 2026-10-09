@@ -47,66 +47,192 @@ content:
       - name: trip_table_01
         label: "11/20 런던 도착"
         type: file
-        path: tables/trip-01.csv
-        format: datagrid
+        path: tables/trip-01.json
+        format: json
+        list: true
         operations:
           delete: false
+        fields:
+          - name: time
+            label: "시간"
+            type: text
+          - name: activity
+            label: "일정"
+            type: text
+          - name: transport
+            label: "이동"
+            type: text
+          - name: shaded
+            label: "행 음영"
+            type: boolean
       - name: trip_table_02
         label: "11/21 런던"
         type: file
-        path: tables/trip-02.csv
-        format: datagrid
+        path: tables/trip-02.json
+        format: json
+        list: true
         operations:
           delete: false
+        fields:
+          - name: time
+            label: "시간"
+            type: text
+          - name: activity
+            label: "일정"
+            type: text
+          - name: transport
+            label: "이동"
+            type: text
+          - name: shaded
+            label: "행 음영"
+            type: boolean
       - name: trip_table_03
         label: "11/22 런던"
         type: file
-        path: tables/trip-03.csv
-        format: datagrid
+        path: tables/trip-03.json
+        format: json
+        list: true
         operations:
           delete: false
+        fields:
+          - name: time
+            label: "시간"
+            type: text
+          - name: activity
+            label: "일정"
+            type: text
+          - name: transport
+            label: "이동"
+            type: text
+          - name: shaded
+            label: "행 음영"
+            type: boolean
       - name: trip_table_04
         label: "11/23 근교 투어"
         type: file
-        path: tables/trip-04.csv
-        format: datagrid
+        path: tables/trip-04.json
+        format: json
+        list: true
         operations:
           delete: false
+        fields:
+          - name: time
+            label: "시간"
+            type: text
+          - name: activity
+            label: "일정"
+            type: text
+          - name: transport
+            label: "이동"
+            type: text
+          - name: shaded
+            label: "행 음영"
+            type: boolean
       - name: trip_table_05
         label: "11/24 런던에서 파리"
         type: file
-        path: tables/trip-05.csv
-        format: datagrid
+        path: tables/trip-05.json
+        format: json
+        list: true
         operations:
           delete: false
+        fields:
+          - name: time
+            label: "시간"
+            type: text
+          - name: activity
+            label: "일정"
+            type: text
+          - name: transport
+            label: "이동"
+            type: text
+          - name: shaded
+            label: "행 음영"
+            type: boolean
       - name: trip_table_06
         label: "11/25 파리"
         type: file
-        path: tables/trip-06.csv
-        format: datagrid
+        path: tables/trip-06.json
+        format: json
+        list: true
         operations:
           delete: false
+        fields:
+          - name: time
+            label: "시간"
+            type: text
+          - name: activity
+            label: "일정"
+            type: text
+          - name: transport
+            label: "이동"
+            type: text
+          - name: shaded
+            label: "행 음영"
+            type: boolean
       - name: trip_table_07
         label: "11/26 베르사유"
         type: file
-        path: tables/trip-07.csv
-        format: datagrid
+        path: tables/trip-07.json
+        format: json
+        list: true
         operations:
           delete: false
+        fields:
+          - name: time
+            label: "시간"
+            type: text
+          - name: activity
+            label: "일정"
+            type: text
+          - name: transport
+            label: "이동"
+            type: text
+          - name: shaded
+            label: "행 음영"
+            type: boolean
       - name: trip_table_08
         label: "11/27 알자스"
         type: file
-        path: tables/trip-08.csv
-        format: datagrid
+        path: tables/trip-08.json
+        format: json
+        list: true
         operations:
           delete: false
+        fields:
+          - name: time
+            label: "시간"
+            type: text
+          - name: activity
+            label: "일정"
+            type: text
+          - name: transport
+            label: "이동"
+            type: text
+          - name: shaded
+            label: "행 음영"
+            type: boolean
       - name: trip_table_09
         label: "11/28 파리 출국"
         type: file
-        path: tables/trip-09.csv
-        format: datagrid
+        path: tables/trip-09.json
+        format: json
+        list: true
         operations:
           delete: false
+        fields:
+          - name: time
+            label: "시간"
+            type: text
+          - name: activity
+            label: "일정"
+            type: text
+          - name: transport
+            label: "이동"
+            type: text
+          - name: shaded
+            label: "행 음영"
+            type: boolean
   - name: shopping_tables
     label: "쇼핑 표 · 셀 직접 수정"
     type: group
@@ -114,14 +240,42 @@ content:
       - name: shopping_table_01
         label: "런던 해러즈"
         type: file
-        path: tables/shopping-01.csv
-        format: datagrid
+        path: tables/shopping-01.json
+        format: json
+        list: true
         operations:
           delete: false
+        fields:
+          - name: product
+            label: "제품"
+            type: text
+          - name: details
+            label: "핵심 포인트"
+            type: text
+          - name: price
+            label: "위치 / 가격"
+            type: text
+          - name: shaded
+            label: "행 음영"
+            type: boolean
       - name: shopping_table_02
         label: "파리 라파예트"
         type: file
-        path: tables/shopping-02.csv
-        format: datagrid
+        path: tables/shopping-02.json
+        format: json
+        list: true
         operations:
           delete: false
+        fields:
+          - name: product
+            label: "제품"
+            type: text
+          - name: details
+            label: "핵심 포인트"
+            type: text
+          - name: price
+            label: "위치 / 가격"
+            type: text
+          - name: shaded
+            label: "행 음영"
+            type: boolean

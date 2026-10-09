@@ -1,0 +1,20 @@
+[
+  {
+    "time": "07:00~\n07:30",
+    "activity": "**투어 집합** (해머스미스, 투어 체크인)",
+    "transport": "🚇 Piccadilly Line: 얼스코트역 (Earl's Court) → 해머스미스역 (Hammersmith)",
+    "shaded": false
+  },
+  {
+    "time": "07:30~\n19:30",
+    "activity": "**런던 근교 투어** \n(스톤헨지, 윈저성, 옥스퍼드, 총 12시간)",
+    "transport": "🚌 투어 차량",
+    "shaded": false
+  },
+  {
+    "time": "20:00~\n22:30",
+    "activity": "**투어 후 저녁**\n**선택 1. 버거** (어니스트 버거스 해머스미스, Honest Burgers Hammersmith)\n**선택 2. 쌀국수** (메드 살레 비엣, Med Salleh Viet)",
+    "transport": "🚶/🚕 투어 종료지점 또는 숙소 근처",
+    "shaded": true
+  }
+]

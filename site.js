@@ -21,44 +21,34 @@
     return marked.parse(clean)
   }
 
-  // CSV tables are edited visually in Pages CMS and rendered as the original HTML tables.
-  function parseCSV(text){
-    const csv=text.replace(/^\uFEFF/,'');
-    const rows=[];let row=[],cell='',quoted=false;
-    for(let i=0;i<csv.length;i++){
-      const ch=csv[i];
-      if(quoted){
-        if(ch==='"'){if(csv[i+1]==='"'){cell+='"';i++}else quoted=false}
-        else cell+=ch
-      }else if(ch==='"')quoted=true;
-      else if(ch===','){row.push(cell);cell=''}
-      else if(ch==='\n'){row.push(cell.replace(/\r$/,''));rows.push(row);row=[];cell=''}
-      else cell+=ch
-    }
-    if(quoted)throw new Error('Invalid CSV');
-    if(row.length||cell!==''){row.push(cell);rows.push(row)}
-    return rows
-  }
-  function tableHTML(csv){
-    const rows=parseCSV(csv);
-    if(rows.length<2||rows[0].length<3)throw new Error('Invalid table data');
-    const header='<tr>'+rows[0].slice(0,3).map(cell=>'<td>'+cell+'</td>').join('')+'</tr>';
-    const body=rows.slice(1).filter(row=>row.some(cell=>cell.trim())).map(row=>{
-      const shade=row[3]==='yes'?' class="row-shaded"':'';
-      return '<tr'+shade+'>'+row.slice(0,3).map(cell=>'<td>'+cell.replace(/\r?\n/g,'<br>')+'</td>').join('')+'</tr>'
+  // Pages CMS edits each JSON row with separate labeled fields.
+  function tableHTML(rows,path){
+    if(!Array.isArray(rows))throw new Error('Invalid table data');
+    const shopping=path.startsWith('tables/shopping-');
+    const keys=shopping?['product','details','price']:['time','activity','transport'];
+    const labels=shopping
+      ?['제품','핵심 포인트',path.endsWith('02.json')?'라파예트 가격':'위치 / 현재 공식 가격 예시']
+      :['시간','일정','이동'];
+    const header='<tr>'+labels.map(text=>'<td>'+text+'</td>').join('')+'</tr>';
+    const body=rows.map(row=>{
+      const shade=row.shaded?' class="row-shaded"':'';
+      return '<tr'+shade+'>'+keys.map(key=>{
+        const cell=typeof row[key]==='string'?row[key]:'';
+        return '<td>'+cell.replace(/\r?\n/g,'<br>')+'</td>';
+      }).join('')+'</tr>';
     }).join('\n');
-    return '\n\n<table>\n'+header+'\n'+body+'\n</table>\n\n'
+    return '\n\n<table>\n'+header+'\n'+body+'\n</table>\n\n';
   }
   async function hydrateTables(source){
-    const pattern=/\[표[^\]\n]*\]\((tables\/(?:trip|shopping)-\d{2}\.csv)\)/g;
+    const pattern=/\[표[^\]\n]*\]\((tables\/(?:trip|shopping)-\d{2}\.json)\)/g;
     const paths=[...new Set([...source.matchAll(pattern)].map(match=>match[1]))];
     const entries=await Promise.all(paths.map(async path=>{
       const response=await fetch(path+'?ts='+Date.now(),{cache:'no-store'});
       if(!response.ok)throw new Error('Cannot load table: '+path);
-      return [path,tableHTML(await response.text())]
+      return [path,tableHTML(await response.json(),path)];
     }));
     const tableMap=new Map(entries);
-    return source.replace(pattern,(_,path)=>tableMap.get(path))
+    return source.replace(pattern,(_,path)=>tableMap.get(path));
   }
 
   function isFoldHeading(title,level){

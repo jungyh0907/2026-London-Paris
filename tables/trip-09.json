@@ -1,0 +1,50 @@
+[
+  {
+    "time": "08:30~\n09:30",
+    "activity": "**선택: 아침**\n**바게트** (메르시 제롬 / 스타벅스, Merci Jérôme / Starbucks)",
+    "transport": "🚶 숙소 근처",
+    "shaded": true
+  },
+  {
+    "time": "09:30~\n10:30",
+    "activity": "체크아웃, 호텔에 짐 보관",
+    "transport": "",
+    "shaded": false
+  },
+  {
+    "time": "11:00~\n12:00",
+    "activity": "**몽마르트**\n(사크레쾨르 대성당 → 테르트르 광장 → 사랑해벽)",
+    "transport": "🚗 10:30 숙소 → 사크레쾨르 대성당\n🚶 구역 내\n사크레쾨르 대성당은 줄이 짧을 경우 내부 잠깐 구경",
+    "shaded": false
+  },
+  {
+    "time": "12:30~\n13:00",
+    "activity": "**생트샤펠 외관**",
+    "transport": "🚗 12:00 사랑해벽 → 생트샤펠",
+    "shaded": false
+  },
+  {
+    "time": "13:00~\n13:30",
+    "activity": "**노트르담 대성당 외관**",
+    "transport": "🚶 생트샤펠 → 노트르담",
+    "shaded": false
+  },
+  {
+    "time": "14:00~\n15:00",
+    "activity": "**점심**",
+    "transport": "🚗 13:30 노트르담 → 숙소 근처",
+    "shaded": true
+  },
+  {
+    "time": "15:00~\n16:30",
+    "activity": "짐 찾기, 출국 준비",
+    "transport": "호텔",
+    "shaded": false
+  },
+  {
+    "time": "21:00",
+    "activity": "**파리 출국**",
+    "transport": "🚗 16:30 숙소 → 샤를 드골 공항 (CDG)\n17:30~18:00 공항 도착, 출국수속\n✈️ 21:00 출발",
+    "shaded": false
+  }
+]

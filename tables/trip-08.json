@@ -1,0 +1,74 @@
+[
+  {
+    "time": "05:30~\n06:00",
+    "activity": "**출발 준비\n선택: 아침**",
+    "transport": "숙소\n전날 간단한 아침거리 준비 권장",
+    "shaded": true
+  },
+  {
+    "time": "07:16~\n09:42",
+    "activity": "**파리 → 콜마르**",
+    "transport": "🚗 파리 동역 (Paris Gare de l’Est)\n🚆 파리 동역 (Paris Gare de l’Est) → 콜마르역 (Colmar), 직행",
+    "shaded": false
+  },
+  {
+    "time": "09:42~\n11:00",
+    "activity": "**쁘띠 베니스** (Petite Venise)\n**샹드마르스 공원** (Champ de Mars)",
+    "transport": "🚶 콜마르역 → 생피에르 다리 (Pont Saint-Pierre) → 레 바틀리에 (Les Bateliers)\n🚶 쁘띠 베니스 → 샹드마르스 공원 → 레스토랑 페펠 (Restaurant Pfeffel)",
+    "shaded": false
+  },
+  {
+    "time": "11:00~\n12:30",
+    "activity": "**점심**\n**알자스 음식** (레스토랑 페펠, Restaurant Pfeffel)\n**선택: 스타벅스** (Starbucks)",
+    "transport": "🚶 구역 내",
+    "shaded": true
+  },
+  {
+    "time": "12:30~\n13:30",
+    "activity": "**생마르탱 성당, 메종 피스테르, 라 마지 드 노엘**\n(Collégiale Saint-Martin, Maison Pfister, La Magie de Noël)\n**앙시엔 두안 크리스마스 마켓** (Place de l’Ancienne Douane)",
+    "transport": "🚶 구역 내",
+    "shaded": false
+  },
+  {
+    "time": "13:30~\n14:00",
+    "activity": "**쿠베르시장, 생선장수 거리, 쁘띠 베니스 크리스마스 마켓**\n(Marché Couvert, Quai de la Poissonnerie, Place des 6 Montagnes Noires)",
+    "transport": "🚶 구역 내\nHot Apple Juice, 간식",
+    "shaded": false
+  },
+  {
+    "time": "14:38~\n15:13",
+    "activity": "**콜마르 → 스트라스부르**",
+    "transport": "🚶 쁘띠 베니스 → 콜마르역 (Colmar)\n🚆 콜마르역 (Colmar) → 스트라스부르역 (Strasbourg), TER",
+    "shaded": false
+  },
+  {
+    "time": "15:13~\n16:00",
+    "activity": "**보방댐, 쿠베르교, 프티트 프랑스**\n(Barrage Vauban, Ponts Couverts, Petite France)",
+    "transport": "🚶 스트라스부르역 → 그랑딜 (Grande-Île)\n보안, 가방검사 시간 포함",
+    "shaded": false
+  },
+  {
+    "time": "16:00~\n16:30",
+    "activity": "**성토마스교회, 구텐베르크 광장**\n(Église Saint-Thomas, Place Gutenberg)\n**스트라스부르 대성당 야경** (Cathédrale Notre-Dame de Strasbourg)",
+    "transport": "🚶 프티트 프랑스 → 성토마스교회 → 구텐베르크 광장 → 스트라스부르 대성당",
+    "shaded": false
+  },
+  {
+    "time": "17:00~\n17:30",
+    "activity": "**카레도르, 오르페브르 거리, 브로글리 광장 크리스마스 마켓**\n(Carré d’Or, Rue des Orfèvres, Christkindelsmärik)\n**간단한 저녁, 간식, 음료**",
+    "transport": "🚶 대성당 → 카레도르, 오르페브르 거리 → 브로글리 광장 (Place Broglie)\n17:50 전후 클레베르 광장으로 이동",
+    "shaded": false
+  },
+  {
+    "time": "18:00~\n18:30",
+    "activity": "**클레베르 광장 대형 크리스마스트리 야경** (Grand Sapin)",
+    "transport": "🚶 브로글리 광장 → 클레베르 광장 (Place Kléber)\n18:00 조명쇼 관람 후 18:15 전후 스트라스부르역으로 이동",
+    "shaded": false
+  },
+  {
+    "time": "18:57~\n20:42",
+    "activity": "**스트라스부르 → 파리 동역**",
+    "transport": "🚶 클레베르 광장 → 스트라스부르역 (Strasbourg)\n🚆 스트라스부르역 (Strasbourg) → 파리 동역 (Paris Gare de l’Est), 직행\n🚇 메트로: 파리 동역 → Strasbourg–Saint-Denis, Metro 4 → La Motte-Picquet–Grenelle, Metro 8\n🚕 숙소 택시",
+    "shaded": false
+  }
+]
