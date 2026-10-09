@@ -46,9 +46,10 @@
       const end=boundary<headings.length?headings[boundary].index:clean.length;
       const body=clean.slice(section.end,end).replace(/^\n+/,'');
       const id='toggle-'+start;
-      html+='<section class="fold"><div class="fold-title">'+md(section.marks+' '+section.title)+'</div>'
+      html+='<section class="fold"><div class="fold-title"><div class="fold-heading">'+md(section.marks+' '+section.title)+'</div>'
+        +'<button class="fold-toggle fold-toggle-top" type="button" aria-expanded="false" aria-controls="'+id+'">펼쳐보기</button></div>'
         +'<div class="fold-content" id="'+id+'">'+md(body)+'</div>'
-        +'<button class="fold-toggle" type="button" aria-expanded="false" aria-controls="'+id+'">전체 내용 펼쳐보기</button></section>';
+        +'<button class="fold-toggle fold-toggle-bottom" type="button" aria-expanded="false" aria-controls="'+id+'">전체 내용 펼쳐보기</button></section>';
       cursor=end;position=boundary
     }
     html+=md(clean.slice(cursor));
@@ -62,6 +63,7 @@
         const rows=[...table.rows],labels=rows[0]?[...rows[0].cells].map(cell=>cell.textContent.trim()):[];
         rows[0]?.classList.add('table-label-row');
         rows.slice(1).forEach(row=>[...row.cells].forEach((cell,index)=>cell.dataset.label=labels[index]||''));
+        if(document.body.dataset.document==='trip')table.querySelectorAll('br').forEach(br=>br.replaceWith(document.createTextNode(' · ')));
         const wrap=document.createElement('div');wrap.className='table-scroll';table.before(wrap);wrap.append(table)
       });
       root.querySelectorAll('img').forEach(image=>{
@@ -75,8 +77,11 @@
   root.addEventListener('click',event=>{
     const button=event.target.closest('.fold-toggle');if(!button)return;
     const fold=button.closest('.fold'),open=button.getAttribute('aria-expanded')!=='true';
-    fold.classList.toggle('expanded',open);button.setAttribute('aria-expanded',String(open));
-    button.textContent=open?'접기':'전체 내용 펼쳐보기'
+    fold.classList.toggle('expanded',open);
+    fold.querySelectorAll('.fold-toggle').forEach(toggle=>{
+      toggle.setAttribute('aria-expanded',String(open));
+      toggle.textContent=open?'접기':(toggle.classList.contains('fold-toggle-top')?'펼쳐보기':'전체 내용 펼쳐보기')
+    })
   });
 
   const dialog=document.querySelector('.viewer'),viewerImage=dialog?.querySelector('img');
