@@ -5,7 +5,7 @@ title: 쇼핑리스트
 # 1. 런던 Harrods 백화점
 
 
-[표 shopping-1](tables/shopping-01.csv)
+[표 shopping-1](tables/shopping-01.json)
 
 
 ---
@@ -238,7 +238,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 # 2. 파리 Lafayette 백화점
 
 
-[표 shopping-2](tables/shopping-02.csv)
+[표 shopping-2](tables/shopping-02.json)
 
 
 ---
