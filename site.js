@@ -9,10 +9,7 @@
   function strong(source){return source.replace(/\*\*([^\n]*?)\*\*/g,'<strong>$1</strong>')}
   function inline(source){return marked.parseInline(strong(source)).trim()}
   function md(source){
-    let clean=normalize(source)
-      .replace(/<callout\b[^>]*>([\s\S]*?)<\/callout>/gi,(_,body)=>'<aside class="callout">'+inline(body.trim())+'</aside>')
-      .replace(/<empty-block\s*\/>/gi,'<div class="empty-block"></div>\n\n')
-      .replace(/<page url="[^"]+">([^<]*)<\/page>/gi,'<a href="shopping.html">$1</a>');
+    let clean=normalize(source);
     // The CSV table renderer uses Markdown emphasis and links inside each cell.
     // Render the cell's inline emphasis and links instead of exposing markers.
     clean=clean.replace(/<(td|th)([^>]*)>([\s\S]*?)<\/\1>/gi,(_,tag,attrs,body)=>'<'+tag+attrs+'>'+inline(body)+'</'+tag+'>');
@@ -45,10 +42,10 @@
     if(rows.length<2||rows[0].length<3)throw new Error('Invalid table data');
     const header='<tr>'+rows[0].slice(0,3).map(cell=>'<td>'+cell+'</td>').join('')+'</tr>';
     const body=rows.slice(1).filter(row=>row.some(cell=>cell.trim())).map(row=>{
-      const shade=row[3]==='gray_bg'?' color="gray_bg"':'';
+      const shade=row[3]==='yes'?' class="row-shaded"':'';
       return '<tr'+shade+'>'+row.slice(0,3).map(cell=>'<td>'+cell.replace(/\r?\n/g,'<br>')+'</td>').join('')+'</tr>'
     }).join('\n');
-    return '\n\n<table fit-page-width="true" header-row="true">\n'+header+'\n'+body+'\n</table>\n\n'
+    return '\n\n<table>\n'+header+'\n'+body+'\n</table>\n\n'
   }
   async function hydrateTables(source){
     const pattern=/\[표[^\]\n]*\]\((tables\/(?:trip|shopping)-\d{2}\.csv)\)/g;
