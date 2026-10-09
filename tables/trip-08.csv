@@ -1,0 +1,48 @@
+"시간","일정","이동","행 배경"
+"05:30~
+06:00","**출발 준비
+선택: 아침**","숙소
+전날 간단한 아침거리 준비 권장","gray_bg"
+"07:16~
+09:42","**파리 → 콜마르**","🚗 파리 동역 (Paris Gare de l’Est)
+🚆 파리 동역 (Paris Gare de l’Est) → 콜마르역 (Colmar), 직행",""
+"09:42~
+11:00","**쁘띠 베니스** (Petite Venise)
+**샹드마르스 공원** (Champ de Mars)","🚶 콜마르역 → 생피에르 다리 (Pont Saint-Pierre) → 레 바틀리에 (Les Bateliers)
+🚶 쁘띠 베니스 → 샹드마르스 공원 → 레스토랑 페펠 (Restaurant Pfeffel)",""
+"11:00~
+12:30","**점심**
+**알자스 음식** (레스토랑 페펠, Restaurant Pfeffel)
+**선택: 스타벅스** (Starbucks)","🚶 구역 내","gray_bg"
+"12:30~
+13:30","**생마르탱 성당, 메종 피스테르, 라 마지 드 노엘**
+(Collégiale Saint-Martin, Maison Pfister, La Magie de Noël)
+**앙시엔 두안 크리스마스 마켓** (Place de l’Ancienne Douane)","🚶 구역 내",""
+"13:30~
+14:00","**쿠베르시장, 생선장수 거리, 쁘띠 베니스 크리스마스 마켓**
+(Marché Couvert, Quai de la Poissonnerie, Place des 6 Montagnes Noires)","🚶 구역 내
+Hot Apple Juice, 간식",""
+"14:38~
+15:13","**콜마르 → 스트라스부르**","🚶 쁘띠 베니스 → 콜마르역 (Colmar)
+🚆 콜마르역 (Colmar) → 스트라스부르역 (Strasbourg), TER",""
+"15:13~
+16:00","**보방댐, 쿠베르교, 프티트 프랑스**
+(Barrage Vauban, Ponts Couverts, Petite France)","🚶 스트라스부르역 → 그랑딜 (Grande-Île)
+보안, 가방검사 시간 포함",""
+"16:00~
+16:30","**성토마스교회, 구텐베르크 광장**
+(Église Saint-Thomas, Place Gutenberg)
+**스트라스부르 대성당 야경** (Cathédrale Notre-Dame de Strasbourg)","🚶 프티트 프랑스 → 성토마스교회 → 구텐베르크 광장 → 스트라스부르 대성당",""
+"17:00~
+17:30","**카레도르, 오르페브르 거리, 브로글리 광장 크리스마스 마켓**
+(Carré d’Or, Rue des Orfèvres, Christkindelsmärik)
+**간단한 저녁, 간식, 음료**","🚶 대성당 → 카레도르, 오르페브르 거리 → 브로글리 광장 (Place Broglie)
+17:50 전후 클레베르 광장으로 이동",""
+"18:00~
+18:30","**클레베르 광장 대형 크리스마스트리 야경** (Grand Sapin)","🚶 브로글리 광장 → 클레베르 광장 (Place Kléber)
+18:00 조명쇼 관람 후 18:15 전후 스트라스부르역으로 이동",""
+"18:57~
+20:42","**스트라스부르 → 파리 동역**","🚶 클레베르 광장 → 스트라스부르역 (Strasbourg)
+🚆 스트라스부르역 (Strasbourg) → 파리 동역 (Paris Gare de l’Est), 직행
+🚇 메트로: 파리 동역 → Strasbourg–Saint-Denis, Metro 4 → La Motte-Picquet–Grenelle, Metro 8
+🚕 숙소 택시",""
