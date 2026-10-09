@@ -1,0 +1,50 @@
+[
+  {
+    "product": "Harrods 가방",
+    "details": "건물 프린트, 로고, 캔버스, 나일론, 레더 등 종류가 많고 실사용성이 높은 대표 기념품",
+    "price": "Lower Ground / Building Print Tote £50, Logo Pocket Shopper £15 등",
+    "shaded": false
+  },
+  {
+    "product": "Harrods 테디베어",
+    "details": "Harrods 대표 기념품. 크리스마스, 잠옷, 근위병 등 런던 느낌이 강한 디자인",
+    "price": "Lower Ground / 2026 Christmas Bear Henry £40, Guardsman Bear £25 등",
+    "shaded": false
+  },
+  {
+    "product": "머그, 찻잔, 접시, 티세트",
+    "details": "Harrods 건물, Toile, 영국 테마가 들어간 식기. 실사용과 소장용 모두 좋음",
+    "price": "Lower Ground / Logo Mug £15~, Trooping the Colour Mug £25, Tea for One £75",
+    "shaded": false
+  },
+  {
+    "product": "키링, 파우치, 마그넷 등 소형 굿즈",
+    "details": "가볍고 부피가 작아 여러 명에게 줄 기념품으로 좋음",
+    "price": "Lower Ground / 키링, 쇼퍼, 파우치 다수 £15~",
+    "shaded": false
+  },
+  {
+    "product": "Harrods 자체 차",
+    "details": "English Breakfast, Earl Grey, Georgian Blend 등 영국 기념품으로 가장 무난",
+    "price": "Ground Floor / 티백 £11~12, 루스리프 125g 약 £15",
+    "shaded": false
+  },
+  {
+    "product": "Harrods 비스킷 틴",
+    "details": "Harrods 로고, 건물 디자인 틴케이스가 남아 선물용으로 좋음",
+    "price": "Ground Floor / 약 £10~30",
+    "shaded": false
+  },
+  {
+    "product": "Harrods 초콜릿",
+    "details": "Chocolate Hall에서 Harrods 자체 제품과 프리미엄 브랜드를 함께 비교 가능",
+    "price": "Ground Floor / 제품별 상이",
+    "shaded": false
+  },
+  {
+    "product": "Harrods 커피",
+    "details": "Signature Blend, SW1 Blend 등 Harrods 자체 커피가 있어 차를 안 마시는 사람 선물 대안",
+    "price": "Ground Floor / 원두 약 £15~20",
+    "shaded": false
+  }
+]
