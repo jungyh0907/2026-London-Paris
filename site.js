@@ -73,7 +73,7 @@
           const table=sibling,id='quick-list-'+quickIndex++,fold=document.createElement('section');
           fold.className='fold quick-list-fold';
           const title=document.createElement('div');title.className='fold-title';
-          const headingWrap=document.createElement('div');headingWrap.className='fold-heading';headingWrap.append(heading);
+          const headingWrap=document.createElement('div');headingWrap.className='fold-heading';
           const top=document.createElement('button');top.className='fold-toggle fold-toggle-top';top.type='button';
           top.setAttribute('aria-expanded','false');top.setAttribute('aria-controls',id);top.textContent='펼쳐보기';
           title.append(headingWrap,top);
@@ -81,6 +81,7 @@
           const bottom=document.createElement('button');bottom.className='fold-toggle fold-toggle-bottom';bottom.type='button';
           bottom.setAttribute('aria-expanded','false');bottom.setAttribute('aria-controls',id);bottom.textContent='전체 내용 펼쳐보기';
           heading.parentNode.insertBefore(fold,heading);
+          headingWrap.append(heading);
           fold.append(title,content,bottom)
         })
       }
