@@ -156,7 +156,7 @@ body[data-document="trip"] #document-content table.itinerary-table th::before{di
 /* Requested layout refinements */
 .section-gap-heading{margin-top:2.2em!important}
 .title-only-fold:not(.expanded) .fold-content{display:none}
-.title-only-fold .fold-toggle-bottom{display:none}
+.title-only-fold:not(.expanded) .fold-toggle-bottom{display:none}
 .quick-list-fold table tr:not(.table-label-row) td:first-child{font-weight:700;color:#1f3348}
 .quick-list-fold table tr.table-label-row td:first-child{font-weight:400;color:inherit}
 
