@@ -72,7 +72,7 @@
       .catch(()=>{})
   }
 
-  fetch(file).then(response=>{if(!response.ok)throw new Error('content');return response.text()})
+  fetch(file+'?ts='+Date.now(),{cache:'no-store'}).then(response=>{if(!response.ok)throw new Error('content');return response.text()})
     .then(source=>{
       root.innerHTML=draw(source);
       addLastUpdated();
