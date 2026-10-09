@@ -169,3 +169,26 @@ body[data-document="trip"] .fold:not(.expanded) .fold-content .table-scroll{
   .fold-toggle-top{padding:8px 9px;font-size:13px}
   .fold-toggle-top:before{width:17px;height:17px;margin-right:5px}
 }
+
+/* Itinerary columns stay side by side; text wraps inside each cell. */
+body[data-document="trip"] #document-content table.itinerary-table{
+  display:table;width:100%;min-width:100%;max-width:100%;table-layout:fixed
+}
+body[data-document="trip"] #document-content table.itinerary-table th:nth-child(1),
+body[data-document="trip"] #document-content table.itinerary-table td:nth-child(1){width:27%}
+body[data-document="trip"] #document-content table.itinerary-table th:nth-child(2),
+body[data-document="trip"] #document-content table.itinerary-table td:nth-child(2){width:35%}
+body[data-document="trip"] #document-content table.itinerary-table th:nth-child(3),
+body[data-document="trip"] #document-content table.itinerary-table td:nth-child(3){width:38%}
+body[data-document="trip"] #document-content table.itinerary-table td,
+body[data-document="trip"] #document-content table.itinerary-table th{
+  white-space:normal;word-break:normal;overflow-wrap:anywhere
+}
+body[data-document="trip"] .table-scroll,
+body[data-document="trip"] .fold:not(.expanded) .fold-content .table-scroll{
+  width:100%;max-width:100%;overflow-x:auto;overflow-y:hidden
+}
+@media(max-width:640px){
+  body[data-document="trip"] #document-content table.itinerary-table td,
+  body[data-document="trip"] #document-content table.itinerary-table th{padding:7px 5px}
+}
