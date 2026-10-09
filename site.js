@@ -4,31 +4,48 @@
   marked.setOptions({gfm:true});
   const file=document.body.dataset.document==='shopping'?'shopping-list.md':'trip.md';
 
-  // Notion's Markdown export prefixes nested blocks with tabs. Remove those
-  // presentation-only indent markers before parsing so paragraphs, lists,
-  // headings, and images are rendered as their intended elements, not code.
+  // Notion's Markdown export prefixes nested blocks with tabs. Strip only these
+  // export indentation markers for rendering; the source Markdown stays intact.
   function normalize(source){return source.replace(/^\t+/gm,'')}
   function md(source){
     const clean=normalize(source)
       .replace(/<callout\b[^>]*>([\s\S]*?)<\/callout>/gi,(_,body)=>'<aside class="callout">'+marked.parseInline(body.trim())+'</aside>')
-      .replace(/<empty-block\s*\/>/gi,'<div class="empty-block"></div>')
-      .replace(/<page url="[^"]+">([^<]*)<\/page>/gi,'<a href="shopping.html">$1</a>');
+      .replace(/<empty-block\s*\/>/gi,'<div class="empty-block"></div>\n\n')
+      .replace(/<page url="[^"]+">([^<]*)<\/page>/gi,'<a href="shopping.html">$1</a>')
+      // Keep Markdown headings and rules outside neighboring raw HTML blocks.
+      .replace(/<\/(table|aside|div)>\s*(?=\S)/gi,'</$1>\n\n');
     return marked.parse(clean)
   }
   function draw(source){
     const clean=normalize(source);
-    const re=/^(#{1,6})\s+(.+?)\s+\{toggle="true"\}\s*$/gm;
-    const sections=[...clean.matchAll(re)];
-    if(!sections.length)return md(clean);
-    let html=md(clean.slice(0,sections[0].index));
-    sections.forEach((match,index)=>{
-      const end=index+1<sections.length?sections[index+1].index:clean.length;
-      const body=clean.slice(match.index+match[0].length,end).replace(/^\n+/,'');
-      const id='toggle-'+index;
-      html+='<section class="fold"><div class="fold-title">'+md(match[1]+' '+match[2])+'</div>'
+    const headingRe=/^(#{1,6})\s+(.+?)\s*$/gm;
+    const headings=[...clean.matchAll(headingRe)].map(match=>({
+      index:match.index,end:match.index+match[0].length,level:match[1].length,
+      title:match[2].replace(/\s+\{toggle="true"\}$/,''),
+      toggle:/\s+\{toggle="true"\}$/.test(match[2]),
+      marks:match[1]
+    }));
+    let html='',cursor=0,position=0;
+    while(position<headings.length){
+      const start=headings.findIndex((heading,index)=>index>=position&&heading.toggle);
+      if(start<0)break;
+      const section=headings[start];
+      html+=md(clean.slice(cursor,section.index));
+      let boundary=start+1;
+      while(boundary<headings.length){
+        const next=headings[boundary];
+        if(next.toggle||next.level<=section.level)break;
+        boundary++
+      }
+      const end=boundary<headings.length?headings[boundary].index:clean.length;
+      const body=clean.slice(section.end,end).replace(/^\n+/,'');
+      const id='toggle-'+start;
+      html+='<section class="fold"><div class="fold-title">'+md(section.marks+' '+section.title)+'</div>'
         +'<div class="fold-content" id="'+id+'">'+md(body)+'</div>'
         +'<button class="fold-toggle" type="button" aria-expanded="false" aria-controls="'+id+'">전체 내용 펼쳐보기</button></section>';
-    });
+      cursor=end;position=boundary
+    }
+    html+=md(clean.slice(cursor));
     return html
   }
 
@@ -48,10 +65,8 @@
 
   root.addEventListener('click',event=>{
     const button=event.target.closest('.fold-toggle');if(!button)return;
-    const fold=button.closest('.fold');
-    const open=button.getAttribute('aria-expanded')!=='true';
-    fold.classList.toggle('expanded',open);
-    button.setAttribute('aria-expanded',String(open));
+    const fold=button.closest('.fold'),open=button.getAttribute('aria-expanded')!=='true';
+    fold.classList.toggle('expanded',open);button.setAttribute('aria-expanded',String(open));
     button.textContent=open?'접기':'전체 내용 펼쳐보기'
   });
 
@@ -62,7 +77,7 @@
   function midpoint(a,b){return{x:(a.x+b.x)/2,y:(a.y+b.y)/2}}
   function openImage(src){viewerImage.src=src;scale=1;x=0;y=0;paint();dialog.showModal()}
   root.addEventListener('click',event=>{
-    const button=event.target.closest('.image-open');if(button)openImage(button.querySelector('img').currentSrc||button.querySelector('img').src)
+    const button=event.target.closest('.image-open');if(button){const image=button.querySelector('img');openImage(image.currentSrc||image.src)}
   });
   dialog?.querySelector('.close')?.addEventListener('click',()=>dialog.close());
   dialog?.addEventListener('click',event=>{if(event.target===dialog)dialog.close()});
