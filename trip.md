@@ -6,55 +6,55 @@ title: 여행 일정
 ### 11/20 금: 런던
 
 
-[표 trip-1](tables/trip-01.csv)
+[표 trip-1](tables/trip-01.json)
 
 
 ### 11/21 토: 런던
 
 
-[표 trip-2](tables/trip-02.csv)
+[표 trip-2](tables/trip-02.json)
 
 
 ### 11/22 일: 런던
 
 
-[표 trip-3](tables/trip-03.csv)
+[표 trip-3](tables/trip-03.json)
 
 
 ### 11/23 월: 런던 근교 투어
 
 
-[표 trip-4](tables/trip-04.csv)
+[표 trip-4](tables/trip-04.json)
 
 
 ### 11/24 화: 런던 → 파리
 
 
-[표 trip-5](tables/trip-05.csv)
+[표 trip-5](tables/trip-05.json)
 
 
 ### 11/25 수: 파리
 
 
-[표 trip-6](tables/trip-06.csv)
+[표 trip-6](tables/trip-06.json)
 
 
 ### 11/26 목: 파리 (베르사유)
 
 
-[표 trip-7](tables/trip-07.csv)
+[표 trip-7](tables/trip-07.json)
 
 
 ### 11/27 금: 파리 근교
 
 
-[표 trip-8](tables/trip-08.csv)
+[표 trip-8](tables/trip-08.json)
 
 
 ### 11/28 토: 파리 → 출국
 
 
-[표 trip-9](tables/trip-09.csv)
+[표 trip-9](tables/trip-09.json)
 
 
 <div class="empty-block"></div>
