@@ -46,7 +46,8 @@
       const end=boundary<headings.length?headings[boundary].index:clean.length;
       const body=clean.slice(section.end,end).replace(/^\n+/,'');
       const id='toggle-'+start;
-      html+='<section class="fold"><div class="fold-title"><div class="fold-heading">'+md(section.marks+' '+section.title)+'</div>'
+      const titleOnly=document.body.dataset.document==='trip'&&section.level===2&&/^\\d{2}\\/\\d{2}\\s/.test(section.title);
+      html+='<section class="fold'+(titleOnly?' title-only-fold':'')+'"><div class="fold-title"><div class="fold-heading">'+md(section.marks+' '+section.title)+'</div>'
         +'<button class="fold-toggle fold-toggle-top" type="button" aria-expanded="false" aria-controls="'+id+'">펼쳐보기</button></div>'
         +'<div class="fold-content" id="'+id+'">'+md(body)+'</div>'
         +'<button class="fold-toggle fold-toggle-bottom" type="button" aria-expanded="false" aria-controls="'+id+'">전체 내용 펼쳐보기</button></section>';
@@ -59,6 +60,10 @@
   fetch(file).then(response=>{if(!response.ok)throw new Error('content');return response.text()})
     .then(source=>{
       root.innerHTML=draw(source);
+      const gapHeading=document.body.dataset.document==='shopping'?'2. 파리 Lafayette 백화점':'2. 날짜별 상세 일정';
+      [...root.querySelectorAll('h1,h2,h3,h4,h5,h6')].forEach(heading=>{
+        if(heading.textContent.trim()===gapHeading)heading.classList.add('section-gap-heading')
+      });
       if(document.body.dataset.document==='shopping'){
         let quickIndex=0;
         [...root.querySelectorAll('h1,h2,h3,h4,h5,h6')].forEach(heading=>{
