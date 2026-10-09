@@ -1,0 +1,50 @@
+[
+  {
+    "time": "07:30~\n08:00",
+    "activity": "**선택: 아침**\n**바게트** (메르시 제롬 / 스타벅스, Merci Jérôme / Starbucks)",
+    "transport": "🚶 숙소 근처",
+    "shaded": true
+  },
+  {
+    "time": "08:00~\n09:00",
+    "activity": "**콩코드 광장, 튀를리 정원**",
+    "transport": "🚇 라 모트 피케–그르넬역 (La Motte-Picquet–Grenelle) → 콩코드역 (Concorde), 메트로 8호선\n🚶 콩코드 광장 → 튀를리 정원",
+    "shaded": false
+  },
+  {
+    "time": "09:00~\n11:30",
+    "activity": "**루브르 박물관\n(**선택: 팔레 루아얄)",
+    "transport": "🚶 튀를리 정원 → 루브르 박물관",
+    "shaded": false
+  },
+  {
+    "time": "12:00~\n12:30",
+    "activity": "**개선문** (Arc de Triomphe)",
+    "transport": "🚇 팔레 루아얄–뮈제 뒤 루브르역 (Palais Royal–Musée du Louvre) → 샤를 드골–에투알역 (Charles de Gaulle–Étoile), 메트로 1호선",
+    "shaded": false
+  },
+  {
+    "time": "12:30~\n14:30",
+    "activity": "**점심**\n**미슐랭 2스타 프렌치 코스** (루아조 블랑, L'Oiseau Blanc)",
+    "transport": "🚶 개선문 (Arc de Triomphe) → 더 페닌슐라 파리 (The Peninsula Paris)",
+    "shaded": true
+  },
+  {
+    "time": "15:00~\n17:00",
+    "activity": "**선택: 샤넬 본점, 에르메스 본점**\n(**선택: 카페 **안젤리나 리볼리, Angelina Rivoli)",
+    "transport": "🚗 더 페닌슐라 파리 (The Peninsula Paris) → CHANEL 31 Cambon\n🚶 CHANEL 31 Cambon → Hermès Faubourg Saint-Honoré\n🚶 구역 내",
+    "shaded": false
+  },
+  {
+    "time": "17:00~\n19:00",
+    "activity": "**샹젤리제, 그랑팔레, 알렉상드르 3세 다리, 롱샴, 디올, 크리스마스 야경**\n(**선택: 마카롱 카페 **라뒤레 샹젤리제, Ladurée Champs-Élysées)",
+    "transport": "🚶 구역 내 이동",
+    "shaded": false
+  },
+  {
+    "time": "19:30~\n20:30",
+    "activity": "**저녁\n한식 **(숙소 근처 한식집 선택)",
+    "transport": "🚇 알마–마르소역 (Alma–Marceau) → 트로카데로역 (Trocadéro), 메트로 9호선 → 라 모트 피케–그르넬역 (La Motte-Picquet–Grenelle), 메트로 6호선",
+    "shaded": true
+  }
+]
