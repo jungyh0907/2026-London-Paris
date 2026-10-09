@@ -51,6 +51,21 @@
     return source.replace(pattern,(_,path)=>tableMap.get(path));
   }
 
+  // Reassemble small, visually editable day documents into the original travel page.
+  async function hydrateDetails(source){
+    if(document.body.dataset.document!=='trip')return source;
+    const pattern=/\[상세 내용\]\((details\/(?:11-\d{2}|paris-restaurants)\.md)\)/g;
+    const files=[...new Set([...source.matchAll(pattern)].map(match=>match[1]))];
+    const entries=await Promise.all(files.map(async path=>{
+      const response=await fetch(path+'?ts='+Date.now(),{cache:'no-store'});
+      if(!response.ok)throw new Error('Cannot load detail: '+path);
+      const raw=await response.text();
+      return [path,normalize(raw).trim()];
+    }));
+    const bodyMap=new Map(entries);
+    return source.replace(pattern,(_,path)=>'\n\n'+bodyMap.get(path)+'\n\n');
+  }
+
   function isFoldHeading(title,level){
     if(document.body.dataset.document==='trip')
       return (level===1&&title==='1. 전체 일정표') ||
@@ -110,6 +125,7 @@
 
   fetch(file+'?ts='+Date.now(),{cache:'no-store'}).then(response=>{if(!response.ok)throw new Error('content');return response.text()})
     .then(hydrateTables)
+    .then(hydrateDetails)
     .then(source=>{
       root.innerHTML=draw(source);
       addLastUpdated();

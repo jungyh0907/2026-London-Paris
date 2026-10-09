@@ -4,24 +4,190 @@ settings:
   content:
     merge: true
 content:
-  - name: trip
-    label: "여행 일정 · 설명과 이미지"
-    type: file
-    path: trip.md
-    format: yaml-frontmatter
-    operations:
-      delete: false
-    fields:
-      - name: title
-        label: "문서 이름"
-        type: string
-        required: true
-      - name: body
-        label: "여행 일정 본문 · 표는 아래에서 별도 편집"
-        type: rich-text
-        options:
-          format: markdown
-          switcher: true
+  - name: daily_details
+    label: "날짜별 상세 일정 · 사진과 설명 수정"
+    type: group
+    items:
+      - name: detail_01
+        label: "11/20 금 — 런던 도착"
+        type: file
+        path: details/11-20.md
+        format: yaml-frontmatter
+        operations:
+          delete: false
+        fields:
+          - name: title
+            label: "제목"
+            type: string
+            required: true
+          - name: body
+            label: "상세 내용 · 글과 사진을 화면에서 편집"
+            type: rich-text
+            options:
+              format: markdown
+              switcher: true
+      - name: detail_02
+        label: "11/21 토 — 대영박물관 + 해러즈 백화점 + 샤넬 + 웨스트엔드"
+        type: file
+        path: details/11-21.md
+        format: yaml-frontmatter
+        operations:
+          delete: false
+        fields:
+          - name: title
+            label: "제목"
+            type: string
+            required: true
+          - name: body
+            label: "상세 내용 · 글과 사진을 화면에서 편집"
+            type: rich-text
+            options:
+              format: markdown
+              switcher: true
+      - name: detail_03
+        label: "11/22 일 — 교대식 + 웨스트민스터 + 켄싱턴/버버리 + 스카이가든"
+        type: file
+        path: details/11-22.md
+        format: yaml-frontmatter
+        operations:
+          delete: false
+        fields:
+          - name: title
+            label: "제목"
+            type: string
+            required: true
+          - name: body
+            label: "상세 내용 · 글과 사진을 화면에서 편집"
+            type: rich-text
+            options:
+              format: markdown
+              switcher: true
+      - name: detail_04
+        label: "11/23 월 — 투어: 스톤헨지 + 윈저성 + 옥스퍼드"
+        type: file
+        path: details/11-23.md
+        format: yaml-frontmatter
+        operations:
+          delete: false
+        fields:
+          - name: title
+            label: "제목"
+            type: string
+            required: true
+          - name: body
+            label: "상세 내용 · 글과 사진을 화면에서 편집"
+            type: rich-text
+            options:
+              format: markdown
+              switcher: true
+      - name: detail_05
+        label: "11/24 화 — 런던 → 파리 + 에펠탑"
+        type: file
+        path: details/11-24.md
+        format: yaml-frontmatter
+        operations:
+          delete: false
+        fields:
+          - name: title
+            label: "제목"
+            type: string
+            required: true
+          - name: body
+            label: "상세 내용 · 글과 사진을 화면에서 편집"
+            type: rich-text
+            options:
+              format: markdown
+              switcher: true
+      - name: detail_06
+        label: "11/25 수 — 루브르 + 개선문 + 샹젤리제 거리"
+        type: file
+        path: details/11-25.md
+        format: yaml-frontmatter
+        operations:
+          delete: false
+        fields:
+          - name: title
+            label: "제목"
+            type: string
+            required: true
+          - name: body
+            label: "상세 내용 · 글과 사진을 화면에서 편집"
+            type: rich-text
+            options:
+              format: markdown
+              switcher: true
+      - name: detail_07
+        label: "11/26 목 — 베르사유 + 라파예트 백화점"
+        type: file
+        path: details/11-26.md
+        format: yaml-frontmatter
+        operations:
+          delete: false
+        fields:
+          - name: title
+            label: "제목"
+            type: string
+            required: true
+          - name: body
+            label: "상세 내용 · 글과 사진을 화면에서 편집"
+            type: rich-text
+            options:
+              format: markdown
+              switcher: true
+      - name: detail_08
+        label: "11/27 금 — 알자스 (콜마르 + 스트라스부르) 크리스마스 마켓"
+        type: file
+        path: details/11-27.md
+        format: yaml-frontmatter
+        operations:
+          delete: false
+        fields:
+          - name: title
+            label: "제목"
+            type: string
+            required: true
+          - name: body
+            label: "상세 내용 · 글과 사진을 화면에서 편집"
+            type: rich-text
+            options:
+              format: markdown
+              switcher: true
+      - name: detail_09
+        label: "11/28 토 — 몽마르트르 + 노트르담 + 출국"
+        type: file
+        path: details/11-28.md
+        format: yaml-frontmatter
+        operations:
+          delete: false
+        fields:
+          - name: title
+            label: "제목"
+            type: string
+            required: true
+          - name: body
+            label: "상세 내용 · 글과 사진을 화면에서 편집"
+            type: rich-text
+            options:
+              format: markdown
+              switcher: true
+      - name: detail_10
+        label: "참고: 파리 숙소 근처 한식/중식당"
+        type: file
+        path: details/paris-restaurants.md
+        format: yaml-frontmatter
+        operations:
+          delete: false
+        fields:
+          - name: title
+            label: "제목"
+            type: string
+            required: true
+          - name: body
+            label: "상세 내용 · 글과 사진을 화면에서 편집"
+            type: rich-text
+            options:
+              format: markdown
+              switcher: true
   - name: shopping
     label: "쇼핑리스트 · 설명과 이미지"
     type: file
