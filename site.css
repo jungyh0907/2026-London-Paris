@@ -30,7 +30,7 @@ main{width:min(calc(100% - 32px),960px);margin:auto}
 #document-content code{overflow-wrap:anywhere}
 #document-content table{width:100%;border-collapse:collapse;margin:14px 0 22px;font-size:15px;line-height:1.7}
 #document-content td,#document-content th{border:1px solid var(--line);padding:9px 11px;vertical-align:top;text-align:left}
-#document-content tr[color="gray_bg"] td{background:#f4f8fb}
+#document-content tr.row-shaded td{background:#f4f8fb}
 .table-scroll{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:14px 0 22px}
 #document-content img{display:block;width:auto;max-width:min(100%,560px);max-height:440px;height:auto;object-fit:contain;margin:16px auto;border-radius:12px}
 .image-open{display:block;max-width:100%;margin:16px auto;padding:0;border:0;background:none;cursor:zoom-in}
