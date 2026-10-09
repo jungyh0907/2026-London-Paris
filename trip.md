@@ -933,7 +933,7 @@
 	### 17:30\~18:00 — CDG 도착, 출국수속
 	- **이동:** 16:30 숙소 → CDG
 	### 21:00 — 파리 출국
-## 파리 숙소 근처 한식/중식당 {toggle="true"}
+## 참고: 파리 숙소 근처 한식/중식당 {toggle="true"}
 	### 동네 (Dong Né)
 	![](https://lh3.googleusercontent.com/d/1mKMx4kNvG7qiFyEQXZeBAMyqM9O0ozRM=w560-h420)
 	![](https://lh3.googleusercontent.com/d/1cHkNUHl4Reu5fRKlRtciI-Vgucg56gtp=w560-h420)
