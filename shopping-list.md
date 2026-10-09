@@ -1,5 +1,4 @@
 # 1. 런던 Harrods 백화점
-## 한눈에 보는 쇼핑 리스트
 <table header-row="true">
 <tr>
 <td>제품</td>
@@ -48,7 +47,7 @@
 </tr>
 </table>
 ---
-# 1. Harrods 자체 굿즈 BEST 4 {toggle="true"}
+# 1-1. Harrods 자체 굿즈 BEST 4 {toggle="true"}
 	## 1) 해러즈 가방
 	**Harrods Tote / Canvas / Nylon / Leather Bags**
 	![](https://lh3.googleusercontent.com/d/1jlXfcJGYvOHWE5s-U_-JxdV-cFpBhLpB=w560-h420)
@@ -134,7 +133,7 @@
 	- **Logo Pocket Shopper Bag:** £15
 	- Royal Guard Magnet 등 일부 품목은 재고 변동이 잦음
 	---
-# 2. Harrods Food Halls 기념품 BEST 4 {toggle="true"}
+# 1-2. Harrods Food Halls 기념품 BEST 4 {toggle="true"}
 	## 1) 해러즈 자체 차
 	**Harrods Tea**
 	![](https://lh3.googleusercontent.com/d/1Et7l3diGO92pGQoKtWL05gcXmgJVKPpo=w560-h420)
@@ -211,7 +210,7 @@
 	- 원두 틴, 선물 세트는 Harrods 기념품 느낌도 유지
 	- 식기보다 가볍고 운반이 쉬움
 	---
-# 3. 층별 쇼핑 동선 {toggle="true"}
+# 1-3. 층별 쇼핑 동선 {toggle="true"}
 	---
 	## Lower Ground Floor — The Harrods Collection
 	1. 가방
@@ -230,7 +229,7 @@
 - [런던 여행 — 해러즈 백화점 : 기념품 사기 좋은 곳](https://blog.naver.com/sejinyong/224287580382)
 - [런던여행 해로즈(Harrods) 백화점 기념품 쇼핑리스트 식품관 가격](https://blog.naver.com/sujittw/224166086361)
 ---
-# 1-1. 런던 기타 쇼핑 스팟 {toggle="true"}
+# 1-4. 런던 기타 쇼핑 스팟 {toggle="true"}
 	## Harrods 4층 Toys — Jellycat Airlines
 	![](https://lh3.googleusercontent.com/d/1-v7f1hh_5tcyNEgAfq2dzmRJnx31HkKQ=w560-h420)
 	![](https://lh3.googleusercontent.com/d/1T0EZJdOYgxg5PpXTmP9jWAGuYs1rNbYN=w560-h420)
@@ -275,7 +274,6 @@
 <empty-block/>
 <empty-block/>
 # 2. 파리 Lafayette 백화점
-## 한눈에 보는 쇼핑 리스트
 <table header-row="true">
 <tr>
 <td>제품</td>
@@ -344,7 +342,7 @@
 </tr>
 </table>
 ---
-# 1. 라파예트 BEST 5 {toggle="true"}
+# 2-1. 라파예트 BEST 5 {toggle="true"}
 	## 1) 라 메종 다모린 — 솔티드 카라멜
 	**La Maison d'Armorine – Salted Caramel**
 	![](https://lh3.googleusercontent.com/d/1owLrq4A291cDq3j6EztPsOtK2b_gNhx7=w560-h420)
@@ -437,7 +435,7 @@
 	- **250g €6.50**
 	- 블로그 방문 당시 봉마르셰에서는 같은 브랜드를 찾지 못했으며, 비슷한 종류의 제품은 있었음
 	---
-# 2. 라파예트 요리 BEST 4 {toggle="true"}
+# 2-2. 라파예트 요리 BEST 4 {toggle="true"}
 	## 1) 아 롤리비에 — 트러플 오일
 	**A L’Olivier – Truffle Oil**
 	![](https://lh3.googleusercontent.com/d/124OGlzIQ4qEKZECEohDe4mMxHbWff_2M=w560-h420)
@@ -548,7 +546,7 @@
 	- **140g €8.50**
 	- 블로그 방문 당시 봉마르셰에는 같은 제품 대신 **비슷한 트러플 마요네즈 제품**이 있었음
 	---
-# 3. 매장별 구매 팁 {toggle="true"}
+# 2-3. 매장별 구매 팁 {toggle="true"}
 	## Galeries Lafayette Gourmet에서 특히 볼 것
 	- **A L’Olivier 블랙 트러플 오일**
 	- **Artisan de la Truffe 트러플 소금**
@@ -557,7 +555,7 @@
 	- **La Mère Poulard 쿠키**
 	- 특히 **초록색 사과 카라멜 맛** 우선 확인
 ---
-# 2-1. 파리 기타 쇼핑 스팟 {toggle="true"}
+# 2-4. 파리 기타 쇼핑 스팟 {toggle="true"}
 	## 샹젤리제 거리
 	**Avenue des Champs-Élysées**
 	![](https://lh3.googleusercontent.com/d/1MJut-VpfDl5Syz-4Y1hFJVj-_TE-t1-B=w560-h420)
