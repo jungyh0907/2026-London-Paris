@@ -64,7 +64,7 @@
         rows[0]?.classList.add('table-label-row');
         rows.slice(1).forEach(row=>[...row.cells].forEach((cell,index)=>cell.dataset.label=labels[index]||''));
         if(document.body.dataset.document==='trip'&&labels[0]==='시간'&&labels[1]==='일정'&&labels[2]==='이동')table.classList.add('itinerary-table');
-        const wrap=document.createElement('div');wrap.className='table-scroll';table.before(wrap);wrap.append(table)
+        const wrap=document.createElement('div');wrap.className='table-scroll'+(table.classList.contains('itinerary-table')?' itinerary-scroll':'');table.before(wrap);wrap.append(table)
       });
       root.querySelectorAll('img').forEach(image=>{
         image.loading='lazy';image.decoding='async';
