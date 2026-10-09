@@ -63,7 +63,7 @@
         const rows=[...table.rows],labels=rows[0]?[...rows[0].cells].map(cell=>cell.textContent.trim()):[];
         rows[0]?.classList.add('table-label-row');
         rows.slice(1).forEach(row=>[...row.cells].forEach((cell,index)=>cell.dataset.label=labels[index]||''));
-        if(document.body.dataset.document==='trip')table.querySelectorAll('br').forEach(br=>br.replaceWith(document.createTextNode(' · ')));
+        if(document.body.dataset.document==='trip'&&labels[0]==='시간'&&labels[1]==='일정'&&labels[2]==='이동')table.classList.add('itinerary-table');
         const wrap=document.createElement('div');wrap.className='table-scroll';table.before(wrap);wrap.append(table)
       });
       root.querySelectorAll('img').forEach(image=>{
