@@ -179,3 +179,15 @@ body[data-document="trip"] #document-content table.itinerary-table th::before{di
   .last-updated{font-size:14px;margin:0 0 10px}
   .country-separator{margin:30px 0 20px}
 }
+
+
+/* Separate London and Paris shopping sections outside the title card */
+.shopping-section-separator{
+  height:0;
+  margin:34px 0 28px;
+  border:0;
+  border-top:1px solid var(--line);
+}
+@media(max-width:640px){
+  .shopping-section-separator{margin:30px 0 24px}
+}
