@@ -102,11 +102,12 @@
       const body=clean.slice(section.end,end).replace(/^\n+/,'');
       const id='toggle-'+start;
       const titleOnly=document.body.dataset.document==='trip'&&section.level===2&&((section.title.length>=6&&section.title[2]==='/'&&section.title[5]===' ')||section.title.includes('파리 숙소 근처 한식/중식당')||section.title==='1) 런던 일정표'||section.title==='2) 파리 일정표');
+      const floorRoute=document.body.dataset.document==='shopping'&&section.title==='1-3. 층별 쇼핑 동선';
       const separator=document.body.dataset.document==='trip'&&section.title.startsWith('11/24 화 — 런던 → 파리')?'<hr class="country-separator">':'';
-      html+=separator+'<section class="fold'+(titleOnly?' title-only-fold':'')+'"><div class="fold-title"><div class="fold-heading">'+md(section.marks+' '+section.title)+'</div>'
-        +'<button class="fold-toggle fold-toggle-top" type="button" aria-expanded="false" aria-controls="'+id+'">펼쳐보기</button></div>'
+      html+=separator+'<section class="fold'+(titleOnly?' title-only-fold':'')+(floorRoute?' expanded shopping-floor-route':'')+'"><div class="fold-title"><div class="fold-heading">'+md(section.marks+' '+section.title)+'</div>'
+        +'<button class="fold-toggle fold-toggle-top" type="button" aria-expanded="'+String(floorRoute)+'" aria-controls="'+id+'">'+(floorRoute?'접기':'펼쳐보기')+'</button></div>'
         +'<div class="fold-content" id="'+id+'">'+md(body)+'</div>'
-        +'<button class="fold-toggle fold-toggle-bottom" type="button" aria-expanded="false" aria-controls="'+id+'">전체 내용 펼쳐보기</button></section>';
+        +'<button class="fold-toggle fold-toggle-bottom" type="button" aria-expanded="'+String(floorRoute)+'" aria-controls="'+id+'">'+(floorRoute?'접기':'전체 내용 펼쳐보기')+'</button></section>';
       cursor=end;position=boundary
     }
     html+=md(clean.slice(cursor));
