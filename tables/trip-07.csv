@@ -1,7 +1,7 @@
-"시간","일정","이동","행 배경"
+"시간","일정","이동","행 음영"
 "07:00~
 07:30","**선택: 아침**
-**바게트** (메르시 제롬 / 스타벅스, Merci Jérôme / Starbucks)","🚶 숙소 근처","gray_bg"
+**바게트** (메르시 제롬 / 스타벅스, Merci Jérôme / Starbucks)","🚶 숙소 근처","yes"
 "08:30~
 09:00","**베르사유** 입장 대기, 보안검색","🚶 07:30 숙소 → 라 모트 피케–그르넬역
 🚇 메트로 10호선 → Javel–André Citroën
@@ -16,7 +16,7 @@
 15:30","**점심**
 **전통 프렌치 달팽이 에스카르고** (르 프로코프, Le Procope)","🚶 12:00 카트 반납 → Versailles Château–Rive Gauche
 🚆 RER C → Saint-Michel–Notre-Dame
-🚶 Le Procope","gray_bg"
+🚶 Le Procope","yes"
 "16:00~
 18:30","**갤러리 라파예트 오스만 백화점** (Galeries Lafayette Haussmann)
 **프랭땅 오스만 백화점** (Printemps Haussmann)","🚗 15:30 Le Procope → 갤러리 라파예트
@@ -26,4 +26,4 @@
 🚶 구역 내",""
 "20:30~
 21:30","**저녁
-한식 **(숙소 근처 한식집 선택)","귀가","gray_bg"
+한식 **(숙소 근처 한식집 선택)","귀가","yes"
