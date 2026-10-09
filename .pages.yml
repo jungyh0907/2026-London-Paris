@@ -1,0 +1,127 @@
+# Pages CMS — GitHub 저장소에 직접 저장, 외부 데이터베이스 불필요
+media: media
+settings:
+  content:
+    merge: true
+content:
+  - name: trip
+    label: "여행 일정 · 설명과 이미지"
+    type: file
+    path: trip.md
+    format: yaml-frontmatter
+    operations:
+      delete: false
+    fields:
+      - name: title
+        label: "문서 이름"
+        type: string
+        required: true
+      - name: body
+        label: "여행 일정 본문 · 표는 아래에서 별도 편집"
+        type: rich-text
+        options:
+          format: markdown
+          switcher: true
+  - name: shopping
+    label: "쇼핑리스트 · 설명과 이미지"
+    type: file
+    path: shopping-list.md
+    format: yaml-frontmatter
+    operations:
+      delete: false
+    fields:
+      - name: title
+        label: "문서 이름"
+        type: string
+        required: true
+      - name: body
+        label: "쇼핑리스트 본문 · 표는 아래에서 별도 편집"
+        type: rich-text
+        options:
+          format: markdown
+          switcher: true
+  - name: trip_tables
+    label: "날짜별 일정표 · 셀 직접 수정"
+    type: group
+    items:
+      - name: trip_table_01
+        label: "11/20 런던 도착"
+        type: file
+        path: tables/trip-01.csv
+        format: datagrid
+        operations:
+          delete: false
+      - name: trip_table_02
+        label: "11/21 런던"
+        type: file
+        path: tables/trip-02.csv
+        format: datagrid
+        operations:
+          delete: false
+      - name: trip_table_03
+        label: "11/22 런던"
+        type: file
+        path: tables/trip-03.csv
+        format: datagrid
+        operations:
+          delete: false
+      - name: trip_table_04
+        label: "11/23 근교 투어"
+        type: file
+        path: tables/trip-04.csv
+        format: datagrid
+        operations:
+          delete: false
+      - name: trip_table_05
+        label: "11/24 런던에서 파리"
+        type: file
+        path: tables/trip-05.csv
+        format: datagrid
+        operations:
+          delete: false
+      - name: trip_table_06
+        label: "11/25 파리"
+        type: file
+        path: tables/trip-06.csv
+        format: datagrid
+        operations:
+          delete: false
+      - name: trip_table_07
+        label: "11/26 베르사유"
+        type: file
+        path: tables/trip-07.csv
+        format: datagrid
+        operations:
+          delete: false
+      - name: trip_table_08
+        label: "11/27 알자스"
+        type: file
+        path: tables/trip-08.csv
+        format: datagrid
+        operations:
+          delete: false
+      - name: trip_table_09
+        label: "11/28 파리 출국"
+        type: file
+        path: tables/trip-09.csv
+        format: datagrid
+        operations:
+          delete: false
+  - name: shopping_tables
+    label: "쇼핑 표 · 셀 직접 수정"
+    type: group
+    items:
+      - name: shopping_table_01
+        label: "런던 해러즈"
+        type: file
+        path: tables/shopping-01.csv
+        format: datagrid
+        operations:
+          delete: false
+      - name: shopping_table_02
+        label: "파리 라파예트"
+        type: file
+        path: tables/shopping-02.csv
+        format: datagrid
+        operations:
+          delete: false
