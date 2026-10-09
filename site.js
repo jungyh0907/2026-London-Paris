@@ -4,9 +4,8 @@
   marked.setOptions({gfm:true});
   const file=document.body.dataset.document==='shopping'?'shopping-list.md':'trip.md';
 
-  // Notion's Markdown export prefixes nested blocks with tabs. Strip these
-  // export indentation markers for rendering; the source Markdown stays intact.
-  function normalize(source){return source.replace(/^\t+/gm,'')}
+  // Allow standard CMS Markdown files with YAML frontmatter.
+  function normalize(source){return source.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/,'').replace(/^\t+/gm,'')}
   function strong(source){return source.replace(/\*\*([^\n]*?)\*\*/g,'<strong>$1</strong>')}
   function inline(source){return marked.parseInline(strong(source)).trim()}
   function md(source){
@@ -14,7 +13,7 @@
       .replace(/<callout\b[^>]*>([\s\S]*?)<\/callout>/gi,(_,body)=>'<aside class="callout">'+inline(body.trim())+'</aside>')
       .replace(/<empty-block\s*\/>/gi,'<div class="empty-block"></div>\n\n')
       .replace(/<page url="[^"]+">([^<]*)<\/page>/gi,'<a href="shopping.html">$1</a>');
-    // Notion exports tables as HTML with Markdown still embedded in each cell.
+    // The CSV table renderer uses Markdown emphasis and links inside each cell.
     // Render the cell's inline emphasis and links instead of exposing markers.
     clean=clean.replace(/<(td|th)([^>]*)>([\s\S]*?)<\/\1>/gi,(_,tag,attrs,body)=>'<'+tag+attrs+'>'+inline(body)+'</'+tag+'>');
     clean=strong(clean);
@@ -22,13 +21,61 @@
     clean=clean.replace(/<\/(table|aside|div)>\s*(?=\S)/gi,'</$1>\n\n');
     return marked.parse(clean)
   }
+
+  // CSV tables are edited visually in Pages CMS and rendered as the original HTML tables.
+  function parseCSV(text){
+    const csv=text.replace(/^\uFEFF/,'');
+    const rows=[];let row=[],cell='',quoted=false;
+    for(let i=0;i<csv.length;i++){
+      const ch=csv[i];
+      if(quoted){
+        if(ch==='"'){if(csv[i+1]==='"'){cell+='"';i++}else quoted=false}
+        else cell+=ch
+      }else if(ch==='"')quoted=true;
+      else if(ch===','){row.push(cell);cell=''}
+      else if(ch==='\n'){row.push(cell.replace(/\r$/,''));rows.push(row);row=[];cell=''}
+      else cell+=ch
+    }
+    if(quoted)throw new Error('Invalid CSV');
+    if(row.length||cell!==''){row.push(cell);rows.push(row)}
+    return rows
+  }
+  function tableHTML(csv){
+    const rows=parseCSV(csv);
+    if(rows.length<2||rows[0].length<3)throw new Error('Invalid table data');
+    const header='<tr>'+rows[0].slice(0,3).map(cell=>'<td>'+cell+'</td>').join('')+'</tr>';
+    const body=rows.slice(1).filter(row=>row.some(cell=>cell.trim())).map(row=>{
+      const shade=row[3]==='gray_bg'?' color="gray_bg"':'';
+      return '<tr'+shade+'>'+row.slice(0,3).map(cell=>'<td>'+cell.replace(/\r?\n/g,'<br>')+'</td>').join('')+'</tr>'
+    }).join('\n');
+    return '\n\n<table fit-page-width="true" header-row="true">\n'+header+'\n'+body+'\n</table>\n\n'
+  }
+  async function hydrateTables(source){
+    const pattern=/\[표[^\]\n]*\]\((tables\/(?:trip|shopping)-\d{2}\.csv)\)/g;
+    const paths=[...new Set([...source.matchAll(pattern)].map(match=>match[1]))];
+    const entries=await Promise.all(paths.map(async path=>{
+      const response=await fetch(path+'?ts='+Date.now(),{cache:'no-store'});
+      if(!response.ok)throw new Error('Cannot load table: '+path);
+      return [path,tableHTML(await response.text())]
+    }));
+    const tableMap=new Map(entries);
+    return source.replace(pattern,(_,path)=>tableMap.get(path))
+  }
+
+  function isFoldHeading(title,level){
+    if(document.body.dataset.document==='trip')
+      return (level===1&&title==='1. 전체 일정표') ||
+        (level===2&&(/^\d{2}\/\d{2}\b/.test(title)||title.startsWith('참고: 파리 숙소')));
+    return level===1&&/^[12]-[1-4]\./.test(title)
+  }
+
   function draw(source){
     const clean=normalize(source);
     const headingRe=/^(#{1,6})\s+(.+?)\s*$/gm;
     const headings=[...clean.matchAll(headingRe)].map(match=>({
       index:match.index,end:match.index+match[0].length,level:match[1].length,
-      title:match[2].replace(/\s+\{toggle="true"\}$/,''),
-      toggle:/\s+\{toggle="true"\}$/.test(match[2]),
+      title:match[2],
+      toggle:isFoldHeading(match[2],match[1].length),
       marks:match[1]
     }));
     let html='',cursor=0,position=0;
@@ -73,6 +120,7 @@
   }
 
   fetch(file+'?ts='+Date.now(),{cache:'no-store'}).then(response=>{if(!response.ok)throw new Error('content');return response.text()})
+    .then(hydrateTables)
     .then(source=>{
       root.innerHTML=draw(source);
       addLastUpdated();
