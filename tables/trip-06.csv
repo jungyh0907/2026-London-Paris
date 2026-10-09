@@ -1,7 +1,7 @@
-"시간","일정","이동","행 배경"
+"시간","일정","이동","행 음영"
 "07:30~
 08:00","**선택: 아침**
-**바게트** (메르시 제롬 / 스타벅스, Merci Jérôme / Starbucks)","🚶 숙소 근처","gray_bg"
+**바게트** (메르시 제롬 / 스타벅스, Merci Jérôme / Starbucks)","🚶 숙소 근처","yes"
 "08:00~
 09:00","**콩코드 광장, 튀를리 정원**","🚇 라 모트 피케–그르넬역 (La Motte-Picquet–Grenelle) → 콩코드역 (Concorde), 메트로 8호선
 🚶 콩코드 광장 → 튀를리 정원",""
@@ -12,7 +12,7 @@
 12:30","**개선문** (Arc de Triomphe)","🚇 팔레 루아얄–뮈제 뒤 루브르역 (Palais Royal–Musée du Louvre) → 샤를 드골–에투알역 (Charles de Gaulle–Étoile), 메트로 1호선",""
 "12:30~
 14:30","**점심**
-**미슐랭 2스타 프렌치 코스** (루아조 블랑, L'Oiseau Blanc)","🚶 개선문 (Arc de Triomphe) → 더 페닌슐라 파리 (The Peninsula Paris)","gray_bg"
+**미슐랭 2스타 프렌치 코스** (루아조 블랑, L'Oiseau Blanc)","🚶 개선문 (Arc de Triomphe) → 더 페닌슐라 파리 (The Peninsula Paris)","yes"
 "15:00~
 17:00","**선택: 샤넬 본점, 에르메스 본점**
 (**선택: 카페 **안젤리나 리볼리, Angelina Rivoli)","🚗 더 페닌슐라 파리 (The Peninsula Paris) → CHANEL 31 Cambon
@@ -23,4 +23,4 @@
 (**선택: 마카롱 카페 **라뒤레 샹젤리제, Ladurée Champs-Élysées)","🚶 구역 내 이동",""
 "19:30~
 20:30","**저녁
-한식 **(숙소 근처 한식집 선택)","🚇 알마–마르소역 (Alma–Marceau) → 트로카데로역 (Trocadéro), 메트로 9호선 → 라 모트 피케–그르넬역 (La Motte-Picquet–Grenelle), 메트로 6호선","gray_bg"
+한식 **(숙소 근처 한식집 선택)","🚇 알마–마르소역 (Alma–Marceau) → 트로카데로역 (Trocadéro), 메트로 9호선 → 라 모트 피케–그르넬역 (La Motte-Picquet–Grenelle), 메트로 6호선","yes"
