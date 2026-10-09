@@ -76,10 +76,11 @@
     .then(source=>{
       root.innerHTML=draw(source);
       addLastUpdated();
-      const gapHeading=document.body.dataset.document==='shopping'?'2. 파리 Lafayette 백화점':'2. 날짜별 상세 일정';
-      [...root.querySelectorAll('h1,h2,h3,h4,h5,h6')].forEach(heading=>{
-        if(heading.textContent.trim()===gapHeading)heading.classList.add('section-gap-heading')
-      });
+      if(document.body.dataset.document==='trip'){
+        [...root.querySelectorAll('h1,h2,h3,h4,h5,h6')].forEach(heading=>{
+          if(heading.textContent.trim()==='2. 날짜별 상세 일정')heading.classList.add('section-gap-heading')
+        })
+      }
       if(document.body.dataset.document==='shopping'){
         let quickIndex=0;
         [...root.querySelectorAll('h1,h2,h3,h4,h5,h6')].forEach(heading=>{
