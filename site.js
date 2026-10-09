@@ -46,8 +46,9 @@
       const end=boundary<headings.length?headings[boundary].index:clean.length;
       const body=clean.slice(section.end,end).replace(/^\n+/,'');
       const id='toggle-'+start;
-      const titleOnly=document.body.dataset.document==='trip'&&section.level===2&&section.title.length>=6&&section.title[2]==='/'&&section.title[5]===' ';
-      html+='<section class="fold'+(titleOnly?' title-only-fold':'')+'"><div class="fold-title"><div class="fold-heading">'+md(section.marks+' '+section.title)+'</div>'
+      const titleOnly=document.body.dataset.document==='trip'&&section.level===2&&((section.title.length>=6&&section.title[2]==='/'&&section.title[5]===' ')||section.title==='파리 숙소 근처 한식/중식당');
+      const separator=document.body.dataset.document==='trip'&&section.title.startsWith('11/24 화 — 런던 → 파리')?'<hr class="country-separator">':'';
+      html+=separator+'<section class="fold'+(titleOnly?' title-only-fold':'')+'"><div class="fold-title"><div class="fold-heading">'+md(section.marks+' '+section.title)+'</div>'
         +'<button class="fold-toggle fold-toggle-top" type="button" aria-expanded="false" aria-controls="'+id+'">펼쳐보기</button></div>'
         +'<div class="fold-content" id="'+id+'">'+md(body)+'</div>'
         +'<button class="fold-toggle fold-toggle-bottom" type="button" aria-expanded="false" aria-controls="'+id+'">전체 내용 펼쳐보기</button></section>';
