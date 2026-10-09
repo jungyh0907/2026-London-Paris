@@ -68,7 +68,7 @@ main{width:min(calc(100% - 32px),960px);margin:auto}
   #document-content h1{font-size:26px}
   #document-content h2{font-size:23px}
   #document-content h3{font-size:20px}
-  #document-content table{min-width:640px;font-size:15px}
+  #document-content table{min-width:640px;font-size:16px}
   #document-content td,#document-content th{padding:8px 9px;min-width:112px}
   .fold{margin:16px 0;border-radius:14px}
   .fold-title{padding:14px 14px 10px}
