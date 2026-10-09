@@ -58,9 +58,24 @@
     return html
   }
 
+  function addLastUpdated(){
+    fetch('last-updated.txt?ts='+Date.now(),{cache:'no-store'})
+      .then(response=>response.ok?response.text():'')
+      .then(stamp=>{
+        stamp=stamp.trim();
+        if(!stamp)return;
+        const updated=document.createElement('div');
+        updated.className='last-updated';
+        updated.textContent='Last updated: '+stamp;
+        root.prepend(updated)
+      })
+      .catch(()=>{})
+  }
+
   fetch(file).then(response=>{if(!response.ok)throw new Error('content');return response.text()})
     .then(source=>{
       root.innerHTML=draw(source);
+      addLastUpdated();
       const gapHeading=document.body.dataset.document==='shopping'?'2. 파리 Lafayette 백화점':'2. 날짜별 상세 일정';
       [...root.querySelectorAll('h1,h2,h3,h4,h5,h6')].forEach(heading=>{
         if(heading.textContent.trim()===gapHeading)heading.classList.add('section-gap-heading')
