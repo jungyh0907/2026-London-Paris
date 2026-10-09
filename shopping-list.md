@@ -255,8 +255,6 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 
 # 1-3. 층별 쇼핑 동선
 
----
-
 ## Lower Ground Floor — The Harrods Collection
 
 1. 가방
@@ -272,8 +270,6 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 4. 커피
 
 - 2시간 안에서는 **Lower Ground 자체 굿즈 → Ground Floor Food Halls** 순서로 보면 기념품 쇼핑 동선이 가장 단순함
-
----
 
 # 1-4. 런던 기타 쇼핑 스팟
 
