@@ -1,7 +1,3 @@
-<callout icon="✈️" color="blue_bg">
-	**2026.11.20(금) \~ 11.28(토)**  
-	일정 및 식사는 유동적으로 변동
-</callout>
 # 1. 전체 일정표 {toggle="true"}
 	### 11/20 금: 런던
 	<table fit-page-width="true" header-row="true">
