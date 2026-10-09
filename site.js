@@ -83,7 +83,7 @@
       if(document.body.dataset.document==='shopping'){
         let quickIndex=0;
         [...root.querySelectorAll('h1,h2,h3,h4,h5,h6')].forEach(heading=>{
-          if(heading.textContent.trim()!=='한눈에 보는 쇼핑 리스트')return;
+          if(!['1. 런던 Harrods 백화점','2. 파리 Lafayette 백화점'].includes(heading.textContent.trim()))return;
           let sibling=heading.nextElementSibling;
           while(sibling&&!sibling.matches('table')&&!/^H[1-6]$/.test(sibling.tagName)){
             const nested=sibling.querySelector?.('table');
