@@ -39,8 +39,8 @@ main{width:min(calc(100% - 32px),960px);margin:auto}
 .fold{margin:18px 0;border:1px solid #e1e7df;border-radius:15px;overflow:hidden;background:white}
 .fold-title{padding:15px 17px 11px;background:linear-gradient(100deg,#f1f5f0,#fbfaf6)}
 .fold-title h1,.fold-title h2,.fold-title h3,.fold-title h4,.fold-title h5,.fold-title h6{margin:0;font-size:clamp(20px,3.6vw,23px);line-height:1.45}
-.fold-content{position:relative;max-height:10.2rem;overflow:hidden;padding:8px 17px 16px}
-.fold:not(.expanded) .fold-content::after{content:"";position:absolute;z-index:1;left:0;right:0;bottom:0;height:2.6rem;background:linear-gradient(transparent,#fff);pointer-events:none}
+.fold-content{position:relative;max-height:17rem;overflow:hidden;padding:8px 17px 16px}
+.fold:not(.expanded) .fold-content::after{content:"";position:absolute;z-index:1;left:0;right:0;bottom:0;height:1.35rem;background:linear-gradient(transparent,#fff);pointer-events:none}
 .fold:not(.expanded) .fold-content .image-open{display:none}
 .fold.expanded .fold-content{max-height:none;overflow:visible;border-top:1px solid #edf0eb;padding-top:12px}
 .fold-toggle{display:block;width:100%;padding:13px 17px;border:0;border-top:1px solid #edf0eb;text-align:left;color:#315b49;background:white;font-size:16px;font-weight:700;cursor:pointer}
@@ -68,16 +68,27 @@ main{width:min(calc(100% - 32px),960px);margin:auto}
   #document-content h1{font-size:26px}
   #document-content h2{font-size:23px}
   #document-content h3{font-size:20px}
-  #document-content table{min-width:640px;font-size:16px}
-  #document-content td,#document-content th{padding:8px 9px;min-width:112px}
+  #document-content table{width:100%;min-width:0;display:block;font-size:16px}
+  #document-content td,#document-content th{padding:8px 9px;min-width:0}
   .fold{margin:16px 0;border-radius:14px}
   .fold-title{padding:14px 14px 10px}
   .fold-title h1,.fold-title h2,.fold-title h3,.fold-title h4,.fold-title h5,.fold-title h6{font-size:21px}
-  .fold-content{max-height:10.8rem;padding:8px 14px 17px}
+  .fold-content{max-height:17rem;padding:8px 14px 17px}
   .fold-toggle{padding:13px 14px;font-size:16px}
   #document-content img{max-height:360px}
 }
 
-.fold:not(.expanded) .fold-content .table-scroll{display:block;max-width:100%;overflow:hidden}
+.fold:not(.expanded) .fold-content .table-scroll{display:block;max-width:100%;overflow:visible}
 .fold:not(.expanded) .fold-content table{width:100%;min-width:0;table-layout:fixed;font-size:15px}
 .fold:not(.expanded) .fold-content td,.fold:not(.expanded) .fold-content th{min-width:0;padding:6px 5px;overflow-wrap:anywhere}
+
+@media(max-width:640px){
+  .table-scroll{overflow:visible}
+  #document-content table{display:block;width:100%;min-width:0;border-collapse:separate}
+  #document-content tbody{display:block}
+  #document-content tr{display:grid;grid-template-columns:minmax(0,1fr);margin:0 0 10px;border:1px solid var(--line);border-radius:11px;background:#fff;overflow:hidden}
+  #document-content tr.table-label-row{display:none}
+  #document-content td,#document-content th{display:grid;grid-template-columns:76px minmax(0,1fr);gap:10px;min-width:0;padding:8px 10px;border:0;border-bottom:1px solid #eef0eb}
+  #document-content td:last-child,#document-content th:last-child{border-bottom:0}
+  #document-content td::before,#document-content th::before{content:attr(data-label);font-size:13px;color:var(--muted);font-weight:700;line-height:1.6}
+}
