@@ -1,0 +1,74 @@
+[
+  {
+    "product": "La Maison d'Armorine 솔티드 카라멜",
+    "details": "에어프랑스 기내용으로 알려진 부드러운 단짠 카라멜",
+    "price": "200g €7.90",
+    "shaded": false
+  },
+  {
+    "product": "Angelina 밤 잼",
+    "details": "1903년 파리에서 시작한 전통 티룸의 밤 크림. 부드러운 질감 + 예쁜 튜브 패키지, Gourmet관 지하 1층",
+    "price": "80g €4.60",
+    "shaded": false
+  },
+  {
+    "product": "Clément Faugier 밤 잼",
+    "details": "튜브형 Crème de Marrons. 바게트, 크레페, 요거트에 곁들이기 좋고 현지 구매 메리트가 있는 제품",
+    "price": "제품별 상이",
+    "shaded": false
+  },
+  {
+    "product": "La Mère Poulard 쿠키",
+    "details": "몽생미셸 전통 레시피의 비스킷. 틴케이스는 선물용으로 좋고, 초록색 사과 카라멜 맛도 확인",
+    "price": "125g €3.10~",
+    "shaded": false
+  },
+  {
+    "product": "Confiture Parisienne 잼",
+    "details": "백화점 식품관용 프리미엄 수제잼",
+    "price": "100g €6.10~6.90",
+    "shaded": false
+  },
+  {
+    "product": "Les Abeilles de Malescot 트러플 꿀",
+    "details": "피자, 샌드위치에 곁들이기 좋은 트러플 꿀",
+    "price": "250g €6.50",
+    "shaded": false
+  },
+  {
+    "product": "A L’Olivier 트러플 오일",
+    "details": "틴케이스, 파스타, 샐러드에 몇 방울",
+    "price": "블랙 €11.90 / 화이트 €14.50",
+    "shaded": false
+  },
+  {
+    "product": "Artisan de la Truffe 트러플 소금",
+    "details": "트러플 소금뿐 아니라 오일, 과자, 선물 세트도 함께 확인. Gourmet관 지하 1층",
+    "price": "€9.50",
+    "shaded": false
+  },
+  {
+    "product": "Bordier Butter",
+    "details": "브르타뉴산 고급 원유 버터. 해조류, 고추, 와인 등 다양한 풍미 버전이 있고 한국 반입용은 구매 시 진공 포장 확인",
+    "price": "제품별 상이",
+    "shaded": false
+  },
+  {
+    "product": "Edmond Fallot 머스타드",
+    "details": "1840년 전통 디종 머스타드, 저렴한 선물",
+    "price": "€3.25",
+    "shaded": false
+  },
+  {
+    "product": "SÒSU 트러플 마요네즈",
+    "details": "실제 여름 트러플 조각, 감튀, 버거용",
+    "price": "140g €8.50",
+    "shaded": false
+  },
+  {
+    "product": "Jellycat 인형",
+    "details": "5층 쿠폴관에서 확인. 프랑스 기념품으로 크루아상 모양 Jellycat이 특히 유명",
+    "price": "제품별 상이",
+    "shaded": false
+  }
+]
