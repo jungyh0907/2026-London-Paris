@@ -7,9 +7,11 @@
   // Allow standard CMS Markdown files with YAML frontmatter.
   function normalize(source){return source.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/,'').replace(/^\t+/gm,'')}
   function strong(source){return source.replace(/\*\*([^\n]*?)\*\*/g,'<strong>$1</strong>')}
+  // Treat tilde (~) in time ranges as text, not a GFM strikethrough delimiter.
+  function escapeTildes(source){return source.replace(/\\?~/g,match=>match==='\\~'?match:'\\~')}
   function inline(source){return marked.parseInline(strong(source)).trim()}
   function md(source){
-    let clean=normalize(source);
+    let clean=escapeTildes(normalize(source));
     // The CSV table renderer uses Markdown emphasis and links inside each cell.
     // Render the cell's inline emphasis and links instead of exposing markers.
     clean=clean.replace(/<(td|th)([^>]*)>([\s\S]*?)<\/\1>/gi,(_,tag,attrs,body)=>'<'+tag+attrs+'>'+inline(body)+'</'+tag+'>');
