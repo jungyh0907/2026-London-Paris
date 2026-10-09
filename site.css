@@ -140,3 +140,16 @@ body[data-document="trip"] .fold-toggle-bottom{padding:13px 17px}
   body[data-document="trip"] #document-content td::before,
   body[data-document="trip"] #document-content th::before{display:none;content:none}
 }
+
+/* Keep itinerary table cells on a single line at every viewport size. */
+body[data-document="trip"] #document-content table{
+  width:max-content;min-width:100%;table-layout:auto
+}
+body[data-document="trip"] #document-content td,
+body[data-document="trip"] #document-content th{
+  white-space:nowrap;word-break:keep-all;overflow-wrap:normal
+}
+body[data-document="trip"] .fold:not(.expanded) .fold-content .table-scroll{
+  display:block;max-width:100%;overflow-x:auto;overflow-y:hidden;
+  -webkit-overflow-scrolling:touch
+}
