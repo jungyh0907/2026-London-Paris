@@ -59,6 +59,31 @@
   fetch(file).then(response=>{if(!response.ok)throw new Error('content');return response.text()})
     .then(source=>{
       root.innerHTML=draw(source);
+      if(document.body.dataset.document==='shopping'){
+        let quickIndex=0;
+        [...root.querySelectorAll('h1,h2,h3,h4,h5,h6')].forEach(heading=>{
+          if(heading.textContent.trim()!=='한눈에 보는 쇼핑 리스트')return;
+          let sibling=heading.nextElementSibling;
+          while(sibling&&!sibling.matches('table')&&!/^H[1-6]$/.test(sibling.tagName)){
+            const nested=sibling.querySelector?.('table');
+            if(nested){sibling=nested;break}
+            sibling=sibling.nextElementSibling
+          }
+          if(!sibling?.matches('table'))return;
+          const table=sibling,id='quick-list-'+quickIndex++,fold=document.createElement('section');
+          fold.className='fold quick-list-fold';
+          const title=document.createElement('div');title.className='fold-title';
+          const headingWrap=document.createElement('div');headingWrap.className='fold-heading';headingWrap.append(heading);
+          const top=document.createElement('button');top.className='fold-toggle fold-toggle-top';top.type='button';
+          top.setAttribute('aria-expanded','false');top.setAttribute('aria-controls',id);top.textContent='펼쳐보기';
+          title.append(headingWrap,top);
+          const content=document.createElement('div');content.className='fold-content';content.id=id;content.append(table);
+          const bottom=document.createElement('button');bottom.className='fold-toggle fold-toggle-bottom';bottom.type='button';
+          bottom.setAttribute('aria-expanded','false');bottom.setAttribute('aria-controls',id);bottom.textContent='전체 내용 펼쳐보기';
+          heading.parentNode.insertBefore(fold,heading);
+          fold.append(title,content,bottom)
+        })
+      }
       root.querySelectorAll('table').forEach(table=>{
         const rows=[...table.rows],labels=rows[0]?[...rows[0].cells].map(cell=>cell.textContent.trim()):[];
         rows[0]?.classList.add('table-label-row');
