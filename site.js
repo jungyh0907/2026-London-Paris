@@ -4,16 +4,22 @@
   marked.setOptions({gfm:true});
   const file=document.body.dataset.document==='shopping'?'shopping-list.md':'trip.md';
 
-  // Notion's Markdown export prefixes nested blocks with tabs. Strip only these
+  // Notion's Markdown export prefixes nested blocks with tabs. Strip these
   // export indentation markers for rendering; the source Markdown stays intact.
   function normalize(source){return source.replace(/^\t+/gm,'')}
+  function strong(source){return source.replace(/\*\*([^\n]*?)\*\*/g,'<strong>$1</strong>')}
+  function inline(source){return marked.parseInline(strong(source)).trim()}
   function md(source){
-    const clean=normalize(source)
-      .replace(/<callout\b[^>]*>([\s\S]*?)<\/callout>/gi,(_,body)=>'<aside class="callout">'+marked.parseInline(body.trim())+'</aside>')
+    let clean=normalize(source)
+      .replace(/<callout\b[^>]*>([\s\S]*?)<\/callout>/gi,(_,body)=>'<aside class="callout">'+inline(body.trim())+'</aside>')
       .replace(/<empty-block\s*\/>/gi,'<div class="empty-block"></div>\n\n')
-      .replace(/<page url="[^"]+">([^<]*)<\/page>/gi,'<a href="shopping.html">$1</a>')
-      // Keep Markdown headings and rules outside neighboring raw HTML blocks.
-      .replace(/<\/(table|aside|div)>\s*(?=\S)/gi,'</$1>\n\n');
+      .replace(/<page url="[^"]+">([^<]*)<\/page>/gi,'<a href="shopping.html">$1</a>');
+    // Notion exports tables as HTML with Markdown still embedded in each cell.
+    // Render the cell's inline emphasis and links instead of exposing markers.
+    clean=clean.replace(/<(td|th)([^>]*)>([\s\S]*?)<\/\1>/gi,(_,tag,attrs,body)=>'<'+tag+attrs+'>'+inline(body)+'</'+tag+'>');
+    clean=strong(clean);
+    // Keep Markdown headings and rules outside neighboring raw HTML blocks.
+    clean=clean.replace(/<\/(table|aside|div)>\s*(?=\S)/gi,'</$1>\n\n');
     return marked.parse(clean)
   }
   function draw(source){
