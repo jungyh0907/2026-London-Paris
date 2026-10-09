@@ -41,7 +41,7 @@ main{width:min(calc(100% - 32px),960px);margin:auto}
 .fold-title h1,.fold-title h2,.fold-title h3,.fold-title h4,.fold-title h5,.fold-title h6{margin:0;font-size:clamp(20px,3.6vw,23px);line-height:1.45}
 .fold-content{position:relative;max-height:10.2rem;overflow:hidden;padding:8px 17px 16px}
 .fold:not(.expanded) .fold-content::after{content:"";position:absolute;z-index:1;left:0;right:0;bottom:0;height:2.6rem;background:linear-gradient(transparent,#fff);pointer-events:none}
-.fold:not(.expanded) .fold-content .image-open,.fold:not(.expanded) .fold-content .table-scroll{display:none}
+.fold:not(.expanded) .fold-content .image-open{display:none}
 .fold.expanded .fold-content{max-height:none;overflow:visible;border-top:1px solid #edf0eb;padding-top:12px}
 .fold-toggle{display:block;width:100%;padding:13px 17px;border:0;border-top:1px solid #edf0eb;text-align:left;color:#315b49;background:white;font-size:16px;font-weight:700;cursor:pointer}
 .fold-toggle:before{content:'＋';display:inline-grid;place-items:center;width:23px;height:23px;margin-right:9px;border-radius:50%;color:white;background:var(--green)}
@@ -77,3 +77,7 @@ main{width:min(calc(100% - 32px),960px);margin:auto}
   .fold-toggle{padding:13px 14px;font-size:16px}
   #document-content img{max-height:360px}
 }
+
+.fold:not(.expanded) .fold-content .table-scroll{display:block;max-width:100%;overflow:hidden}
+.fold:not(.expanded) .fold-content table{width:100%;min-width:0;table-layout:fixed;font-size:15px}
+.fold:not(.expanded) .fold-content td,.fold:not(.expanded) .fold-content th{min-width:0;padding:6px 5px;overflow-wrap:anywhere}
