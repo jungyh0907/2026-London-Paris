@@ -9,7 +9,7 @@
   function strong(source){return source.replace(/\*\*([^\n]*?)\*\*/g,'<strong>$1</strong>')}
   // Treat tilde (~) in time ranges as text, not a GFM strikethrough delimiter.
   function escapeTildes(source){return source.replace(/\\?~/g,match=>match==='\\~'?match:'\\~')}
-  function inline(source){return marked.parseInline(strong(source)).trim()}
+  function inline(source){return marked.parseInline(strong(escapeTildes(source))).trim()}
   function md(source){
     let clean=escapeTildes(normalize(source));
     // The CSV table renderer uses Markdown emphasis and links inside each cell.
@@ -128,6 +128,9 @@
     .then(hydrateDetails)
     .then(source=>{
       root.innerHTML=draw(source);
+      // Undo accidental GFM strike elements while keeping their text and formatting.
+      // Literal time/price ranges such as 13:30~14:30 must remain ordinary text.
+      root.querySelectorAll('del,s,strike').forEach(el=>el.replaceWith(...el.childNodes));
       addLastUpdated();
       if(document.body.dataset.document==='trip'){
         [...root.querySelectorAll('h1,h2,h3,h4,h5,h6')].forEach(heading=>{
