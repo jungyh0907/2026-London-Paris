@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap');
-:root{--ink:#202925;--muted:#66736b;--paper:#f6f5f0;--card:#fffefa;--line:#e5e5dc;--green:#355c4b;--soft:#edf3ee;--gold:#b98143;font-family:'DM Sans','Noto Sans KR',sans-serif}
+:root{--ink:#1e2d3c;--muted:#5d7184;--paper:#f2f6fa;--card:#fcfdff;--line:#d9e3ec;--green:#315d7c;--soft:#eaf2f8;--gold:#668eae;font-family:'DM Sans','Noto Sans KR',sans-serif}
 *{box-sizing:border-box}
 html{min-width:320px;overflow-x:hidden;background:var(--paper);-webkit-text-size-adjust:100%}
 body{margin:0;overflow-x:hidden;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.78}
-a{color:#315f50}
-header{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;min-height:62px;padding:0 clamp(14px,5vw,54px);background:#fffefaed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+a{color:#315f83}
+header{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;min-height:62px;padding:0 clamp(14px,5vw,54px);background:#fcfdffed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .brand{font-weight:700;text-decoration:none;color:var(--ink)}
 .brand small{margin-left:8px;color:var(--muted);font-size:10px;letter-spacing:.13em}
 nav{display:flex;gap:5px}
-nav a{padding:8px 13px;border-radius:30px;text-decoration:none;font-size:14px;font-weight:600;color:#56645c;white-space:nowrap}
+nav a{padding:8px 13px;border-radius:30px;text-decoration:none;font-size:14px;font-weight:600;color:#526b82;white-space:nowrap}
 nav a.active{color:white;background:var(--green)}
 main{width:min(calc(100% - 32px),960px);margin:auto}
 .hero{padding:clamp(28px,6vw,65px) 0 22px}
@@ -20,30 +20,30 @@ main{width:min(calc(100% - 32px),960px);margin:auto}
 #document-content p{margin:.55em 0 1em}
 #document-content ul,#document-content ol{padding-left:1.45em;margin:.45em 0 1em}
 #document-content li{padding-left:.12em;margin:.22em 0}
-#document-content h1,#document-content h2,#document-content h3,#document-content h4,#document-content h5,#document-content h6{color:#273c32;line-height:1.42;word-break:keep-all;overflow-wrap:anywhere}
+#document-content h1,#document-content h2,#document-content h3,#document-content h4,#document-content h5,#document-content h6{color:#29435c;line-height:1.42;word-break:keep-all;overflow-wrap:anywhere}
 #document-content h1{font-size:clamp(25px,4vw,35px);margin:.65em 0 .45em}
 #document-content h2{font-size:clamp(22px,3.5vw,28px);margin:.75em 0 .45em}
 #document-content h3{font-size:clamp(20px,3vw,23px);margin:.8em 0 .45em}
 #document-content h4,#document-content h5,#document-content h6{font-size:18px;margin:.8em 0 .4em}
-#document-content strong{font-weight:700;color:#202b25}
+#document-content strong{font-weight:700;color:#1f3348}
 #document-content pre{max-width:100%;white-space:pre-wrap;overflow-wrap:anywhere}
 #document-content code{overflow-wrap:anywhere}
 #document-content table{width:100%;border-collapse:collapse;margin:14px 0 22px;font-size:15px;line-height:1.7}
 #document-content td,#document-content th{border:1px solid var(--line);padding:9px 11px;vertical-align:top;text-align:left}
-#document-content tr[color="gray_bg"] td{background:#f8f8f4}
+#document-content tr[color="gray_bg"] td{background:#f4f8fb}
 .table-scroll{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:14px 0 22px}
 #document-content img{display:block;width:auto;max-width:min(100%,560px);max-height:440px;height:auto;object-fit:contain;margin:16px auto;border-radius:12px}
 .image-open{display:block;max-width:100%;margin:16px auto;padding:0;border:0;background:none;cursor:zoom-in}
 .image-open img{margin:0}
-#document-content blockquote,#document-content .callout{margin:18px 0;padding:14px 18px;border-left:4px solid #99b39f;border-radius:8px;background:var(--soft)}
-.fold{margin:18px 0;border:1px solid #e1e7df;border-radius:15px;overflow:hidden;background:white}
-.fold-title{padding:15px 17px 11px;background:linear-gradient(100deg,#f1f5f0,#fbfaf6)}
+#document-content blockquote,#document-content .callout{margin:18px 0;padding:14px 18px;border-left:4px solid #86acc9;border-radius:8px;background:var(--soft)}
+.fold{margin:18px 0;border:1px solid #d2e0eb;border-radius:15px;overflow:hidden;background:white}
+.fold-title{padding:15px 17px 11px;background:linear-gradient(100deg,#dceaf5,#eaf2f8)}
 .fold-title h1,.fold-title h2,.fold-title h3,.fold-title h4,.fold-title h5,.fold-title h6{margin:0;font-size:clamp(20px,3.6vw,23px);line-height:1.45}
 .fold-content{position:relative;max-height:17rem;overflow:hidden;padding:8px 17px 16px}
 .fold:not(.expanded) .fold-content::after{content:"";position:absolute;z-index:1;left:0;right:0;bottom:0;height:1.35rem;background:linear-gradient(transparent,#fff);pointer-events:none}
 .fold:not(.expanded) .fold-content .image-open{display:none}
-.fold.expanded .fold-content{max-height:none;overflow:visible;border-top:1px solid #edf0eb;padding-top:12px}
-.fold-toggle{display:block;width:100%;padding:13px 17px;border:0;border-top:1px solid #edf0eb;text-align:left;color:#315b49;background:white;font-size:16px;font-weight:700;cursor:pointer}
+.fold.expanded .fold-content{max-height:none;overflow:visible;border-top:1px solid #e1eaf1;padding-top:12px}
+.fold-toggle{display:block;width:100%;padding:13px 17px;border:0;border-top:1px solid #e1eaf1;text-align:left;color:#315d7c;background:white;font-size:16px;font-weight:700;cursor:pointer}
 .fold-toggle:before{content:'＋';display:inline-grid;place-items:center;width:23px;height:23px;margin-right:9px;border-radius:50%;color:white;background:var(--green)}
 .fold-toggle[aria-expanded="true"]:before{content:'−'}
 .empty-block{height:14px}
@@ -99,8 +99,8 @@ main{width:min(calc(100% - 32px),960px);margin:auto}
 .fold-heading{flex:1;min-width:0}
 .fold-toggle-top{
   display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;width:auto;
-  margin:0;padding:8px 12px;border:1px solid #d7e3d9;border-radius:999px;
-  background:#fffefa;color:#315b49;font-size:14px;line-height:1.25;font-weight:700;
+  margin:0;padding:8px 12px;border:1px solid #c6d9e8;border-radius:999px;
+  background:#fcfdff;color:#315d7c;font-size:14px;line-height:1.25;font-weight:700;
   white-space:nowrap
 }
 .fold-toggle-top:before{width:18px;height:18px;margin-right:6px;font-size:13px}
