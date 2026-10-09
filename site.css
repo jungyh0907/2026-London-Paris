@@ -93,68 +93,8 @@ main{width:min(calc(100% - 32px),960px);margin:auto}
   #document-content td::before,#document-content th::before{content:attr(data-label);font-size:13px;color:var(--muted);font-weight:700;line-height:1.6}
 }
 
-/* Trip itinerary tables stay as real rows on narrow screens. Scroll the table
-   within its own viewport so one itinerary row never breaks into stacked cells. */
-body[data-document="trip"] .fold-title{display:flex;align-items:center;justify-content:space-between;gap:12px}
-body[data-document="trip"] .fold-heading{flex:1;min-width:0}
-body[data-document="trip"] .fold-toggle-top{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;width:auto;margin:0;padding:8px 12px;border:1px solid #d7e3d9;border-radius:999px;background:#fffefa;color:#315b49;font-size:14px;line-height:1.25;white-space:nowrap}
-body[data-document="trip"] .fold-toggle-top:before{width:18px;height:18px;margin-right:6px;font-size:13px}
-body[data-document="trip"] .fold-toggle-bottom{padding:13px 17px}
 
-@media(max-width:640px){
-  body[data-document="trip"] main{width:calc(100% - 8px)}
-  body[data-document="trip"] #document-content{padding:12px 6px;border-radius:15px}
-  body[data-document="trip"] .fold{margin:14px 0;border-radius:13px}
-  body[data-document="trip"] .fold-title{gap:6px;padding:12px 9px}
-  body[data-document="trip"] .fold-title h1,
-  body[data-document="trip"] .fold-title h2,
-  body[data-document="trip"] .fold-title h3,
-  body[data-document="trip"] .fold-title h4,
-  body[data-document="trip"] .fold-title h5,
-  body[data-document="trip"] .fold-title h6{font-size:20px}
-  body[data-document="trip"] .fold-toggle-top{padding:8px 9px;font-size:13px}
-  body[data-document="trip"] .fold-toggle-top:before{width:17px;height:17px;margin-right:5px}
-  body[data-document="trip"] .fold-content{padding:8px 9px 16px}
-  body[data-document="trip"] .fold.expanded .fold-content{padding:10px 9px 16px}
-  body[data-document="trip"] .fold-toggle-bottom{padding:12px 10px;font-size:15px}
-
-  body[data-document="trip"] .table-scroll,
-  body[data-document="trip"] .fold:not(.expanded) .fold-content .table-scroll{
-    display:block;width:100%;max-width:100%;overflow-x:auto;overflow-y:hidden;
-    -webkit-overflow-scrolling:touch;overscroll-behavior-inline:contain
-  }
-  body[data-document="trip"] #document-content table{
-    display:table;width:max-content;min-width:100%;table-layout:auto;
-    border-collapse:collapse;font-size:15px
-  }
-  body[data-document="trip"] #document-content tbody{display:table-row-group}
-  body[data-document="trip"] #document-content tr{
-    display:table-row;margin:0;border:0;border-radius:0;background:transparent;overflow:visible
-  }
-  body[data-document="trip"] #document-content tr.table-label-row{display:table-row}
-  body[data-document="trip"] #document-content td,
-  body[data-document="trip"] #document-content th{
-    display:table-cell;min-width:0;padding:7px 9px;border:1px solid var(--line);
-    white-space:nowrap;word-break:keep-all;overflow-wrap:normal
-  }
-  body[data-document="trip"] #document-content td::before,
-  body[data-document="trip"] #document-content th::before{display:none;content:none}
-}
-
-/* Keep itinerary table cells on a single line at every viewport size. */
-body[data-document="trip"] #document-content table{
-  width:max-content;min-width:100%;table-layout:auto
-}
-body[data-document="trip"] #document-content td,
-body[data-document="trip"] #document-content th{
-  white-space:nowrap;word-break:keep-all;overflow-wrap:normal
-}
-body[data-document="trip"] .fold:not(.expanded) .fold-content .table-scroll{
-  display:block;max-width:100%;overflow-x:auto;overflow-y:hidden;
-  -webkit-overflow-scrolling:touch
-}
-
-/* Keep the section preview action beside its heading on both pages. */
+/* Section controls remain beside headings on both pages. */
 .fold-title{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .fold-heading{flex:1;min-width:0}
 .fold-toggle-top{
@@ -164,16 +104,36 @@ body[data-document="trip"] .fold:not(.expanded) .fold-content .table-scroll{
   white-space:nowrap
 }
 .fold-toggle-top:before{width:18px;height:18px;margin-right:6px;font-size:13px}
+
 @media(max-width:640px){
   .fold-title{gap:6px;padding:12px 9px}
   .fold-toggle-top{padding:8px 9px;font-size:13px}
   .fold-toggle-top:before{width:17px;height:17px;margin-right:5px}
+  body[data-document="trip"] main{width:calc(100% - 8px)}
+  body[data-document="trip"] #document-content{padding:12px 6px;border-radius:15px}
+  body[data-document="trip"] .fold{margin:14px 0;border-radius:13px}
+  body[data-document="trip"] .fold-title h1,
+  body[data-document="trip"] .fold-title h2,
+  body[data-document="trip"] .fold-title h3,
+  body[data-document="trip"] .fold-title h4,
+  body[data-document="trip"] .fold-title h5,
+  body[data-document="trip"] .fold-title h6{font-size:20px}
+  body[data-document="trip"] .fold-content{padding:8px 9px 16px}
+  body[data-document="trip"] .fold.expanded .fold-content{padding:10px 9px 16px}
+  body[data-document="trip"] .fold-toggle-bottom{padding:12px 10px;font-size:15px}
 }
 
-/* Itinerary columns stay side by side; text wraps inside each cell. */
-body[data-document="trip"] #document-content table.itinerary-table{
-  display:table;width:100%;min-width:100%;max-width:100%;table-layout:fixed
+/* Itinerary tables fit the viewport. Cells stay in the same row and text wraps inside them. */
+body[data-document="trip"] #document-content .table-scroll.itinerary-scroll{
+  display:block;width:100%;max-width:100%;overflow-x:hidden;overflow-y:visible
 }
+body[data-document="trip"] #document-content table.itinerary-table{
+  display:table;width:100%;min-width:0;max-width:100%;table-layout:fixed;
+  border-collapse:collapse;box-sizing:border-box
+}
+body[data-document="trip"] #document-content table.itinerary-table tbody{display:table-row-group}
+body[data-document="trip"] #document-content table.itinerary-table tr{display:table-row}
+body[data-document="trip"] #document-content table.itinerary-table tr.table-label-row{display:table-row}
 body[data-document="trip"] #document-content table.itinerary-table th:nth-child(1),
 body[data-document="trip"] #document-content table.itinerary-table td:nth-child(1){width:27%}
 body[data-document="trip"] #document-content table.itinerary-table th:nth-child(2),
@@ -182,29 +142,12 @@ body[data-document="trip"] #document-content table.itinerary-table th:nth-child(
 body[data-document="trip"] #document-content table.itinerary-table td:nth-child(3){width:38%}
 body[data-document="trip"] #document-content table.itinerary-table td,
 body[data-document="trip"] #document-content table.itinerary-table th{
-  white-space:normal;word-break:normal;overflow-wrap:anywhere
+  display:table-cell;min-width:0;padding:7px 8px;border:1px solid var(--line);
+  white-space:normal;word-break:normal;overflow-wrap:anywhere;box-sizing:border-box
 }
-body[data-document="trip"] .table-scroll,
-body[data-document="trip"] .fold:not(.expanded) .fold-content .table-scroll{
-  width:100%;max-width:100%;overflow-x:auto;overflow-y:hidden
-}
+body[data-document="trip"] #document-content table.itinerary-table td::before,
+body[data-document="trip"] #document-content table.itinerary-table th::before{display:none;content:none}
 @media(max-width:640px){
   body[data-document="trip"] #document-content table.itinerary-table td,
   body[data-document="trip"] #document-content table.itinerary-table th{padding:7px 5px}
 }
-
-/* Fit each itinerary table to the viewport; keep all three cells in the same row. */
-body[data-document="trip"] #document-content .table-scroll{
-  width:100%;max-width:100%;overflow-x:hidden;overflow-y:visible
-}
-body[data-document="trip"] #document-content table.itinerary-table{
-  display:table;width:100%;min-width:0;max-width:100%;table-layout:fixed;box-sizing:border-box
-}
-body[data-document="trip"] #document-content table.itinerary-table td,
-body[data-document="trip"] #document-content table.itinerary-table th{
-  display:table-cell;min-width:0;white-space:normal;word-break:normal;
-  overflow-wrap:anywhere;box-sizing:border-box
-}
-body[data-document="trip"] #document-content table.itinerary-table tr{display:table-row}
-body[data-document="trip"] #document-content table.itinerary-table td:first-child br,
-body[data-document="trip"] #document-content table.itinerary-table th:first-child br{display:block}
