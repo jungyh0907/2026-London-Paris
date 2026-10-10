@@ -12,31 +12,19 @@
     "shaded": false
   },
   {
-    "time": "11:00~\n12:00",
+    "time": "11:00~\n12:30",
     "activity": "**몽마르트**\n(사크레쾨르 대성당 → 테르트르 광장 → 사랑해벽)",
     "transport": "🚗 10:30 숙소 → 사크레쾨르 대성당\n🚶 구역 내\n사크레쾨르 대성당은 줄이 짧을 경우 내부 잠깐 구경",
     "shaded": false
   },
   {
-    "time": "12:30~\n13:00",
-    "activity": "**생트샤펠 외관**",
-    "transport": "🚗 12:00 사랑해벽 → 생트샤펠",
-    "shaded": false
-  },
-  {
-    "time": "13:00~\n13:30",
-    "activity": "**노트르담 대성당 외관**",
-    "transport": "🚶 생트샤펠 → 노트르담",
-    "shaded": false
-  },
-  {
-    "time": "14:00~\n15:00",
+    "time": "13:00~\n14:00",
     "activity": "**점심**",
-    "transport": "🚗 13:30 노트르담 → 숙소 근처",
+    "transport": "🚗 12:30 몽마르트르 사랑해벽 → 숙소 근처 (택시/차량 약 20~30분)",
     "shaded": true
   },
   {
-    "time": "15:00~\n16:30",
+    "time": "14:00~\n16:30",
     "activity": "짐 찾기, 출국 준비",
     "transport": "호텔",
     "shaded": false
