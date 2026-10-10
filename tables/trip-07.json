@@ -24,21 +24,33 @@
     "shaded": true
   },
   {
-    "time": "16:00~\n18:30",
-    "activity": "**갤러리 라파예트 오스만 백화점** (Galeries Lafayette Haussmann)\n**프랭땅 오스만 백화점** (Printemps Haussmann)",
-    "transport": "🚗 15:30 Le Procope → 갤러리 라파예트\n🚶 갤러리 라파예트 → 프랭땅",
+    "time": "15:30~\n16:00",
+    "activity": "**생트샤펠 외관, 노트르담 대성당 외관**",
+    "transport": "🚶 15:30 Le Procope → 생트샤펠 (약 7~10분)\n🚶 생트샤펠 → 노트르담 (약 5분)\n외관만 짧게 관람",
+    "shaded": false
+  },
+  {
+    "time": "16:30~\n18:00",
+    "activity": "**갤러리 라파예트 오스만 백화점** (Galeries Lafayette Haussmann)",
+    "transport": "🚗 16:00 노트르담 대성당 인근 → 갤러리 라파예트 (택시/차량 약 20~30분, 교통상황에 따라 변동)",
+    "shaded": false
+  },
+  {
+    "time": "18:00~\n18:45",
+    "activity": "**프랭땅 오스만 백화점** (Printemps Haussmann)",
+    "transport": "🚶 갤러리 라파예트 → 프랭땅",
     "shaded": false
   },
   {
     "time": "19:00~\n20:00",
     "activity": "**밴돔 광장, Rue Saint-Honoré / Faubourg Saint-Honoré 크리스마스 야경**",
-    "transport": "🚶 프랭땅 → Place Vendôme\n🚶 구역 내",
+    "transport": "🚶 18:45 프랭땅 → Place Vendôme (약 10~15분)\n🚶 구역 내",
     "shaded": false
   },
   {
     "time": "20:30~\n21:30",
     "activity": "**저녁\n한식 **(숙소 근처 한식집 선택)",
-    "transport": "귀가",
+    "transport": "🚗 20:00 Rue Saint-Honoré 인근 → 숙소 근처 (택시/차량 약 20~30분)",
     "shaded": true
   }
 ]
