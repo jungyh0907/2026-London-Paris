@@ -1,7 +1,6 @@
 ---
 title: 쇼핑리스트
 ---
-
 # 1. 런던 Harrods 백화점
 
 ## 한눈에 보는 쇼핑 리스트
@@ -215,6 +214,7 @@ Harrods 로고와 백화점, 런던 디자인이 들어간 틴케이스 제품�
 ### Harrods Heritage Tea and Biscuits Gift Set
 
 두 번째 블로그가 추천한 **홍차 + 비스킷 결합 틴 세트**. Harrods 공식 설명에서도 'Food Halls의 완벽한 souvenir'로 소개되는 제품으로, Georgian Blend 티백과 초콜릿 청크 비스킷이 함께 들어 있음.
+
 - **현재 공식 온라인 기준 품절 상태**
 - 11월 방문 시 현장 재고는 다시 확인 필요
 
@@ -304,6 +304,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ## 코벤트가든
 
 **Covent Garden**
+
 - **성격:** 패션, 뷰티, 향수, 라이프스타일 브랜드와 독립 부티크가 섞인 쇼핑 지역
 - **뷰티, 향수:** CHANEL Fragrance & Beauty, Dior Beauty, Aesop, Diptyque, BYREDO, Creed, Jo Malone London, Le Labo, Penhaligon's, Glossier, Charlotte Tilbury, NARS
 - **패션, 액세서리:** Mulberry, Paul Smith, Barbour, Hackett, Polo Ralph Lauren, A.P.C., AllSaints, GANNI 등
@@ -347,6 +348,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ## 카나비 스트리트
 
 **Carnaby Street**
+
 - **성격:** 대형 럭셔리보다 스트리트, 캐주얼, 독립 부티크, 컨셉스토어 비중이 높은 쇼핑 구역
 - **대표 브랜드:** adidas Originals, Vans, Dr. Martens, Levi's, The North Face, Ray-Ban, END., GANNI, Puma, Timberland 등
 - **쇼핑 포인트:** Harrods, Regent Street보다 젊고 캐주얼한 브랜드를 보기 좋고, 골목형이라 짧게 훑기 쉬움
@@ -548,6 +550,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ### 활용법
 
 요리를 복잡하게 하지 않아도 마지막에 조금만 뿌리면 풍미를 올릴 수 있어 블로그에서는 **“요리 치트키”** 아이템으로 소개.
+
 - 파스타
 - 샐러드
 - 짜파게티 같은 간단한 면 요리
@@ -560,6 +563,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ### 구매할 때 주의
 
 패키지가 비슷하므로 캔 색상만 보고 고르면 안 됨.
+
 - 🖤 **Truffe Noire = 블랙 트러플**
 - 🤍 **Truffe Blanche = 화이트 트러플**
 특히 **흰색 패키지라고 무조건 화이트 트러플이 아님.**  
@@ -568,6 +572,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ### 가격
 
 **블랙 트러플**
+
 - 150ml €11.90
 - 블로그 방문 당시 봉마르셰에서는 미발견
 **화이트 트러플**
@@ -654,6 +659,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ### 종류
 
 홀그레인 머스타드도 한 종류만 있는 것이 아니라 여러 풍미가 있음.
+
 - 카시스
 - 호두
 - 허브 등
@@ -676,6 +682,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ### 가격
 
 **홀그레인 200g**
+
 - Galeries Lafayette €3.25
 - Le Bon Marché €3.15
 **튜브형**
@@ -804,6 +811,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ## 방돔 광장
 
 **Place Vendôme**
+
 - **성격:** 패션 쇼핑보다는 **하이주얼리, 럭셔리 워치** 중심
 - **대표 메종:** Cartier, Van Cleef & Arpels, Boucheron, Chaumet, Bulgari, Dior Joaillerie, Chanel Fine Jewellery, Jaeger-LeCoultre, Louis Vuitton Jewellery
 - **볼 포인트:** 실제 구매 목적이 없어도 쇼윈도 자체가 볼거리. 주얼리, 시계에 관심 있으면 파리에서 가장 밀도가 높은 구역
@@ -840,9 +848,9 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ![](https://lh3.googleusercontent.com/d/1Ippu1jfOlPwwL5oTRU43TKsB33drkpuf=w560-h420)
 
 - **주소:** 3 Cours de la Garonne, 77700 Serris, France
-- **영업시간:** 일반적으로 10:00~20:00 (방문일 확정 후 재확인)
-- 파리 동쪽의 야외형 명품 아울렛. 여러 브랜드를 한곳에서 비교하고 쇼핑하기 좋음
-- **방문:** 토요일 5시간 쇼핑 검토 (점심 포함)
+- **영업시간:** 10:00~20:00
+- 파리 동쪽의 야외형 명품 아울렛
+- **방문:** 토요일 5시간 (점심 포함)
 - [라발레빌리지 공식 홈페이지](https://www.thebicestercollection.com/la-vallee-village/ko/)
 - [매장 지도](https://www.thebicestercollection.com/la-vallee-village/fr/map/)
 
@@ -850,7 +858,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 
 # 3-2. 브랜드
 
-## 한국인 여행객 관심 브랜드
+## 관심 브랜드
 
 ![](https://lh3.googleusercontent.com/d/1AqOwluu-XbNis-6ukn1neP5P9cK52yJx=w560-h420)
 
@@ -858,13 +866,13 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 
 **몽클레르, 버버리, 구찌, 프라다, 미우미우, 막스마라, 롱샴, 폴로 랄프로렌, 코치, 토리버치**
 
-## 그 외 제공된 네이버 블로그 언급 브랜드
+## 그 외 브랜드
 
 발망, 어그, 라코스테, 클라랑스, 돌체앤가바나, 펜디, 마이클 코어스, 마쥬, 스톤아일랜드, 지미추, 지방시, 레페토, 마크 제이콥스, 토즈, 페라가모, 끌로에, 노스페이스, 버켄스탁, 발렌시아가, 쌤소나이트, 룰루레몬, 디젤, 알렉산더 맥퀸, 아르마니, 리바이스, 타미 힐피거, 베르사체, 까웨이, 산드로, 팀버랜드, 자크뮈스
 
 ---
 
-# 3-3. 대한항공 마일리지·택스리펀
+# 3-3. 대한항공 마일리지, 택스리펀
 
 - **대한항공 SKYPASS:** 당일 총 €300 이상 구매 시 **€1당 1마일**
 - **적립 예시:** €300 구매 → 300마일 / €500 → 500마일 / €1,000 → 1,000마일
@@ -873,13 +881,9 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 
 ---
 
-# 3-4. 식사·쇼핑 순서
+# 3-4. 식사
 
-- **점심:** 빌리지 내부 프레타망제·라뒤레·카페 라페루즈 또는 발드유럽 쇼핑몰 푸드코트
-- **10:00~11:00:** 몽클레르
-- **11:00~12:00:** 버버리
-- **12:00~12:30:** 구찌·프라다·미우미우 중 선택
-- **12:30~13:00:** 점심
-- **13:00~15:00:** 나머지 관심 브랜드 쇼핑 및 마무리
+- **점심:** 빌리지 내부 프레타망제, 라뒤레, 카페 라페루즈 또는 발드유럽 쇼핑몰 푸드코트
 
 ---
+
