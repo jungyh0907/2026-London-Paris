@@ -18,33 +18,45 @@
     "shaded": false
   },
   {
-    "time": "14:00~\n15:30",
-    "activity": "**점심**\n**전통 프렌치 달팽이 에스카르고** (르 프로코프, Le Procope)",
-    "transport": "🚶 12:00 카트 반납 → Versailles Château–Rive Gauche\n🚆 RER C → Saint-Michel–Notre-Dame\n🚶 Le Procope",
-    "shaded": true
-  },
-  {
-    "time": "15:30~\n16:00",
+    "time": "13:00~\n13:30",
     "activity": "**생트샤펠 외관, 노트르담 대성당 외관**",
-    "transport": "🚶 15:30 Le Procope → 생트샤펠 (약 7~10분)\n🚶 생트샤펠 → 노트르담 (약 5분)\n외관만 짧게 관람",
+    "transport": "🚶 12:00 카트 반납 → Versailles Château–Rive Gauche\n🚆 RER C → Saint-Michel–Notre-Dame\n🚶 생트샤펠 → 노트르담, 외관만 짧게 관람",
     "shaded": false
   },
   {
-    "time": "16:30~\n18:30",
-    "activity": "**갤러리 라파예트 오스만 백화점** (Galeries Lafayette Haussmann)\n**프랭땅 오스만 백화점** (Printemps Haussmann)",
-    "transport": "🚗 16:00 노트르담 대성당 인근 → 갤러리 라파예트 (택시/차량 약 20~30분, 교통상황에 따라 변동)\n🚶 갤러리 라파예트 → 프랭땅",
+    "time": "14:00~\n15:30",
+    "activity": "**점심**\n**전통 프렌치 달팽이 에스카르고** (르 프로코프, Le Procope)",
+    "transport": "🚶 13:30 노트르담 대성당 → Le Procope (약 10~15분)",
+    "shaded": true
+  },
+  {
+    "time": "16:00~\n17:30",
+    "activity": "**샤넬 본점, 에르메스 본점**\n(CHANEL 31 Cambon, Hermès Faubourg Saint-Honoré)",
+    "transport": "🚗 15:30 Le Procope → CHANEL 31 Cambon (약 15~25분)\n🚶 CHANEL 31 Cambon → Hermès Faubourg Saint-Honoré (약 10~15분)",
+    "shaded": false
+  },
+  {
+    "time": "18:00~\n19:00",
+    "activity": "**프랭땅 오스만 백화점** (Printemps Haussmann)",
+    "transport": "🚶 17:30 Hermès Faubourg Saint-Honoré → Printemps Haussmann (약 15~20분)",
     "shaded": false
   },
   {
     "time": "19:00~\n20:00",
-    "activity": "**밴돔 광장, Rue Saint-Honoré / Faubourg Saint-Honoré 크리스마스 야경**",
-    "transport": "🚶 18:30 프랭땅 → Place Vendôme (약 10~15분)\n🚶 구역 내",
+    "activity": "**갤러리 라파예트 오스만 백화점** (Galeries Lafayette Haussmann)",
+    "transport": "🚶 Printemps Haussmann → Galeries Lafayette Haussmann (약 3~5분)",
     "shaded": false
   },
   {
-    "time": "20:30~\n21:30",
+    "time": "20:00~\n21:00",
+    "activity": "**밴돔 광장, Rue Saint-Honoré / Faubourg Saint-Honoré 크리스마스 야경**",
+    "transport": "🚶 20:00 갤러리 라파예트 → Place Vendôme (약 10~15분)\n🚶 구역 내",
+    "shaded": false
+  },
+  {
+    "time": "21:30~\n22:30",
     "activity": "**저녁\n한식 **(숙소 근처 한식집 선택)",
-    "transport": "🚗 20:00 Rue Saint-Honoré 인근 → 숙소 근처 (택시/차량 약 20~30분)",
+    "transport": "🚗 21:00 Rue Saint-Honoré 인근 → 숙소 근처 (택시/차량 약 20~30분)",
     "shaded": true
   }
 ]
