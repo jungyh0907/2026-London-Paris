@@ -8,55 +8,49 @@
   {
     "time": "08:30~\n09:00",
     "activity": "**베르사유** 입장 대기, 보안검색",
-    "transport": "🚶 07:30 숙소 → 라 모트 피케–그르넬역\n🚇 메트로 10호선 → Javel–André Citroën\n🚶 Javel역 환승\n🚆 RER C → Versailles Château–Rive Gauche\n🚶 베르사유 궁전\n08:30 전후 도착",
+    "transport": "🚇 07:30 숙소 출발 → Javel → RER C Versailles Château–Rive Gauche → 궁전",
     "shaded": false
   },
   {
-    "time": "09:00~\n12:00",
-    "activity": "**베르사유 궁전, 거울의 방, 전동 카트**\n(정원, 대운하, 그랑 트리아농, 프티 트리아농)",
-    "transport": "🚗 궁전 관람 후 전동 카트 대여",
+    "time": "09:00~\n10:30",
+    "activity": "**베르사유 궁전, 거울의 방**",
+    "transport": "🚶 궁전 내부",
     "shaded": false
   },
   {
-    "time": "13:00~\n13:30",
-    "activity": "**생트샤펠 외관, 노트르담 대성당 외관**",
-    "transport": "🚶 12:00 카트 반납 → Versailles Château–Rive Gauche\n🚆 RER C → Saint-Michel–Notre-Dame\n🚶 생트샤펠 → 노트르담, 외관만 짧게 관람",
+    "time": "10:30~\n12:00",
+    "activity": "**베르사유 정원·전동 카트**\n(정원, 대운하, 그랑 트리아농, 프티 트리아농)",
+    "transport": "🚗 궁전 관람 후 전동 카트",
     "shaded": false
   },
   {
-    "time": "14:00~\n15:30",
-    "activity": "**점심**\n**전통 프렌치 달팽이 에스카르고** (르 프로코프, Le Procope)",
-    "transport": "🚶 13:30 노트르담 대성당 → Le Procope (약 10~15분)",
+    "time": "13:00~\n15:30",
+    "activity": "**점심·휴식**",
+    "transport": "🚆 12:00 베르사유 → 파리 시내, 부모님 휴식",
     "shaded": true
   },
   {
-    "time": "16:00~\n17:30",
+    "time": "16:00~\n17:00",
     "activity": "**샤넬 본점, 에르메스 본점**\n(CHANEL 31 Cambon, Hermès Faubourg Saint-Honoré)",
-    "transport": "🚗 15:30 Le Procope → CHANEL 31 Cambon (약 15~25분)\n🚶 CHANEL 31 Cambon → Hermès Faubourg Saint-Honoré (약 10~15분)",
+    "transport": "🚶/🚕 16:00~17:30 중 방문",
     "shaded": false
   },
   {
-    "time": "18:00~\n19:00",
-    "activity": "**프랭땅 오스만 백화점** (Printemps Haussmann)",
-    "transport": "🚶 17:30 Hermès Faubourg Saint-Honoré → Printemps Haussmann (약 15~20분)",
-    "shaded": false
-  },
-  {
-    "time": "19:00~\n20:00",
-    "activity": "**갤러리 라파예트 오스만 백화점** (Galeries Lafayette Haussmann)",
-    "transport": "🚶 Printemps Haussmann → Galeries Lafayette Haussmann (약 3~5분)",
+    "time": "17:30~\n20:00",
+    "activity": "**갤러리 라파예트, 프랭땅 백화점** (Galeries Lafayette Haussmann, Printemps Haussmann)",
+    "transport": "",
     "shaded": false
   },
   {
     "time": "20:00~\n21:00",
     "activity": "**밴돔 광장, Rue Saint-Honoré / Faubourg Saint-Honoré 크리스마스 야경**",
-    "transport": "🚶 20:00 갤러리 라파예트 → Place Vendôme (약 10~15분)\n🚶 구역 내",
+    "transport": "🚶 라파예트 → 방돔 광장",
     "shaded": false
   },
   {
     "time": "21:30~\n22:30",
     "activity": "**저녁\n한식 **(숙소 근처 한식집 선택)",
-    "transport": "🚗 21:00 Rue Saint-Honoré 인근 → 숙소 근처 (택시/차량 약 20~30분)",
+    "transport": "🚕 방돔 광장권 → 숙소 근처",
     "shaded": true
   }
 ]
