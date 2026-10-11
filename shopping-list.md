@@ -845,7 +845,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 - **주소:** 3 Cours de la Garonne, 77700 Serris, France
 - **영업시간:** 일반적으로 10:00~20:00 (방문일 확정 후 재확인)
 - 파리 동쪽의 야외형 명품 아울렛. 여러 브랜드를 한곳에서 비교하고 쇼핑하기 좋음
-- **방문:** 미정, 평일 5시간 쇼핑 검토 (점심 포함)
+- **방문:** 토요일 5시간 쇼핑 검토 (점심 포함)
 - [라발레빌리지 공식 홈페이지](https://www.thebicestercollection.com/la-vallee-village/ko/)
 - [매장 지도](https://www.thebicestercollection.com/la-vallee-village/fr/map/)
 
