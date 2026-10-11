@@ -25,8 +25,9 @@
   function tableHTML(rows,path){
     if(!Array.isArray(rows))throw new Error('Invalid table data');
     const shopping=path.startsWith('tables/shopping-');
-    const keys=shopping?['product','details','price']:['time','activity','transport'];
-    const labels=shopping
+    const valleyTable=path.endsWith('shopping-03.json');
+    const keys=valleyTable?['item','details']:shopping?['product','details','price']:['time','activity','transport'];
+    const labels=valleyTable?['항목','내용']:shopping
       ?['제품','핵심 포인트',path.endsWith('02.json')?'라파예트 가격':'위치 / 현재 공식 가격 예시']
       :['시간','일정','이동'];
     const header='<tr>'+labels.map(text=>'<td>'+text+'</td>').join('')+'</tr>';
@@ -72,9 +73,9 @@
         title==='1) 런던 일정표' ||
         title==='2) 파리 일정표' ||
         /^\d{2}\/\d{2}\b/.test(title) ||
-        title.startsWith('참고: 파리 숙소')
+        (title.startsWith('참고: 파리 숙소') || title==='파리 숙소 근처 한식/중식당')
       );
-    return level===1&&/^[12]-[1-4]\./.test(title)
+    return level===1&&/^[123]-[1-4]\./.test(title)
   }
 
   function draw(source){
@@ -145,8 +146,10 @@
       if(document.body.dataset.document==='shopping'){
         let quickIndex=0;
         [...root.querySelectorAll('h1,h2,h3,h4,h5,h6')].forEach(heading=>{
-          if(!['1. 런던 Harrods 백화점','2. 파리 Lafayette 백화점'].includes(heading.textContent.trim()))return;
+          if(!['1. 런던 Harrods 백화점','2. 파리 Lafayette 백화점','3. 파리 La Vallée Village 아울렛'].includes(heading.textContent.trim()))return;
           let sibling=heading.nextElementSibling;
+          const subtitle=sibling?.matches('h2')&&sibling.textContent.trim()==='한눈에 보는 쇼핑 리스트'?sibling:null;
+          if(subtitle)sibling=subtitle.nextElementSibling;
           while(sibling&&!sibling.matches('table')&&!/^H[1-6]$/.test(sibling.tagName)){
             const nested=sibling.querySelector?.('table');
             if(nested){sibling=nested;break}
@@ -160,7 +163,7 @@
           const top=document.createElement('button');top.className='fold-toggle fold-toggle-top';top.type='button';
           top.setAttribute('aria-expanded','false');top.setAttribute('aria-controls',id);top.textContent='펼쳐보기';
           title.append(headingWrap,top);
-          const content=document.createElement('div');content.className='fold-content';content.id=id;content.append(table);
+          const content=document.createElement('div');content.className='fold-content';content.id=id;if(subtitle)content.append(subtitle);content.append(table);
           const bottom=document.createElement('button');bottom.className='fold-toggle fold-toggle-bottom';bottom.type='button';
           bottom.setAttribute('aria-expanded','false');bottom.setAttribute('aria-controls',id);bottom.textContent='전체 내용 펼쳐보기';
           heading.parentNode.insertBefore(fold,heading);
