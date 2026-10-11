@@ -39,7 +39,7 @@ title: 여행 일정
 
 [표 trip-8](tables/trip-08.json)
 
-### 11/28 토: 파리 출국
+### 11/28 토: 아울렛, 파리 출국
 
 [표 trip-9](tables/trip-09.json)
 
