@@ -67,13 +67,16 @@
     return source.replace(pattern,(_,path)=>'\n\n'+bodyMap.get(path)+'\n\n');
   }
 
+  // Keep the Paris restaurant section collapsible even if its Pages CMS title changes.
+  function isRestaurantSection(title){return /^(?:참고:\s*)?파리 숙소 근처(?:\s|$)/.test(title)}
+
   function isFoldHeading(title,level){
     if(document.body.dataset.document==='trip')
       return level===2&&(
         title==='1) 런던 일정표' ||
         title==='2) 파리 일정표' ||
         /^\d{2}\/\d{2}\b/.test(title) ||
-        (title.startsWith('참고: 파리 숙소') || title==='파리 숙소 근처 한식/중식당')
+        isRestaurantSection(title)
       );
     return level===1&&/^[123]-[1-4]\./.test(title)
   }
@@ -102,7 +105,7 @@
       const end=boundary<headings.length?headings[boundary].index:clean.length;
       const body=clean.slice(section.end,end).replace(/^\n+/,'');
       const id='toggle-'+start;
-      const titleOnly=document.body.dataset.document==='trip'&&section.level===2&&((section.title.length>=6&&section.title[2]==='/'&&section.title[5]===' ')||section.title.includes('파리 숙소 근처 한식/중식당')||section.title==='1) 런던 일정표'||section.title==='2) 파리 일정표');
+      const titleOnly=document.body.dataset.document==='trip'&&section.level===2&&((section.title.length>=6&&section.title[2]==='/'&&section.title[5]===' ')||isRestaurantSection(section.title)||section.title==='1) 런던 일정표'||section.title==='2) 파리 일정표');
       const floorRoute=document.body.dataset.document==='shopping'&&section.title==='1-3. 층별 쇼핑 동선';
       const separator=document.body.dataset.document==='trip'&&section.title.startsWith('11/24 화 — 런던 → 파리')?'<hr class="country-separator">':'';
       html+=separator+'<section class="fold'+(titleOnly?' title-only-fold':'')+(floorRoute?' expanded shopping-floor-route':'')+'"><div class="fold-title"><div class="fold-heading">'+md(section.marks+' '+section.title)+'</div>'
