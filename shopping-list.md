@@ -289,15 +289,6 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 
 - 2시간 안에서는 **Lower Ground 자체 굿즈 → Ground Floor Food Halls** 순서로 보면 기념품 쇼핑 동선이 가장 단순함
 
-# 원문 참고
-
----
-
-- [런던 여행 — 해러즈 백화점 : 기념품 사기 좋은 곳](https://blog.naver.com/sejinyong/224287580382)
-- [런던여행 해로즈(Harrods) 백화점 기념품 쇼핑리스트 식품관 가격](https://blog.naver.com/sujittw/224166086361)
-
----
-
 # 1-4. 런던 기타 쇼핑 스팟
 
 ## Harrods 4층 Toys — Jellycat Airlines
@@ -359,6 +350,15 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 - **성격:** 대형 럭셔리보다 스트리트, 캐주얼, 독립 부티크, 컨셉스토어 비중이 높은 쇼핑 구역
 - **대표 브랜드:** adidas Originals, Vans, Dr. Martens, Levi's, The North Face, Ray-Ban, END., GANNI, Puma, Timberland 등
 - **쇼핑 포인트:** Harrods, Regent Street보다 젊고 캐주얼한 브랜드를 보기 좋고, 골목형이라 짧게 훑기 쉬움
+
+---
+
+# 원문 참고
+
+---
+
+- [런던 여행 — 해러즈 백화점 : 기념품 사기 좋은 곳](https://blog.naver.com/sejinyong/224287580382)
+- [런던여행 해로즈(Harrods) 백화점 기념품 쇼핑리스트 식품관 가격](https://blog.naver.com/sujittw/224166086361)
 
 ---
 
