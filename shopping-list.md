@@ -1,7 +1,10 @@
 ---
 title: 쇼핑리스트
 ---
+
 # 1. 런던 Harrods 백화점
+
+## 한눈에 보는 쇼핑 리스트
 
 [표 shopping-1](tables/shopping-01.json)
 
@@ -12,8 +15,11 @@ title: 쇼핑리스트
 ## 1) 해러즈 가방
 
 **Harrods Tote / Canvas / Nylon / Leather Bags**
+
 ![](https://lh3.googleusercontent.com/d/1jlXfcJGYvOHWE5s-U_-JxdV-cFpBhLpB=w560-h420)
+
 ![](https://lh3.googleusercontent.com/d/12r_taCSl53hCkHfgJ2gukuz9uXXx110G=w560-h420)
+
 ![](https://lh3.googleusercontent.com/d/1pUNURyERaxL5wvi01zRKZkcp_DZK8CaK=w560-h420)
 
 ### 어떤 제품?
@@ -49,6 +55,7 @@ Harrods 자체 컬렉션에서 가장 실용적인 기념품 중 하나. 두 블
 ## 2) 해러즈 테디베어
 
 **Harrods Teddy Bear**
+
 ![](https://lh3.googleusercontent.com/d/1k9xSOGAkq_l04Q2UoIFIbUgfnBzBUbgz=w560-h420)
 
 ### 어떤 제품?
@@ -81,9 +88,13 @@ Harrods를 대표하는 상징적인 기념품. 첫 번째 블로그에서는 �
 ## 3) 해러즈 접시, 그릇, 머그, 티세트
 
 **Harrods Tableware & Tea Set**
+
 ![](https://lh3.googleusercontent.com/d/1qXnUJCz7U4wL3ce0HSVAL26qk_nI9pa3=w560-h420)
+
 ![](https://lh3.googleusercontent.com/d/1ubeDbSCJB9kgQFgrvBLM4sQjIJ7Dmui8=w560-h420)
+
 ![](https://lh3.googleusercontent.com/d/1Sr21Jkgv4MY4OWyLy-vpu8nPvl_3h9NB=w560-h420)
+
 ![](https://lh3.googleusercontent.com/d/1iLV_f323lXD0Vc1LtDI-97ec4ebD33h2=w560-h420)
 
 ### 어떤 제품?
@@ -110,9 +121,12 @@ Harrods 건물, 영국 테마, 화려한 Toile, 보태니컬 패턴 등이 들�
 
 도자기류는 가방, 차, 비스킷보다 파손 위험이 있으므로 **선물용 수량을 많이 살 때는 포장과 수하물 공간을 고려**하는 편이 좋음.
 
+---
+
 ## 4) 키링, 파우치, 마그넷, 오너먼트
 
 **Harrods Small Souvenirs**
+
 ![](https://lh3.googleusercontent.com/d/10NQl8YHWna813JRTmzcWmHRJjZpTX4G3=w560-h420)
 
 ### 어떤 제품?
@@ -139,6 +153,7 @@ Harrods 건물, 영국 테마, 화려한 Toile, 보태니컬 패턴 등이 들�
 ## 1) 해러즈 자체 차
 
 **Harrods Tea**
+
 ![](https://lh3.googleusercontent.com/d/1Et7l3diGO92pGQoKtWL05gcXmgJVKPpo=w560-h420)
 
 ### 어떤 제품?
@@ -174,7 +189,9 @@ Harrods 건물, 영국 테마, 화려한 Toile, 보태니컬 패턴 등이 들�
 ## 2) 해러즈 비스킷 틴
 
 **Harrods Biscuits**
+
 ![](https://lh3.googleusercontent.com/d/1j5CNmL6_DAt15MCgHVW4bvtQbWOLwbCO=w560-h420)
+
 ![](https://lh3.googleusercontent.com/d/1JAxo8wyYpW7K4qoITANx3_2g4lHF5IqM=w560-h420)
 
 ### 어떤 제품?
@@ -198,7 +215,6 @@ Harrods 로고와 백화점, 런던 디자인이 들어간 틴케이스 제품�
 ### Harrods Heritage Tea and Biscuits Gift Set
 
 두 번째 블로그가 추천한 **홍차 + 비스킷 결합 틴 세트**. Harrods 공식 설명에서도 'Food Halls의 완벽한 souvenir'로 소개되는 제품으로, Georgian Blend 티백과 초콜릿 청크 비스킷이 함께 들어 있음.
-
 - **현재 공식 온라인 기준 품절 상태**
 - 11월 방문 시 현장 재고는 다시 확인 필요
 
@@ -207,7 +223,9 @@ Harrods 로고와 백화점, 런던 디자인이 들어간 틴케이스 제품�
 ## 3) 초콜릿
 
 **Harrods Chocolate Hall**
+
 ![](https://lh3.googleusercontent.com/d/1V_dg3XrZxMPIgtrBd9avW-WW_EyK-YHs=w560-h420)
+
 ![](https://lh3.googleusercontent.com/d/1V7lK-L1LlBMeYD9aRdaYeyg1F1vJpPUu=w560-h420)
 
 ### 어떤 곳?
@@ -255,6 +273,8 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 
 # 1-3. 층별 쇼핑 동선
 
+---
+
 ## Lower Ground Floor — The Harrods Collection
 
 1. 가방
@@ -268,14 +288,25 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 2. 비스킷 틴 / Tea & Biscuits Gift Set
 3. 초콜릿
 4. 커피
-
 - 2시간 안에서는 **Lower Ground 자체 굿즈 → Ground Floor Food Halls** 순서로 보면 기념품 쇼핑 동선이 가장 단순함
+
+---
+
+# 원문 참고
+
+---
+
+- [런던 여행 — 해러즈 백화점 : 기념품 사기 좋은 곳](https://blog.naver.com/sejinyong/224287580382)
+- [런던여행 해로즈(Harrods) 백화점 기념품 쇼핑리스트 식품관 가격](https://blog.naver.com/sujittw/224166086361)
+
+---
 
 # 1-4. 런던 기타 쇼핑 스팟
 
 ## Harrods 4층 Toys — Jellycat Airlines
 
 ![](https://lh3.googleusercontent.com/d/1-v7f1hh_5tcyNEgAfq2dzmRJnx31HkKQ=w560-h420)
+
 ![](https://lh3.googleusercontent.com/d/1T0EZJdOYgxg5PpXTmP9jWAGuYs1rNbYN=w560-h420)
 
 - **무엇을 파나:** Jellycat, Harrods 자체 인형
@@ -285,7 +316,6 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ## 코벤트가든
 
 **Covent Garden**
-
 - **성격:** 패션, 뷰티, 향수, 라이프스타일 브랜드와 독립 부티크가 섞인 쇼핑 지역
 - **뷰티, 향수:** CHANEL Fragrance & Beauty, Dior Beauty, Aesop, Diptyque, BYREDO, Creed, Jo Malone London, Le Labo, Penhaligon's, Glossier, Charlotte Tilbury, NARS
 - **패션, 액세서리:** Mulberry, Paul Smith, Barbour, Hackett, Polo Ralph Lauren, A.P.C., AllSaints, GANNI 등
@@ -294,6 +324,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ## 포트넘 앤 메이슨 피카딜리 본점
 
 **Fortnum & Mason Piccadilly**
+
 ![](https://lh3.googleusercontent.com/d/1UAXFSz6lJ5q3Q8iXbvS11cgidVvwA8cM=w560-h420)
 
 - **성격:** 영국 전통 식품, 차, 선물에 특화. 특히 **차, 비스킷, 햄퍼**가 강함
@@ -308,6 +339,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ## 리젠트 스트리트
 
 **Regent Street**
+
 ![](https://lh3.googleusercontent.com/d/1j1spLgbOXhyF0d5_Kc5glcafVFl72Lbi=w560-h420)
 
 - **성격:** 런던 대표 플래그십 쇼핑 거리. 명품, 컨템포러리 패션, 뷰티, 테크가 섞여 있음
@@ -317,6 +349,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ## 버버리 리젠트 스트리트
 
 **Burberry Regent Street — 121 Regent Street**
+
 ![](https://lh3.googleusercontent.com/d/1q6kFo5_M40kT-oGjzp4TImpEaWYF1ugq=w560-h420)
 
 - **무엇을 파나:** 여성, 남성, 키즈 레디투웨어, 가방, 액세서리, 슈즈, 스카프, 아이코닉 체크, **Heritage Trench Coat**
@@ -326,25 +359,15 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ## 카나비 스트리트
 
 **Carnaby Street**
-
 - **성격:** 대형 럭셔리보다 스트리트, 캐주얼, 독립 부티크, 컨셉스토어 비중이 높은 쇼핑 구역
 - **대표 브랜드:** adidas Originals, Vans, Dr. Martens, Levi's, The North Face, Ray-Ban, END., GANNI, Puma, Timberland 등
 - **쇼핑 포인트:** Harrods, Regent Street보다 젊고 캐주얼한 브랜드를 보기 좋고, 골목형이라 짧게 훑기 쉬움
 
 ---
 
-# 원문 참고
-
----
-
-- [런던 여행 — 해러즈 백화점 : 기념품 사기 좋은 곳](https://blog.naver.com/sejinyong/224287580382)
-- [런던여행 해로즈(Harrods) 백화점 기념품 쇼핑리스트 식품관 가격](https://blog.naver.com/sujittw/224166086361)
-
----
-
----
-
 # 2. 파리 Lafayette 백화점
+
+## 한눈에 보는 쇼핑 리스트
 
 [표 shopping-2](tables/shopping-02.json)
 
@@ -355,6 +378,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ## 1) 라 메종 다모린 — 솔티드 카라멜
 
 **La Maison d'Armorine – Salted Caramel**
+
 ![](https://lh3.googleusercontent.com/d/1owLrq4A291cDq3j6EztPsOtK2b_gNhx7=w560-h420)
 
 ### 어떤 제품?
@@ -381,6 +405,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ## 2) 앙젤리나 — 밤 잼
 
 **Angelina – Crème de Marrons**
+
 ![](https://lh3.googleusercontent.com/d/19f7Rks9bugYJiqo6JrBcA2dSvuG3kyPs=w560-h420)
 
 ### 어떤 제품?
@@ -419,7 +444,9 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ## 3) 라 메르 풀라르 — 쿠키
 
 **La Mère Poulard**
+
 ![](https://lh3.googleusercontent.com/d/1PGoNChXw7JDta-yLbmY5R-wYw6Xqq_1v=w560-h420)
+
 ![](https://lh3.googleusercontent.com/d/149YVb0dWvTfcJiQAS_yKhzMfLkMvef0q=w560-h420)
 
 ### 어떤 제품?
@@ -458,6 +485,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ## 4) 콩피튀르 파리지엔느 — 잼
 
 **Confiture Parisienne**
+
 ![](https://lh3.googleusercontent.com/d/1rKC-chCmOi1VZqaynie8RLILeB1eOslI=w560-h420)
 
 ### 어떤 제품?
@@ -483,6 +511,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ## 5) 레 자베이 드 말레스코 — 트러플 꿀
 
 **Les Abeilles de Malescot – Truffle Honey**
+
 ![](https://lh3.googleusercontent.com/d/1zRP9ORc2iTOiWDtpyxShvIjdTe6gefPT=w560-h420)
 
 ### 어떤 제품?
@@ -511,6 +540,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ## 1) 아 롤리비에 — 트러플 오일
 
 **A L’Olivier – Truffle Oil**
+
 ![](https://lh3.googleusercontent.com/d/124OGlzIQ4qEKZECEohDe4mMxHbWff_2M=w560-h420)
 
 ### 어떤 브랜드?
@@ -521,7 +551,6 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ### 활용법
 
 요리를 복잡하게 하지 않아도 마지막에 조금만 뿌리면 풍미를 올릴 수 있어 블로그에서는 **“요리 치트키”** 아이템으로 소개.
-
 - 파스타
 - 샐러드
 - 짜파게티 같은 간단한 면 요리
@@ -534,7 +563,6 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ### 구매할 때 주의
 
 패키지가 비슷하므로 캔 색상만 보고 고르면 안 됨.
-
 - 🖤 **Truffe Noire = 블랙 트러플**
 - 🤍 **Truffe Blanche = 화이트 트러플**
 특히 **흰색 패키지라고 무조건 화이트 트러플이 아님.**  
@@ -543,7 +571,6 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ### 가격
 
 **블랙 트러플**
-
 - 150ml €11.90
 - 블로그 방문 당시 봉마르셰에서는 미발견
 **화이트 트러플**
@@ -555,6 +582,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ## 2) 아티장 드 라 트뤼프 — 트러플 소금
 
 **Artisan de la Truffe – Truffle Salt**
+
 ![](https://lh3.googleusercontent.com/d/1BZ_qQk9P7H6W2Rb-sCJ2VdWaCcaV5_zx=w560-h420)
 
 ### 어떤 제품?
@@ -592,6 +620,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ## 추가로 볼 것 — 보르디에 버터
 
 **Bordier Butter**
+
 ![](https://lh3.googleusercontent.com/d/12RQnOByF47qtrnqMI_S3R-RUsV1nVllj=w560-h420)
 
 ### 어떤 제품?
@@ -613,8 +642,11 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ## 3) 에드몽 팔로 — 머스타드
 
 **Edmond Fallot**
+
 ![](https://lh3.googleusercontent.com/d/1C-0z6Fl4LS51q9PEeRyskGTHsBy6wFeO=w560-h420)
+
 ![](https://lh3.googleusercontent.com/d/1A9af-FP1Xv_IfJ5Wne-Xy6UYgKxuzXUy=w560-h420)
+
 ![](https://lh3.googleusercontent.com/d/1-y_ozL_ln--ocsyJcFmNiavryTnMODEp=w560-h420)
 
 ### 어떤 브랜드?
@@ -625,7 +657,6 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ### 종류
 
 홀그레인 머스타드도 한 종류만 있는 것이 아니라 여러 풍미가 있음.
-
 - 카시스
 - 호두
 - 허브 등
@@ -648,7 +679,6 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ### 가격
 
 **홀그레인 200g**
-
 - Galeries Lafayette €3.25
 - Le Bon Marché €3.15
 **튜브형**
@@ -660,6 +690,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ## 4) 소수 — 트러플 마요네즈
 
 **SÒSU – Truffle Mayonnaise**
+
 ![](https://lh3.googleusercontent.com/d/1egqjEDBylDgP0PiVEDIpGU5dSe2pze0O=w560-h420)
 
 ### 어떤 제품?
@@ -702,6 +733,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ## 샹젤리제 거리
 
 **Avenue des Champs-Élysées**
+
 ![](https://lh3.googleusercontent.com/d/1MJut-VpfDl5Syz-4Y1hFJVj-_TE-t1-B=w560-h420)
 
 - **성격:** 명품 플래그십부터 스포츠, 뷰티, SPA까지 한 거리에 섞인 대표 쇼핑 거리
@@ -723,6 +755,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ## 디올 Dior 30 Montaigne
 
 **30 Avenue Montaigne**
+
 ![](https://lh3.googleusercontent.com/d/1UCBWhVTna1Fv9ygBS3K9oc2ddKCpKJNU=w560-h420)
 
 - **Dior 30 Montaigne:** Dior의 역사적 본점 성격의 플래그십
@@ -734,6 +767,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ## 갤러리 라파예트 오스만 — 일반 쇼핑
 
 **Galeries Lafayette Haussmann**
+
 ![](https://lh3.googleusercontent.com/d/1Gbhvu5iWYqKTEPjrj1S_4hSGfvd3WX3V=w560-h420)
 
 - 기존 위쪽 섹션은 식품 기념품 중심이므로 여기서는 일반 브랜드 쇼핑 관점
@@ -741,12 +775,15 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 - **뷰티:** Chanel, Dior, Guerlain, Lancôme, La Mer, Creed, Maison Francis Kurkdjian 등
 - **남성:** Prada, Fendi, Burberry 등 럭셔리 남성 라인
 - **키즈, 토이:** 5층 쿠폴관에 키즈, 장난감, Jellycat. [France.fr](http://France.fr)에서는 **크루아상 모양 Jellycat**을 파리에서 볼 만한 기념품으로 특히 소개
+
 ![](https://lh3.googleusercontent.com/d/1uxJiiVzo0OZQghXh9FYB1l1XIBGVp-sX=w560-h420)
+
 - **쇼핑 포인트:** 명품, 뷰티, 식품, Jellycat까지 한 건물권에서 폭넓게 처리하기 좋음
 
 ## 프랭땅 오스만 백화점
 
 **Printemps Haussmann**
+
 ![](https://lh3.googleusercontent.com/d/1YBuoBsTzCoJNlPdneF_f9wnd-Y5KbYKy=w560-h420)
 
 - **성격:** 라파예트 바로 옆 대형 백화점. 여성관, 남성관, Beauty/Home/Kids 건물이 나뉘어 있음
@@ -759,6 +796,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ## 샤넬 본점 CHANEL 31 Cambon
 
 **31 Rue Cambon**
+
 ![](https://lh3.googleusercontent.com/d/1iW-D3Dfdk53JEE7vbHsUFI1DEVjLPq2x=w560-h420)
 
 - **상징성:** Chanel의 역사와 가장 직접적으로 연결되는 대표 주소
@@ -769,7 +807,6 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ## 방돔 광장
 
 **Place Vendôme**
-
 - **성격:** 패션 쇼핑보다는 **하이주얼리, 럭셔리 워치** 중심
 - **대표 메종:** Cartier, Van Cleef & Arpels, Boucheron, Chaumet, Bulgari, Dior Joaillerie, Chanel Fine Jewellery, Jaeger-LeCoultre, Louis Vuitton Jewellery
 - **볼 포인트:** 실제 구매 목적이 없어도 쇼윈도 자체가 볼거리. 주얼리, 시계에 관심 있으면 파리에서 가장 밀도가 높은 구역
@@ -788,6 +825,64 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ---
 
 - [프랑스 관광청 — 갤러리 라파예트에서 놓치면 안되는 프랑스 기념품 쇼핑 리스트 TOP6](https://www.france.fr/ko/article/galerieslafayette-shopping-list/)
-- [라파예트 식품관 기념품 1탄  달달이 BEST 5](https://m.blog.naver.com/wonny_in_paris/224422865627)
-- [라파예트 식품관 기념품 2탄  짭짤이 BEST 4](https://m.blog.naver.com/wonny_in_paris/224427483159)
+- [라파예트 식품관 기념품 1탄 | 달달이 BEST 5](https://m.blog.naver.com/wonny_in_paris/224422865627)
+- [라파예트 식품관 기념품 2탄 | 짭짤이 BEST 4](https://m.blog.naver.com/wonny_in_paris/224427483159)
 
+# 3. 파리 La Vallée Village 아울렛
+
+## 한눈에 보는 쇼핑 리스트
+
+[표 shopping-3](tables/shopping-03.json)
+
+---
+
+# 3-1. 기본 정보
+
+![](https://lh3.googleusercontent.com/d/1pWcnVWGaElo974S1L9EWLWZeXfzAheYa=w560-h420)
+
+![](https://lh3.googleusercontent.com/d/1Ippu1jfOlPwwL5oTRU43TKsB33drkpuf=w560-h420)
+
+- **주소:** 3 Cours de la Garonne, 77700 Serris, France
+- **영업시간:** 일반적으로 10:00~20:00 (방문일 확정 후 재확인)
+- 파리 동쪽의 야외형 명품 아울렛. 여러 브랜드를 한곳에서 비교하고 쇼핑하기 좋음
+- **방문:** 미정, 평일 5시간 쇼핑 검토 (점심 포함)
+- [라발레빌리지 공식 홈페이지](https://www.thebicestercollection.com/la-vallee-village/ko/)
+- [매장 지도](https://www.thebicestercollection.com/la-vallee-village/fr/map/)
+
+---
+
+# 3-2. 브랜드
+
+## 한국인 여행객 관심 브랜드
+
+![](https://lh3.googleusercontent.com/d/1AqOwluu-XbNis-6ukn1neP5P9cK52yJx=w560-h420)
+
+![](https://lh3.googleusercontent.com/d/1ypINH2mprjLf9Ieq2Ckqtoh9bFvIo6GB=w560-h420)
+
+**몽클레르, 버버리, 구찌, 프라다, 미우미우, 막스마라, 롱샴, 폴로 랄프로렌, 코치, 토리버치**
+
+## 그 외 제공된 네이버 블로그 언급 브랜드
+
+발망, 어그, 라코스테, 클라랑스, 돌체앤가바나, 펜디, 마이클 코어스, 마쥬, 스톤아일랜드, 지미추, 지방시, 레페토, 마크 제이콥스, 토즈, 페라가모, 끌로에, 노스페이스, 버켄스탁, 발렌시아가, 쌤소나이트, 룰루레몬, 디젤, 알렉산더 맥퀸, 아르마니, 리바이스, 타미 힐피거, 베르사체, 까웨이, 산드로, 팀버랜드, 자크뮈스
+
+---
+
+# 3-3. 대한항공 마일리지·택스리펀
+
+- **대한항공 SKYPASS:** 당일 총 €300 이상 구매 시 **€1당 1마일**
+- **적립 예시:** €300 구매 → 300마일 / €500 → 500마일 / €1,000 → 1,000마일
+- **택스리펀:** 비EU 거주 관광객 신청 가능
+- [대한항공 공식 안내](https://www.koreanair.com/contents/skypass/earn-miles/travel-and-life/shopping-points)
+
+---
+
+# 3-4. 식사·쇼핑 순서
+
+- **점심:** 빌리지 내부 프레타망제·라뒤레·카페 라페루즈 또는 발드유럽 쇼핑몰 푸드코트
+- **10:00~11:00:** 몽클레르
+- **11:00~12:00:** 버버리
+- **12:00~12:30:** 구찌·프라다·미우미우 중 선택
+- **12:30~13:00:** 점심
+- **13:00~15:00:** 나머지 관심 브랜드 쇼핑 및 마무리
+
+---
