@@ -30,19 +30,19 @@
     "shaded": true
   },
   {
-    "time": "15:00~\n17:00",
-    "activity": "**선택: 샤넬 본점, 에르메스 본점**\n(**선택: 카페 **안젤리나 리볼리, Angelina Rivoli)",
-    "transport": "🚗 더 페닌슐라 파리 (The Peninsula Paris) → CHANEL 31 Cambon\n🚶 CHANEL 31 Cambon → Hermès Faubourg Saint-Honoré\n🚶 구역 내",
+    "time": "15:00~\n16:00",
+    "activity": "**몽마르트르**\n(사크레쾨르 대성당 → 테르트르 광장 → 사랑해벽)",
+    "transport": "🚗 14:30 더 페닌슐라 파리 (The Peninsula Paris) → 사크레쾨르 대성당 (약 20~30분)\n🚶 구역 내",
     "shaded": false
   },
   {
-    "time": "17:00~\n19:00",
-    "activity": "**샹젤리제, 그랑팔레, 알렉상드르 3세 다리, 롱샴, 디올, 크리스마스 야경**\n(**선택: 마카롱 카페 **라뒤레 샹젤리제, Ladurée Champs-Élysées)",
-    "transport": "🚶 구역 내 이동",
+    "time": "16:30~\n19:30",
+    "activity": "**샹젤리제, 롱샴, 그랑팔레, 프티팔레, 알렉상드르 3세 다리, 디올, 크리스마스 야경**\n(**선택: 마카롱 카페 **라뒤레 샹젤리제, Ladurée Champs-Élysées)",
+    "transport": "🚗 16:00 몽마르트르 사랑해벽 → 롱샴 샹젤리제 (약 20~30분)\n🚶 롱샴 → 샹젤리제 → Dior 30 Montaigne → 그랑팔레·프티팔레 → 알렉상드르 3세 다리",
     "shaded": false
   },
   {
-    "time": "19:30~\n20:30",
+    "time": "20:00~\n21:00",
     "activity": "**저녁\n한식 **(숙소 근처 한식집 선택)",
     "transport": "🚇 알마–마르소역 (Alma–Marceau) → 트로카데로역 (Trocadéro), 메트로 9호선 → 라 모트 피케–그르넬역 (La Motte-Picquet–Grenelle), 메트로 6호선",
     "shaded": true
