@@ -4,6 +4,24 @@ settings:
   content:
     merge: true
 content:
+  - name: trip_overview
+    label: "여행 전체 일정표 · 날짜별 목차와 사진"
+    type: file
+    path: trip.md
+    format: yaml-frontmatter
+    operations:
+      delete: false
+    fields:
+      - name: title
+        label: "제목"
+        type: string
+        required: true
+      - name: body
+        label: "일정표 목차 · 사진 · 본문"
+        type: rich-text
+        options:
+          format: markdown
+          switcher: true
   - name: daily_details
     label: "날짜별 상세 일정 · 사진과 설명 수정"
     type: group
@@ -81,7 +99,7 @@ content:
               format: markdown
               switcher: true
       - name: detail_05
-        label: "11/24 화 — 런던 → 파리 + 에펠탑"
+        label: "11/24 화 — 런던 → 파리 + 에펠탑 + 노트르담"
         type: file
         path: details/11-24.md
         format: yaml-frontmatter
@@ -99,7 +117,7 @@ content:
               format: markdown
               switcher: true
       - name: detail_06
-        label: "11/25 수 — 루브르 + 개선문 + 샹젤리제 거리"
+        label: "11/25 수 — 루브르 + 미슐랭 + 몽마르트르 + 샹젤리제"
         type: file
         path: details/11-25.md
         format: yaml-frontmatter
@@ -117,7 +135,7 @@ content:
               format: markdown
               switcher: true
       - name: detail_07
-        label: "11/26 목 — 베르사유 + 라파예트 백화점"
+        label: "11/26 목 — 베르사유 + 라파예트 백화점 + 방돔 광장"
         type: file
         path: details/11-26.md
         format: yaml-frontmatter
@@ -153,7 +171,7 @@ content:
               format: markdown
               switcher: true
       - name: detail_09
-        label: "11/28 토 — 몽마르트르 + 노트르담 + 출국"
+        label: "11/28 토 — 라발레빌리지 + 출국"
         type: file
         path: details/11-28.md
         format: yaml-frontmatter
@@ -441,6 +459,24 @@ content:
             type: text
           - name: price
             label: "위치 / 가격"
+            type: text
+          - name: shaded
+            label: "행 음영"
+            type: boolean
+      - name: shopping_table_03
+        label: "파리 라발레빌리지"
+        type: file
+        path: tables/shopping-03.json
+        format: json
+        list: true
+        operations:
+          delete: false
+        fields:
+          - name: item
+            label: "항목"
+            type: text
+          - name: details
+            label: "내용"
             type: text
           - name: shaded
             label: "행 음영"
