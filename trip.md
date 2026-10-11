@@ -83,6 +83,6 @@ title: 여행 일정
 
 [상세 내용](details/11-28.md)
 
-## 파리 숙소 근처 한식/중식당
+## 파리 숙소 근처 한식/식당
 
 [상세 내용](details/paris-restaurants.md)
