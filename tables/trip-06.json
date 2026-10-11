@@ -18,27 +18,27 @@
     "shaded": false
   },
   {
-    "time": "12:00~\n14:00",
+    "time": "12:00~\n12:30",
+    "activity": "**개선문** (Arc de Triomphe)",
+    "transport": "🚇 Palais Royal–Musée du Louvre → Charles de Gaulle–Étoile, 메트로 1호선\n🚶 12:20 개선문 → The Peninsula Paris",
+    "shaded": false
+  },
+  {
+    "time": "12:30~\n14:30",
     "activity": "**점심**\n**미슐랭 2스타 프렌치 코스** (루아조 블랑, L'Oiseau Blanc)",
-    "transport": "🚇 팔레 루아얄–뮈제 뒤 루브르 → 샤를 드골–에투알, 메트로 1호선\n🚶 The Peninsula Paris",
+    "transport": "🚶 개선문 → The Peninsula Paris (L'Oiseau Blanc)",
     "shaded": true
   },
   {
-    "time": "14:30~\n15:30",
+    "time": "15:00~\n16:00",
     "activity": "**몽마르트르**\n(사크레쾨르 대성당 → 테르트르 광장 → 사랑해벽)",
     "transport": "🚇 Charles de Gaulle–Étoile → Anvers, 메트로 2호선\n🚶 / 푸니쿨라, 몽마르트르 구역 내",
     "shaded": false
   },
   {
-    "time": "16:00~\n16:30",
-    "activity": "**개선문** (Arc de Triomphe)",
-    "transport": "🚇 Anvers → Charles de Gaulle–Étoile, 메트로 2호선",
-    "shaded": false
-  },
-  {
     "time": "16:30~\n19:30",
     "activity": "**샹젤리제, 롱샴, 그랑팔레, 프티팔레, 알렉상드르 3세 다리, 디올, 크리스마스 야경**\n(**선택: 마카롱 카페 **라뒤레 샹젤리제, Ladurée Champs-Élysées)",
-    "transport": "🚶 개선문 → 롱샴 → 샹젤리제 → Dior 30 Montaigne → 그랑팔레·프티팔레 → 알렉상드르 3세 다리",
+    "transport": "🚇 Anvers → Charles de Gaulle–Étoile, 메트로 2호선\n🚶 롱샴 → 샹젤리제 → Dior 30 Montaigne → 그랑팔레·프티팔레 → 알렉상드르 3세 다리",
     "shaded": false
   },
   {
