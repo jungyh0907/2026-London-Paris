@@ -70,12 +70,15 @@
   // Keep the Paris restaurant section collapsible even if its Pages CMS title changes.
   function isRestaurantSection(title){return /^(?:참고:\s*)?파리 숙소 근처(?:\s|$)/.test(title)}
 
+  // Support both 11/20 and 20 date headings after Pages CMS edits.
+  function isTripDayHeading(title){return /^(?:11\/)?2[0-8]\s+[월화수목금토일](?:\s|$)/.test(title.trim())}
+
   function isFoldHeading(title,level){
     if(document.body.dataset.document==='trip')
       return level===2&&(
         title==='1) 런던 일정표' ||
         title==='2) 파리 일정표' ||
-        /^\d{2}\/\d{2}\b/.test(title) ||
+        isTripDayHeading(title) ||
         isRestaurantSection(title)
       );
     return level===1&&/^[123]-[1-4]\./.test(title)
@@ -106,9 +109,9 @@
       const body=clean.slice(section.end,end).replace(/^\n+/,'');
       const id='toggle-'+start;
       const shoppingSubsection=document.body.dataset.document==='shopping'&&section.level===1&&/^[123]-[1-4]\./.test(section.title);
-      const tripTitleOnly=document.body.dataset.document==='trip'&&section.level===2&&((section.title.length>=6&&section.title[2]==='/'&&section.title[5]===' ')||isRestaurantSection(section.title)||section.title==='1) 런던 일정표'||section.title==='2) 파리 일정표');
+      const tripTitleOnly=document.body.dataset.document==='trip'&&section.level===2&&(isTripDayHeading(section.title)||isRestaurantSection(section.title)||section.title==='1) 런던 일정표'||section.title==='2) 파리 일정표');
       const titleOnly=tripTitleOnly||shoppingSubsection;
-      const separator=document.body.dataset.document==='trip'&&section.title.startsWith('11/24 화 — 런던 → 파리')?'<hr class="country-separator">':'';
+      const separator=document.body.dataset.document==='trip'&&/^(?:11\/)?24\s+화\s+—\s+런던\s+→\s+파리/.test(section.title)?'<hr class="country-separator">':'';
       html+=separator+'<section class="fold'+(titleOnly?' title-only-fold':'')+'"><div class="fold-title"><div class="fold-heading">'+md(section.marks+' '+section.title)+'</div>'
         +'<button class="fold-toggle fold-toggle-top" type="button" aria-expanded="false" aria-controls="'+id+'">펼쳐보기</button></div>'
         +'<div class="fold-content" id="'+id+'">'+md(body)+'</div>'
