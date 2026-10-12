@@ -70,7 +70,7 @@
       observer.observe(root);
       observer.observe(container);
     }
-    const timeout=setTimeout(cancel,8000);
+    const timeout=setTimeout(cancel,trip?8000:20000);
     // Any deliberate user interaction stops automatic corrections.
     window.addEventListener('wheel',cancel,{passive:true});
     window.addEventListener('touchstart',cancel,{passive:true});
@@ -400,11 +400,53 @@
         if(fold&&heading)linkTargets.set(group+'|'+product,{fold,heading,group});
       }
     }
+    // First-visit shopping photos are lazy-loaded. When a fold opens, images
+    // above the clicked product initially have no height, which moves its
+    // heading down after the first scroll. Eagerly load only those images and
+    // make one final correction after they have all settled.
+    let shoppingJump=0;
+    function jumpToShoppingDetail(fold,heading){
+      if(!fold||!heading)return;
+      const jump=++shoppingJump;
+      setFold(fold,true);
+      const images=[...fold.querySelectorAll('.fold-content img')].filter(image=>
+        !!(image.compareDocumentPosition(heading)&Node.DOCUMENT_POSITION_FOLLOWING));
+      // Assign loading='eager' before the first scroll to request every image
+      // whose eventual height affects the target heading.
+      images.forEach(image=>{image.loading='eager';});
+      const move=()=>{if(jump===shoppingJump)scrollToNode(heading);};
+      // Immediately move towards the selected product. The common scroll
+      // helper continues realigning on resizing / individual image loads.
+      requestAnimationFrame(()=>requestAnimationFrame(move));
+      const outstanding=images.filter(image=>!image.complete);
+      if(outstanding.length){
+        const allReady=Promise.all(outstanding.map(image=>new Promise(resolve=>{
+          image.addEventListener('load',resolve,{once:true});
+          image.addEventListener('error',resolve,{once:true});
+        })));
+        // Stop pending final jumps when the user chooses to scroll manually.
+        const stop=()=>{shoppingJump++;cleanup();};
+        const cleanup=()=>{
+          window.removeEventListener('touchstart',stop);
+          window.removeEventListener('wheel',stop);
+          window.removeEventListener('pointerdown',stop);
+          window.removeEventListener('keydown',stop);
+          clearTimeout(deadline);
+        };
+        window.addEventListener('touchstart',stop,{passive:true});
+        window.addEventListener('wheel',stop,{passive:true});
+        window.addEventListener('pointerdown',stop,{passive:true});
+        window.addEventListener('keydown',stop);
+        const deadline=setTimeout(cleanup,18000);
+        allReady.then(()=>{
+          if(jump===shoppingJump)requestAnimationFrame(()=>requestAnimationFrame(move));
+          cleanup();
+        });
+      }
+    }
     function openProduct(group,name){
       const target=linkTargets.get(group+'|'+name);
-      if(!target)return;
-      setFold(target.fold,true);
-      scrollToNode(target.heading);
+      if(target)jumpToShoppingDetail(target.fold,target.heading);
     }
     // Product lists: interest flags, not purchase records or itinerary metadata.
     for(const {fold,group} of groups.slice(0,2)){
@@ -429,10 +471,9 @@
               [...root.querySelectorAll('section.fold')].find(f=>
                 f.querySelector('.fold-heading')?.textContent.includes('2-1. 라파예트'));
             if(!detailSection)return;
-            setFold(detailSection,true);
             const teaHeading=[...detailSection.querySelectorAll('.fold-content h2')]
               .find(h=>h.textContent.includes('마리아주 프레르'));
-            scrollToNode(teaHeading||detailSection);
+            jumpToShoppingDetail(detailSection,teaHeading||detailSection);
           });
         }else if(linkTargets.has(group+'|'+name)){
           productName.addEventListener('click',()=>openProduct(group,name));
