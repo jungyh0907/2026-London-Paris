@@ -301,7 +301,7 @@
     for(const group of ['harrods','lafayette']){
       for(const [product,[section,title]] of Object.entries(productTargets[group])){
         const fold=sectionFolds.get(section);
-        const heading=[...(fold?.querySelectorAll('.fold-content h2,.fold-content h3')||[])]
+        let heading=[...(fold?.querySelectorAll('.fold-content h2,.fold-content h3')||[])]
           .find(node=>node.textContent.includes(title));
         if(group==='lafayette'&&product==='Jellycat 인형'&&fold){
           const jellycatInfo=[...fold.querySelectorAll('.fold-content li')]
