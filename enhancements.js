@@ -284,7 +284,7 @@
         empty.hidden=filter==='all'||count>0;
       }
       filters.forEach((button,value)=>button.setAttribute('aria-pressed',String(value===filter)));
-      if(storageOK)hint.textContent='체크 기록은 현재 브라우저에만 저장됩니다. 다른 기기와는 동기화되지 않습니다.';
+      if(storageOK)hint.textContent='매장의 ‘한눈에 보는 쇼핑 리스트’를 펼쳐 체크하세요. 기록은 현재 브라우저에만 저장됩니다.';
     }
     buttons.addEventListener('click',event=>{
       const button=event.target.closest('button[data-filter]');
