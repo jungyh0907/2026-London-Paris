@@ -75,6 +75,7 @@
     toolbar.append(title,options);
     const values=['전체',...Array.from({length:9},(_,i)=>String(20+i))];
     const weekdays=['금','토','일','월','화','수','목','금','토'];
+    const locations=['런던 도착','런던','런던','런던 근교 투어','런던 → 파리','파리','파리','알자스','아울렛/출국'];
     const chips=new Map();
     for(const value of values){
       const button=makeAction('','trip-day-chip');
@@ -83,9 +84,9 @@
       }else{
         button.append(
           element('span','trip-day-chip-date',value+' '+weekdays[Number(value)-20]),
-          element('span','trip-day-chip-city',Number(value)<=23?'런던':'파리')
+          element('span','trip-day-chip-city',locations[Number(value)-20])
         );
-        button.setAttribute('aria-label','11월 '+value+'일 '+weekdays[Number(value)-20]+'요일, '+(Number(value)<=23?'런던':'파리'));
+        button.setAttribute('aria-label','11월 '+value+'일 '+weekdays[Number(value)-20]+'요일, '+locations[Number(value)-20]);
       }
       button.setAttribute('aria-pressed',String(value==='전체'));
       button.dataset.day=value;
