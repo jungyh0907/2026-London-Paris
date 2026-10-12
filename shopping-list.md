@@ -9,7 +9,7 @@ title: 쇼핑리스트
 
 ---
 
-# 1-1. Harrods 자체 굿즈 BEST 4
+# 1-1. Harrods 기념품 BEST 4
 
 ## 1) 해러즈 가방
 
@@ -147,7 +147,7 @@ Harrods 건물, 영국 테마, 화려한 Toile, 보태니컬 패턴 등이 들�
 
 ---
 
-# 1-2. Harrods Food Halls 기념품 BEST 4
+# 1-2. Harrods 식품관 BEST 4
 
 ## 1) 해러즈 자체 차
 
@@ -372,7 +372,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 
 ---
 
-# 2-1. 라파예트 BEST 5
+# 2-1. 라파예트 기념품 BEST 5
 
 ## 1) 라 메종 다모린 — 솔티드 카라멜
 
@@ -534,7 +534,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 
 ---
 
-# 2-2. 라파예트 요리 BEST 4
+# 2-2. 라파예트 식재료 BEST 4
 
 ## 1) 아 롤리비에 — 트러플 오일
 
