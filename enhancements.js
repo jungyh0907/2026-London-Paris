@@ -77,7 +77,16 @@
     const weekdays=['금','토','일','월','화','수','목','금','토'];
     const chips=new Map();
     for(const value of values){
-      const button=makeAction(value==='전체'?'전체':value+' '+weekdays[Number(value)-20],'trip-day-chip');
+      const button=makeAction('','trip-day-chip');
+      if(value==='전체'){
+        button.append(element('span','trip-day-chip-date','전체'));
+      }else{
+        button.append(
+          element('span','trip-day-chip-date',value+' '+weekdays[Number(value)-20]),
+          element('span','trip-day-chip-city',Number(value)<=23?'런던':'파리')
+        );
+        button.setAttribute('aria-label','11월 '+value+'일 '+weekdays[Number(value)-20]+'요일, '+(Number(value)<=23?'런던':'파리'));
+      }
       button.setAttribute('aria-pressed',String(value==='전체'));
       button.dataset.day=value;
       options.append(button);
