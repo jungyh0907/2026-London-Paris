@@ -174,6 +174,48 @@
         if(placement==='top')content.prepend(bar);else content.append(bar);
       }
     }
+
+    // Keep a compact return action on screen while any expanded daily detail is
+    // being read. The original top and bottom return links remain unchanged.
+    const floating=makeAction('↑ 일정표로 돌아가기','trip-floating-return');
+    floating.hidden=true;
+    floating.setAttribute('aria-label','현재 날짜의 일정표로 돌아가기');
+    document.body.append(floating);
+    let visibleDay=null;
+    function updateFloating(){
+      const anchor=window.innerHeight*0.68;
+      const minBottom=Math.min(110,window.innerHeight*0.2);
+      let match=null,closest=Infinity;
+      for(const [day,fold] of dayFolds){
+        if(!fold.classList.contains('expanded')||fold.classList.contains('trip-day-hidden'))continue;
+        const content=fold.querySelector('.fold-content');
+        const rect=content?.getBoundingClientRect();
+        if(!rect||rect.top>anchor||rect.bottom<minBottom)continue;
+        const distance=Math.abs(rect.top-anchor);
+        if(distance<closest){closest=distance;match=day;}
+      }
+      visibleDay=match;
+      floating.hidden=!match||!!document.querySelector('dialog[open]');
+      if(match){
+        floating.textContent='↑ 11/'+match+' 일정표로';
+        floating.setAttribute('aria-label','11월 '+match+'일 일정표로 돌아가기');
+      }
+    }
+    floating.addEventListener('click',()=>{
+      if(!visibleDay)return;
+      const day=visibleDay;
+      showDay(day);
+      setFold(schedules.get(day).fold,true);
+      floating.hidden=true;
+      scrollToNode(schedules.get(day).heading);
+    });
+    window.addEventListener('scroll',updateFloating,{passive:true});
+    window.addEventListener('resize',updateFloating);
+    root.addEventListener('click',event=>{
+      if(event.target.closest('.fold-toggle,.trip-detail-link,.trip-back-link'))
+        requestAnimationFrame(updateFloating);
+    });
+    updateFloating();
   }
 
   function initShopping(){
@@ -186,6 +228,7 @@
     ];
     if(groups.some(g=>!g.fold))return;
 
+    // Preserve all existing checked products as interested products.
     const key='london-paris-shopping-checks-v1';
     let saved={};
     let storageOK=true;
@@ -205,12 +248,12 @@
       input.addEventListener('change',()=>{
         if(input.checked)saved[id]=true;
         else delete saved[id];
-        row.classList.toggle('shopping-bought',input.checked);
+        row.classList.toggle('shopping-interested',input.checked);
         save();refresh();
       });
-      row.classList.toggle('shopping-bought',input.checked);
+      row.classList.toggle('shopping-interested',input.checked);
     }
-    // Product lists: purchase actions, not itinerary metadata.
+    // Product lists: interest flags, not purchase records or itinerary metadata.
     for(const {fold,group} of groups.slice(0,2)){
       const table=fold.querySelector('table');
       if(!table)continue;
@@ -219,7 +262,7 @@
         const name=cell.textContent.trim();
         const label=element('label','shopping-check-label');
         const input=document.createElement('input');input.type='checkbox';input.className='shopping-check-input';
-        input.setAttribute('aria-label',name+' 구매 완료');
+        input.setAttribute('aria-label',name+' 관심상품');
         const text=element('span','shopping-check-name');
         while(cell.firstChild)text.append(cell.firstChild);
         label.append(input,text);cell.append(label);
@@ -238,7 +281,7 @@
       for(const name of brands){
         const label=element('label','shopping-brand-check');
         const input=document.createElement('input');input.type='checkbox';input.className='shopping-check-input';
-        input.setAttribute('aria-label',name+' 구매 완료');
+        input.setAttribute('aria-label',name+' 관심상품');
         label.append(input,element('span','',name));
         grid.append(label);
         register(input,name,label,'outlet');
@@ -249,18 +292,18 @@
 
     const toolbar=element('div','shopping-check-toolbar');
     const header=element('div','shopping-check-head');
-    header.append(element('strong','','쇼핑 체크리스트'),element('span','shopping-check-progress'));
+    header.append(element('strong','','관심상품 체크리스트'),element('span','shopping-check-progress'));
     const buttons=element('div','shopping-filter-options');
     buttons.setAttribute('role','group');buttons.setAttribute('aria-label','쇼핑리스트 필터');
     const filters=new Map();
-    for(const [value,name] of [['all','전체'],['todo','미구매'],['done','구매 완료']]){
+    for(const [value,name] of [['all','전체'],['interest','관심'],['no-interest','미관심']]){
       const button=makeAction(name,'shopping-filter-chip');
       button.dataset.filter=value;
       button.setAttribute('aria-pressed',String(value==='all'));
       buttons.append(button);filters.set(value,button);
     }
     const meter=document.createElement('progress');meter.className='shopping-meter';meter.max=items.length;
-    const hint=element('p','shopping-filter-hint','구매한 항목을 체크하면 이 브라우저에 저장됩니다. 다른 기기와 자동 동기화되지 않습니다.');
+    const hint=element('p','shopping-filter-hint','관심 있는 상품을 체크하세요. 기존 체크 기록은 유지되며 다른 기기와 자동 동기화되지 않습니다.');
     toolbar.append(header,meter,buttons,hint);
     const firstHeading=[...root.querySelectorAll('h1')].find(h=>h.textContent.trim().startsWith('1. 런던 Harrods'));
     if(firstHeading){
@@ -269,13 +312,13 @@
     }else root.prepend(toolbar);
 
     function refresh(){
-      const bought=items.filter(item=>item.input.checked).length;
-      header.querySelector('.shopping-check-progress').textContent=bought+' / '+items.length+' 완료';
-      meter.value=bought;
+      const interested=items.filter(item=>item.input.checked).length;
+      header.querySelector('.shopping-check-progress').textContent='관심 '+interested+' / '+items.length;
+      meter.value=interested;
       for(const item of items){
         item.row.classList.toggle('shopping-filter-hidden',
-          filter==='todo'?item.input.checked:filter==='done'?!item.input.checked:false);
-        item.row.classList.toggle('shopping-bought',item.input.checked);
+          filter==='no-interest'?item.input.checked:filter==='interest'?!item.input.checked:false);
+        item.row.classList.toggle('shopping-interested',item.input.checked);
       }
       for(const {fold,group} of groups){
         const count=items.filter(item=>item.group===group&&!item.row.classList.contains('shopping-filter-hidden')).length;
@@ -284,7 +327,7 @@
         empty.hidden=filter==='all'||count>0;
       }
       filters.forEach((button,value)=>button.setAttribute('aria-pressed',String(value===filter)));
-      if(storageOK)hint.textContent='매장의 ‘한눈에 보는 쇼핑 리스트’를 펼쳐 체크하세요. 기록은 현재 브라우저에만 저장됩니다.';
+      if(storageOK)hint.textContent='‘한눈에 보는 쇼핑 리스트’에서 관심상품을 체크하세요. 기록은 현재 브라우저에만 저장됩니다.';
     }
     buttons.addEventListener('click',event=>{
       const button=event.target.closest('button[data-filter]');
