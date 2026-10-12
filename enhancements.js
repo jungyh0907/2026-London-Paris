@@ -17,8 +17,70 @@
     if(!fold)return;
     if(fold.classList.contains('expanded')!==open)topButton(fold)?.click();
   }
+  // Keep an anchor aligned while a freshly opened section grows as its
+  // images and fonts load. A one-shot smooth scroll drifts on first visit.
+  let cancelPendingScroll=null;
   function scrollToNode(node){
-    if(node)node.scrollIntoView({behavior:'smooth',block:'start'});
+    if(!node)return;
+    if(cancelPendingScroll)cancelPendingScroll();
+    let cancelled=false,frame=0;
+    const container=node.closest('.fold')||root;
+    const earlierImages=[...container.querySelectorAll('img')].filter(image=>
+      !!(image.compareDocumentPosition(node)&Node.DOCUMENT_POSITION_FOLLOWING));
+    let observer=null;
+    const align=()=>{
+      frame=0;
+      if(cancelled||!node.isConnected||!node.getClientRects().length)return;
+      const header=document.querySelector('header');
+      const offset=(header?.getBoundingClientRect().height||0)+14;
+      const maximum=Math.max(0,document.documentElement.scrollHeight-window.innerHeight);
+      const top=Math.max(0,Math.min(maximum,window.scrollY+node.getBoundingClientRect().top-offset));
+      if(Math.abs(window.scrollY-top)>2)window.scrollTo({top,behavior:'instant'});
+    };
+    const schedule=()=>{
+      if(!cancelled&&!frame)frame=requestAnimationFrame(align);
+    };
+    const cancel=()=>{
+      if(cancelled)return;
+      cancelled=true;
+      if(frame)cancelAnimationFrame(frame);
+      observer?.disconnect();
+      earlierImages.forEach(image=>{
+        image.removeEventListener('load',schedule);
+        image.removeEventListener('error',schedule);
+      });
+      window.removeEventListener('wheel',cancel);
+      window.removeEventListener('touchstart',cancel);
+      window.removeEventListener('pointerdown',cancel);
+      window.removeEventListener('keydown',cancel);
+      clearTimeout(timeout);
+      if(cancelPendingScroll===cancel)cancelPendingScroll=null;
+    };
+    cancelPendingScroll=cancel;
+    earlierImages.forEach(image=>{
+      if(!image.complete){
+        image.addEventListener('load',schedule);
+        image.addEventListener('error',schedule);
+      }
+    });
+    // Observe content height, not just the heading, since lazy-loaded images
+    // above the destination move the heading without changing its own size.
+    if(typeof ResizeObserver!=='undefined'){
+      observer=new ResizeObserver(schedule);
+      observer.observe(root);
+      observer.observe(container);
+    }
+    const timeout=setTimeout(cancel,8000);
+    // Any deliberate user interaction stops automatic corrections.
+    window.addEventListener('wheel',cancel,{passive:true});
+    window.addEventListener('touchstart',cancel,{passive:true});
+    window.addEventListener('pointerdown',cancel,{passive:true});
+    window.addEventListener('keydown',cancel);
+    requestAnimationFrame(()=>requestAnimationFrame(schedule));
+    setTimeout(schedule,200);
+    setTimeout(schedule,650);
+    setTimeout(schedule,1500);
+    document.fonts?.ready?.then(schedule);
   }
   function dayFromTitle(text){
     const match=text.trim().match(/^(?:11\/)?(2[0-8])(?=\s+[월화수목금토일](?:\s|:|$))/);
@@ -370,7 +432,7 @@
             setFold(detailSection,true);
             const teaHeading=[...detailSection.querySelectorAll('.fold-content h2')]
               .find(h=>h.textContent.includes('마리아주 프레르'));
-            requestAnimationFrame(()=>scrollToNode(teaHeading||detailSection));
+            scrollToNode(teaHeading||detailSection);
           });
         }else if(linkTargets.has(group+'|'+name)){
           productName.addEventListener('click',()=>openProduct(group,name));
