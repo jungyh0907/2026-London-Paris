@@ -307,3 +307,25 @@ body:has(dialog[open]) .trip-floating-return{display:none!important}
 @media(max-width:640px){
   .trip-floating-return{right:12px;bottom:calc(12px + env(safe-area-inset-bottom));padding:11px 15px}
 }
+
+
+/* The product name navigates to details; the adjacent checkbox changes interest only. */
+body[data-document="shopping"] #document-content .shopping-product-link{
+  appearance:none;display:inline;border:0;background:transparent;
+  padding:0;margin:0;font:inherit;font-weight:700;line-height:inherit;
+  color:#315f83;text-align:left;cursor:pointer;
+  text-decoration:underline;text-decoration-color:#a6c4d8;text-underline-offset:3px;
+  overflow-wrap:anywhere;
+}
+body[data-document="shopping"] #document-content .shopping-product-link:hover{
+  text-decoration-color:#315f83;
+}
+body[data-document="shopping"] #document-content .shopping-product-link:focus-visible{
+  outline:3px solid #86acc9;outline-offset:3px;border-radius:3px;
+}
+body[data-document="shopping"] #document-content .fold-content h2,
+body[data-document="shopping"] #document-content .fold-content h3,
+body[data-document="shopping"] #document-content .fold-content li,
+body[data-document="shopping"] #document-content .quick-list-fold{
+  scroll-margin-top:82px;
+}
