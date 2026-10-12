@@ -262,6 +262,56 @@
       });
       row.classList.toggle('shopping-interested',input.checked);
     }
+    // Explicit product-to-detail targets keep similar products (including nested
+    // Clément Faugier and Bordier descriptions) pointing to their own sections.
+    const productTargets={
+      harrods:{
+        'Harrods 가방':['1-1.','해러즈 가방'],
+        'Harrods 테디베어':['1-1.','해러즈 테디베어'],
+        '머그, 찻잔, 접시, 티세트':['1-1.','해러즈 접시'],
+        '키링, 파우치, 마그넷 등 소형 굿즈':['1-1.','키링, 파우치'],
+        'Jellycat 인형 (Harrods 4층)':['1-1.','Jellycat Airlines'],
+        'Harrods 자체 차':['1-2.','해러즈 자체 차'],
+        'Harrods 비스킷 틴':['1-2.','해러즈 비스킷 틴'],
+        'Harrods 초콜릿':['1-2.','초콜릿'],
+        'Harrods 커피':['1-2.','해러즈 커피']
+      },
+      lafayette:{
+        "La Maison d'Armorine 솔티드 카라멜":['2-1.','라 메종 다모린'],
+        'Angelina 밤 잼':['2-1.','앙젤리나'],
+        'Clément Faugier 밤 잼':['2-1.','Clément Faugier'],
+        'La Mère Poulard 쿠키':['2-1.','라 메르 풀라르'],
+        'Confiture Parisienne 잼':['2-1.','콩피튀르 파리지엔느'],
+        'Les Abeilles de Malescot 트러플 꿀':['2-1.','레 자베이 드 말레스코'],
+        'A L’Olivier 트러플 오일':['2-2.','아 롤리비에'],
+        'Artisan de la Truffe 트러플 소금':['2-2.','아티장 드 라 트뤼프'],
+        'Bordier Butter':['2-2.','보르디에 버터'],
+        'Edmond Fallot 머스타드':['2-2.','에드몽 팔로'],
+        'SÒSU 트러플 마요네즈':['2-2.','소수'],
+        'Jellycat 인형':['2-4.','갤러리 라파예트 오스만 — 일반 쇼핑']
+      }
+    };
+    const sectionFolds=new Map();
+    for(const fold of root.querySelectorAll('section.fold:not(.quick-list-fold)')){
+      const title=fold.querySelector('.fold-heading')?.textContent.trim()||'';
+      const section=title.match(/^([12]-[1-4]\.)/);
+      if(section)sectionFolds.set(section[1],fold);
+    }
+    const linkTargets=new Map();
+    for(const group of ['harrods','lafayette']){
+      for(const [product,[section,title]] of Object.entries(productTargets[group])){
+        const fold=sectionFolds.get(section);
+        const heading=[...(fold?.querySelectorAll('.fold-content h2,.fold-content h3')||[])]
+          .find(node=>node.textContent.includes(title));
+        if(fold&&heading)linkTargets.set(group+'|'+product,{fold,heading,group});
+      }
+    }
+    function openProduct(group,name){
+      const target=linkTargets.get(group+'|'+name);
+      if(!target)return;
+      setFold(target.fold,true);
+      scrollToNode(target.heading);
+    }
     // Product lists: interest flags, not purchase records or itinerary metadata.
     for(const {fold,group} of groups.slice(0,2)){
       const table=fold.querySelector('table');
@@ -269,13 +319,20 @@
       for(const row of [...table.rows].slice(1)){
         const cell=row.cells[0];if(!cell)continue;
         const name=cell.textContent.trim();
-        const label=element('label','shopping-check-label');
+        const label=element('div','shopping-check-label');
         const input=document.createElement('input');input.type='checkbox';input.className='shopping-check-input';
         input.setAttribute('aria-label',name+' 관심상품');
-        const text=element('span','shopping-check-name');
-        while(cell.firstChild)text.append(cell.firstChild);
-        label.append(input,text);cell.append(label);
+        const productName=makeAction('','shopping-product-link shopping-check-name');
+        productName.setAttribute('aria-label',name+' 상세 설명으로 이동');
+        while(cell.firstChild)productName.append(cell.firstChild);
+        label.append(input,productName);cell.append(label);
         register(input,name,row,group);
+        if(linkTargets.has(group+'|'+name)){
+          productName.addEventListener('click',()=>openProduct(group,name));
+        }else{
+          // Fall back to ordinary text rather than offer a broken navigation action.
+          productName.replaceWith(element('span','shopping-check-name',name));
+        }
       }
     }
     // The outlet summary contains visit logistics, not products. Extract
@@ -347,6 +404,51 @@
       if(filter!=='all')groups.forEach(({fold})=>setFold(fold,true));
     });
     refresh();
+
+    // A persistent return button is displayed while reading either department
+    // store's expanded descriptions, even when far down the page.
+    const floating=makeAction('↑ 체크리스트로 돌아가기','shopping-floating-return');
+    floating.hidden=true;
+    document.body.append(floating);
+    const relevantSections=[
+      ['1-1.','harrods'],['1-2.','harrods'],
+      ['2-1.','lafayette'],['2-2.','lafayette'],['2-3.','lafayette'],['2-4.','lafayette']
+    ].map(([section,group])=>({fold:sectionFolds.get(section),group})).filter(x=>x.fold);
+    let activeGroup=null;
+    function updateShoppingReturn(){
+      const anchor=window.innerHeight*.68;
+      const minBottom=Math.min(110,window.innerHeight*.2);
+      let current=null,closest=Infinity;
+      for(const {fold,group} of relevantSections){
+        if(!fold.classList.contains('expanded'))continue;
+        const rect=fold.querySelector('.fold-content')?.getBoundingClientRect();
+        if(!rect||rect.top>anchor||rect.bottom<minBottom)continue;
+        const distance=Math.abs(rect.top-anchor);
+        if(distance<closest){closest=distance;current=group;}
+      }
+      activeGroup=current;
+      floating.hidden=!current||!!document.querySelector('dialog[open]');
+      if(current){
+        const label=current==='harrods'?'해러즈':'라파예트';
+        floating.textContent='↑ '+label+' 체크리스트로';
+        floating.setAttribute('aria-label',label+' 관심상품 체크리스트로 돌아가기');
+      }
+    }
+    floating.addEventListener('click',()=>{
+      if(!activeGroup)return;
+      const group=groups.find(x=>x.group===activeGroup);
+      if(!group)return;
+      setFold(group.fold,true);
+      floating.hidden=true;
+      scrollToNode(group.fold.querySelector('.fold-title')||group.fold);
+    });
+    window.addEventListener('scroll',updateShoppingReturn,{passive:true});
+    window.addEventListener('resize',updateShoppingReturn);
+    root.addEventListener('click',event=>{
+      if(event.target.closest('.fold-toggle,.shopping-product-link'))
+        requestAnimationFrame(updateShoppingReturn);
+    });
+    updateShoppingReturn();
   }
 
   // The original website hydrates Markdown, detail pages and JSON asynchronously.
