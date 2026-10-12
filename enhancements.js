@@ -231,7 +231,7 @@
     window.addEventListener('scroll',updateFloating,{passive:true});
     window.addEventListener('resize',updateFloating);
     root.addEventListener('click',event=>{
-      if(event.target.closest('.fold-toggle,.trip-detail-link,.trip-back-link'))
+      if(event.target.closest('.fold-toggle,.trip-activity-link,.trip-back-link'))
         requestAnimationFrame(updateFloating);
     });
     updateFloating();
