@@ -13,7 +13,7 @@
   },
   {
     "time": "09:00~\n10:30",
-    "activity": "**베르사유 궁전, 거울의 방**",
+    "activity": "**베르사유 궁전, 거울의 방** (예약)",
     "transport": "🚶 궁전 내부",
     "shaded": false
   },
@@ -38,7 +38,6 @@
   {
     "time": "17:30~\n20:00",
     "activity": "**갤러리 라파예트, 프랭땅 백화점** (Galeries Lafayette Haussmann, Printemps Haussmann)",
-    "transport": "",
     "shaded": false
   },
   {
