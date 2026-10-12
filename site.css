@@ -256,7 +256,7 @@ body[data-document="shopping"] #document-content .shopping-check-label{
 }
 body[data-document="shopping"] #document-content .shopping-bought .shopping-check-name,
 body[data-document="shopping"] #document-content .shopping-brand-check.shopping-bought span{
-  opacity:.6;text-decoration:line-through;text-decoration-thickness:1px;
+  opacity:.6;
 }
 body[data-document="shopping"] #document-content .shopping-check-label strong{color:inherit}
 body[data-document="shopping"] #document-content .shopping-brand-panel h3{margin:0 0 8px;font-size:17px}
