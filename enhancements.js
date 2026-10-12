@@ -303,6 +303,11 @@
         const fold=sectionFolds.get(section);
         const heading=[...(fold?.querySelectorAll('.fold-content h2,.fold-content h3')||[])]
           .find(node=>node.textContent.includes(title));
+        if(group==='lafayette'&&product==='Jellycat 인형'&&fold){
+          const jellycatInfo=[...fold.querySelectorAll('.fold-content li')]
+            .find(node=>node.textContent.includes('키즈, 토이')&&node.textContent.includes('Jellycat'));
+          if(jellycatInfo)heading=jellycatInfo;
+        }
         if(fold&&heading)linkTargets.set(group+'|'+product,{fold,heading,group});
       }
     }
@@ -407,7 +412,7 @@
 
     // A persistent return button is displayed while reading either department
     // store's expanded descriptions, even when far down the page.
-    const floating=makeAction('↑ 체크리스트로 돌아가기','shopping-floating-return');
+    const floating=makeAction('↑ 체크리스트로 돌아가기','trip-floating-return shopping-floating-return');
     floating.hidden=true;
     document.body.append(floating);
     const relevantSections=[
