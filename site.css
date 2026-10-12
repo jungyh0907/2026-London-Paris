@@ -215,6 +215,14 @@ body[data-document="trip"] #document-content table.itinerary-table th::before{di
   background:#fff;color:#315d7c;border:1px solid #b8d0e2;border-radius:25px;
   padding:7px 13px;font:inherit;font-size:14px;font-weight:700;line-height:1.4;
 }
+/* Two-line date chips: date/day above, city below. */
+.trip-day-chip{
+  display:inline-flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:1px;min-width:68px;min-height:58px;padding:7px 12px;
+  text-align:center;white-space:nowrap;
+}
+.trip-day-chip-date{display:block;font-size:14px;line-height:1.35;font-weight:700}
+.trip-day-chip-city{display:block;font-size:12px;line-height:1.4;font-weight:600;opacity:.85}
 .trip-day-chip[aria-pressed="true"],.shopping-filter-chip[aria-pressed="true"]{
   color:#fff;background:#315d7c;border-color:#315d7c;
 }
@@ -277,7 +285,7 @@ body[data-document="shopping"] #document-content .shopping-brand-panel h3{margin
 .shopping-empty-message[hidden]{display:none!important}
 @media(max-width:640px){
   .trip-day-switcher,.shopping-check-toolbar{margin:6px 0 18px;padding:12px 10px}
-  .trip-day-chip{padding:7px 11px;font-size:14px}
+  .trip-day-chip{padding:7px 10px;font-size:14px;min-width:64px}
   .shopping-brand-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   body[data-document="trip"] #document-content .trip-detail-link{font-size:12px;padding:5px 7px}
 }
