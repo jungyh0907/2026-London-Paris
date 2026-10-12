@@ -199,3 +199,80 @@ body[data-document="trip"] #document-content table.itinerary-table th::before{di
 #document-content [style*="line-through"]{
   text-decoration-line:none!important;
 }
+
+
+/* Optional interactive trip navigation and shopping checklist (original content preserved). */
+.trip-day-switcher,.shopping-check-toolbar{
+  margin:8px 0 22px;padding:14px 15px;border:1px solid #cbdce9;border-radius:14px;
+  background:#f4f8fc;
+}
+.trip-day-switcher-title,.shopping-check-head{
+  font-size:17px;font-weight:700;color:#29435c;line-height:1.5;margin-bottom:10px;
+}
+.trip-day-options{display:flex;gap:7px;overflow-x:auto;overscroll-behavior-x:contain;padding:2px 1px 8px;-webkit-overflow-scrolling:touch}
+.trip-day-chip,.shopping-filter-chip{
+  flex:0 0 auto;appearance:none;cursor:pointer;min-height:38px;
+  background:#fff;color:#315d7c;border:1px solid #b8d0e2;border-radius:25px;
+  padding:7px 13px;font:inherit;font-size:14px;font-weight:700;line-height:1.4;
+}
+.trip-day-chip[aria-pressed="true"],.shopping-filter-chip[aria-pressed="true"]{
+  color:#fff;background:#315d7c;border-color:#315d7c;
+}
+.trip-day-chip:focus-visible,.shopping-filter-chip:focus-visible,
+.trip-detail-link:focus-visible,.trip-back-link:focus-visible,
+.shopping-check-input:focus-visible{outline:3px solid #86acc9;outline-offset:2px}
+.trip-day-tip,.shopping-filter-hint{
+  font-size:13px!important;line-height:1.6!important;color:#526b82!important;margin:4px 0 0!important;
+}
+.trip-day-hidden{display:none!important}
+body[data-document="trip"] #document-content .trip-detail-link{
+  display:inline-block;margin:8px 0 0;padding:5px 9px;
+  border:1px solid #b7d1e2;border-radius:8px;cursor:pointer;
+  font-size:13px;font-weight:700;line-height:1.4;background:#eef5fa;color:#315d7c;text-align:left;
+}
+.trip-return-bar{display:flex;justify-content:flex-start;margin:8px 0 13px}
+.trip-return-bottom{margin:18px 0 7px}
+.trip-back-link{
+  appearance:none;border:1px solid #b7d1e2;border-radius:20px;padding:7px 11px;
+  font-size:13px;font-weight:700;color:#315d7c;background:#f1f7fb;cursor:pointer;
+}
+body[data-document="trip"] #document-content .fold,
+body[data-document="trip"] #document-content h3[id]{scroll-margin-top:85px}
+body[data-document="trip"] #document-content .fold-content h3,
+body[data-document="trip"] #document-content .fold-content h4{scroll-margin-top:85px}
+
+.shopping-check-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px}
+.shopping-check-progress{font-size:14px;font-weight:700;color:#315d7c}
+.shopping-meter{display:block;width:100%;height:8px;margin:6px 0 13px;accent-color:#315d7c}
+.shopping-filter-options{display:flex;flex-wrap:wrap;gap:8px}
+body[data-document="shopping"] #document-content tr.shopping-filter-hidden,
+body[data-document="shopping"] #document-content .shopping-brand-check.shopping-filter-hidden{display:none!important}
+body[data-document="shopping"] #document-content .shopping-check-label{
+  display:flex;align-items:flex-start;gap:9px;cursor:pointer;line-height:1.55;
+}
+.shopping-check-input{
+  flex:0 0 auto;width:19px;height:19px;accent-color:#315d7c;
+  margin:3px 0 0;cursor:pointer;
+}
+body[data-document="shopping"] #document-content .shopping-bought .shopping-check-name,
+body[data-document="shopping"] #document-content .shopping-brand-check.shopping-bought span{
+  opacity:.6;
+}
+body[data-document="shopping"] #document-content .shopping-check-label strong{color:inherit}
+body[data-document="shopping"] #document-content .shopping-brand-panel h3{margin:0 0 8px;font-size:17px}
+.shopping-brand-panel{padding:9px 0 8px}
+.shopping-brand-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.shopping-brand-check{
+  display:flex;align-items:center;gap:8px;min-width:0;padding:7px 9px;
+  border:1px solid #d9e3ec;border-radius:9px;background:#f9fbfd;cursor:pointer;
+  font-size:14px;line-height:1.45;
+}
+.shopping-brand-check span{overflow-wrap:anywhere}
+.shopping-empty-message{font-size:14px;color:#526b82;padding:8px 0}
+.shopping-empty-message[hidden]{display:none!important}
+@media(max-width:640px){
+  .trip-day-switcher,.shopping-check-toolbar{margin:6px 0 18px;padding:12px 10px}
+  .trip-day-chip{padding:7px 11px;font-size:14px}
+  .shopping-brand-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  body[data-document="trip"] #document-content .trip-detail-link{font-size:12px;padding:5px 7px}
+}
