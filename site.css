@@ -227,16 +227,27 @@ body[data-document="trip"] #document-content table.itinerary-table th::before{di
   color:#fff;background:#315d7c;border-color:#315d7c;
 }
 .trip-day-chip:focus-visible,.shopping-filter-chip:focus-visible,
-.trip-detail-link:focus-visible,.trip-back-link:focus-visible,
+.trip-activity-link:focus-visible,.trip-back-link:focus-visible,
 .shopping-check-input:focus-visible{outline:3px solid #86acc9;outline-offset:2px}
 .trip-day-tip,.shopping-filter-hint{
   font-size:13px!important;line-height:1.6!important;color:#526b82!important;margin:4px 0 0!important;
 }
 .trip-day-hidden{display:none!important}
-body[data-document="trip"] #document-content .trip-detail-link{
-  display:inline-block;margin:8px 0 0;padding:5px 9px;
-  border:1px solid #b7d1e2;border-radius:8px;cursor:pointer;
-  font-size:13px;font-weight:700;line-height:1.4;background:#eef5fa;color:#315d7c;text-align:left;
+/* The original itinerary text is the detail link; no separate button is shown. */
+body[data-document="trip"] #document-content td.itinerary-activity-cell{
+  cursor:pointer;touch-action:manipulation;
+}
+body[data-document="trip"] #document-content .trip-activity-link{
+  display:block;width:100%;padding:0;margin:0;border:0;
+  background:transparent;color:inherit;text-align:left;
+  font:inherit;line-height:inherit;white-space:normal;word-break:normal;
+  overflow-wrap:anywhere;cursor:pointer;
+}
+body[data-document="trip"] #document-content td.itinerary-activity-cell:hover{
+  background:#e7f0f8;
+}
+body[data-document="trip"] #document-content td.itinerary-activity-cell:active{
+  background:#d8e8f5;
 }
 .trip-return-bar{display:flex;justify-content:flex-start;margin:8px 0 13px}
 .trip-return-bottom{margin:18px 0 7px}
@@ -287,7 +298,6 @@ body[data-document="shopping"] #document-content .shopping-brand-panel h3{margin
   .trip-day-switcher,.shopping-check-toolbar{margin:6px 0 18px;padding:12px 10px}
   .trip-day-chip{padding:7px 10px;font-size:14px;min-width:64px}
   .shopping-brand-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  body[data-document="trip"] #document-content .trip-detail-link{font-size:12px;padding:5px 7px}
 }
 
 
