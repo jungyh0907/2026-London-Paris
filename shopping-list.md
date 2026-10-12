@@ -548,6 +548,8 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 
 ### 마르코 폴로 (Marco Polo)
 
+![마리아주 프레르 마르코 폴로 홍차 100g 틴케이스](https://www.lagrandeepicerie.com/on/demandware.static/-/Sites-lge-master-catalog/default/dwe135dacd/images/DIS/batch_90_2/3700286549671_1.jpg)
+
 - **종류:** 과일·꽃 향이 특징인 블렌딩 홍차
 - **특징:** 중국·티베트의 꽃과 과일을 연상시키는 부드럽고 향긋한 향. 마리아주 프레르의 대표 제품.
 - **가격:** 프랑스 공식 온라인 기준 **잎차 100g €13 / 기타 포장 €19~20**
