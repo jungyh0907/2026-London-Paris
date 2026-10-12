@@ -540,6 +540,8 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 
 **Mariage Frères – Marco Polo / Wedding Impérial**
 
+![마리아주 프레르 마르코 폴로 홍차 100g 틴케이스](https://www.lagrandeepicerie.com/on/demandware.static/-/Sites-lge-master-catalog/default/dwe135dacd/images/DIS/batch_90_2/3700286549671_1.jpg)
+
 ![](https://www.mariagefreres.com/media/catalog/collection/Headers-Origines-desktop_4_51.jpg)
 
 ### 어떤 브랜드?
@@ -547,8 +549,6 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 1854년부터 이어져 온 프랑스의 홍차 전문 브랜드. 대표 블렌딩 홍차인 **마르코 폴로**와 **웨딩 임페리얼**은 향과 선물용 포장을 비교해볼 만한 제품.
 
 ### 마르코 폴로 (Marco Polo)
-
-![마리아주 프레르 마르코 폴로 홍차 100g 틴케이스](https://www.lagrandeepicerie.com/on/demandware.static/-/Sites-lge-master-catalog/default/dwe135dacd/images/DIS/batch_90_2/3700286549671_1.jpg)
 
 - **종류:** 과일·꽃 향이 특징인 블렌딩 홍차
 - **특징:** 중국·티베트의 꽃과 과일을 연상시키는 부드럽고 향긋한 향. 마리아주 프레르의 대표 제품.
