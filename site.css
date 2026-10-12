@@ -242,6 +242,9 @@ body[data-document="trip"] #document-content .trip-activity-link{
   background:transparent;color:inherit;text-align:left;
   font:inherit;line-height:inherit;white-space:normal;word-break:normal;
   overflow-wrap:anywhere;cursor:pointer;
+  text-decoration-line:underline;text-decoration-style:dotted;
+  text-decoration-color:#8aaac4;text-decoration-thickness:1.5px;
+  text-underline-offset:3px;
 }
 body[data-document="trip"] #document-content td.itinerary-activity-cell:hover{
   background:#e7f0f8;
