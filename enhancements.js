@@ -156,15 +156,25 @@
     for(const [day,info] of schedules){
       for(const row of [...info.table.rows].slice(1)){
         if(row.cells.length<3)continue;
-        const link=makeAction('상세 보기 ↗','trip-detail-link');
-        link.setAttribute('aria-label','11월 '+day+'일 해당 일정 상세 보기');
-        row.cells[1].append(link);
-        link.addEventListener('click',()=>{
+        const cell=row.cells[1];
+        const activity=makeAction('','trip-activity-link');
+        activity.setAttribute('aria-label','11월 '+day+'일 '+cell.textContent.trim().replace(/\s+/g,' ')+' 상세 일정 보기');
+        // Keep every word and all formatting exactly as it appeared in the table.
+        while(cell.firstChild)activity.append(cell.firstChild);
+        cell.append(activity);
+        cell.classList.add('itinerary-activity-cell');
+        const openDetails=()=>{
           showDay(day);
           const detail=dayFolds.get(day);
           setFold(detail,true);
           scrollToNode(matchingDetail(day,row));
+        };
+        // Both the original text and the surrounding schedule cell are tappable.
+        activity.addEventListener('click',event=>{
+          event.stopPropagation();
+          openDetails();
         });
+        cell.addEventListener('click',openDetails);
       }
     }
 
@@ -221,7 +231,7 @@
     window.addEventListener('scroll',updateFloating,{passive:true});
     window.addEventListener('resize',updateFloating);
     root.addEventListener('click',event=>{
-      if(event.target.closest('.fold-toggle,.trip-detail-link,.trip-back-link'))
+      if(event.target.closest('.fold-toggle,.trip-activity-link,.trip-back-link'))
         requestAnimationFrame(updateFloating);
     });
     updateFloating();
