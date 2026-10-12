@@ -294,6 +294,8 @@
         'La Mère Poulard 쿠키':['2-1.','라 메르 풀라르'],
         'Confiture Parisienne 잼':['2-1.','콩피튀르 파리지엔느'],
         'Les Abeilles de Malescot 트러플 꿀':['2-1.','레 자베이 드 말레스코'],
+        'Mariage Frères Marco Polo 홍차':['2-1.','마르코 폴로 (Marco Polo)'],
+        'Mariage Frères Wedding Impérial 홍차':['2-1.','웨딩 임페리얼 (Wedding Impérial)'],
         'A L’Olivier 트러플 오일':['2-2.','아 롤리비에'],
         'Artisan de la Truffe 트러플 소금':['2-2.','아티장 드 라 트뤼프'],
         'Bordier Butter':['2-2.','보르디에 버터'],
