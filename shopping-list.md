@@ -374,7 +374,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 
 ---
 
-# 2-1. 라파예트 기념품 BEST 5
+# 2-1. 라파예트 기념품 BEST 6
 
 ## 1) 라 메종 다모린 — 솔티드 카라멜
 
@@ -533,6 +533,40 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 
 - **250g €6.50**
 - 블로그 방문 당시 봉마르셰에서는 같은 브랜드를 찾지 못했으며, 비슷한 종류의 제품은 있었음
+
+---
+
+## 6) 마리아주 프레르 — 마르코 폴로·웨딩 임페리얼 홍차
+
+**Mariage Frères – Marco Polo / Wedding Impérial**
+
+![](https://www.mariagefreres.com/media/catalog/collection/Headers-Origines-desktop_4_51.jpg)
+
+### 어떤 브랜드?
+
+1854년부터 이어져 온 프랑스의 홍차 전문 브랜드. 대표 블렌딩 홍차인 **마르코 폴로**와 **웨딩 임페리얼**은 향과 선물용 포장을 비교해볼 만한 제품.
+
+### 마르코 폴로 (Marco Polo)
+
+- **종류:** 과일·꽃 향이 특징인 블렌딩 홍차
+- **특징:** 중국·티베트의 꽃과 과일을 연상시키는 부드럽고 향긋한 향. 마리아주 프레르의 대표 제품.
+- **가격:** 프랑스 공식 온라인 기준 **잎차 100g €13 / 기타 포장 €19~20**
+- **공식 상품:** [Marco Polo](https://www.mariagefreres.com/fr/the/les-thes-icones/marco-polo.html)
+
+### 웨딩 임페리얼 (Wedding Impérial)
+
+- **종류:** 초콜릿·캐러멜 향이 특징인 블렌딩 홍차
+- **특징:** 달콤하고 진한 디저트 계열의 향. 마르코 폴로와 향이 달라 함께 비교하기 좋음.
+- **가격:** 프랑스 공식 온라인 기준 **잎차 100g €12 / 기타 포장 €18~20**
+- **공식 상품:** [Wedding Impérial](https://www.mariagefreres.com/fr/the/les-thes-icones/wedding-imperial.html)
+
+### 구매 위치 (여행 일정 기준)
+
+- **갤러리 라파예트 Le Gourmet 지상층(RDC):** 마리아주 프레르 공식 판매 코너. **11/26 16:30~18:30** 백화점 쇼핑 일정 중 확인.
+- **프랭땅 오스만 3층, La Cuisine Conviviale:** 같은 날 라파예트에 이어 방문할 때 확인 가능.
+- **모노프릭스(Monoprix):** 두 제품의 공식 취급 여부가 확인되지 않아 우선 구매처로 추천하지 않음.
+- **참고:** 두 백화점의 브랜드 입점은 공식 확인되지만, **마르코 폴로·웨딩 임페리얼의 매장별 당일 재고는 미확인**.
+- **공식 판매처:** [마리아주 프레르 매장 목록](https://www.mariagefreres.com/fr/comptoirs)
 
 ---
 
