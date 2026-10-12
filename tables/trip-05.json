@@ -25,7 +25,7 @@
   },
   {
     "time": "18:30~\n20:00",
-    "activity": "**저녁**\n**전통 프렌치 달팽이 에스카르고** (르 프로코프, Le Procope)",
+    "activity": "**저녁**\n**전통 프렌치 달팽이 에스카르고** (르 프로코프, Le Procope) (예약)",
     "transport": "🚶 노트르담 대성당 → Le Procope",
     "shaded": true
   },
@@ -44,7 +44,6 @@
   {
     "time": "참고",
     "activity": "**약국** (파마시 파리 에펠 코메르스, Pharmacie Paris Eiffel Commerce)",
-    "transport": "",
     "shaded": false
   }
 ]
