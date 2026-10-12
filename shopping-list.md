@@ -564,10 +564,8 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 
 ### 구매 위치 (여행 일정 기준)
 
-- **갤러리 라파예트 Le Gourmet 지상층(RDC):** 마리아주 프레르 공식 판매 코너. **11/26 16:30~18:30** 백화점 쇼핑 일정 중 확인.
-- **프랭땅 오스만 3층, La Cuisine Conviviale:** 같은 날 라파예트에 이어 방문할 때 확인 가능.
-- **모노프릭스(Monoprix):** 두 제품의 공식 취급 여부가 확인되지 않아 우선 구매처로 추천하지 않음.
-- **참고:** 두 백화점의 브랜드 입점은 공식 확인되지만, **마르코 폴로·웨딩 임페리얼의 매장별 당일 재고는 미확인**.
+- **갤러리 라파예트 Le Gourmet 지상층(RDC):** 마리아주 프레르 공식 판매 코너
+- **프랭땅 오스만 3층, La Cuisine Conviviale**
 - **공식 판매처:** [마리아주 프레르 매장 목록](https://www.mariagefreres.com/fr/comptoirs)
 
 ---
@@ -587,7 +585,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 
 ### 활용법
 
-요리를 복잡하게 하지 않아도 마지막에 조금만 뿌리면 풍미를 올릴 수 있어 블로그에서는 **“요리 치트키”** 아이템으로 소개.
+요리를 복잡하게 하지 않아도 마지막에 조금만 뿌리면 풍미를 올릴 수 있어 **“요리 치트키”** 아이템
 
 - 파스타
 - 샐러드
@@ -612,8 +610,9 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 **블랙 트러플**
 
 - 150ml €11.90
-- 블로그 방문 당시 봉마르셰에서는 미발견
+
 **화이트 트러플**
+
 - Galeries Lafayette 150ml €14.50
 - Le Bon Marché €13.35
 
@@ -652,12 +651,10 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ### 가격
 
 - **Galeries Lafayette: 60g €9.50**
-- **Le Bon Marché: €11.60**
-- 블로그 기준으로는 **라파예트가 더 저렴**
 
 ---
 
-## 추가로 볼 것 — 보르디에 버터
+## 추가 — 보르디에 버터
 
 **Bordier Butter**
 
@@ -675,7 +672,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ### 구매 팁
 
 - 한국으로 가져갈 경우 **구매 시 진공 포장 여부 확인**
-- **Galeries Lafayette Gourmet관 지하 1층**에서 확인
+- **Galeries Lafayette Gourmet관 지하 1층**
 
 ---
 
@@ -722,10 +719,10 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 **홀그레인 200g**
 
 - Galeries Lafayette €3.25
-- Le Bon Marché €3.15
+
 **튜브형**
+
 - Galeries Lafayette €3.25
-- Le Bon Marché €3.60
 
 ---
 
@@ -738,7 +735,6 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ### 어떤 제품?
 
 프랑스산 방사 유정란을 베이스로 하고, **실제 여름 트러플 조각이 들어간 마요네즈**.
-프랑스에서는 감자튀김을 마요네즈에 찍어 먹는 게 흔하다는 맥락에서 소개된 제품.
 
 ### 활용법
 
@@ -751,7 +747,6 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ### 가격
 
 - **140g €8.50**
-- 블로그 방문 당시 봉마르셰에는 같은 제품 대신 **비슷한 트러플 마요네즈 제품**이 있었음
 
 ---
 
