@@ -9,7 +9,7 @@ title: 쇼핑리스트
 
 ---
 
-# 1-1. Harrods 기념품 BEST 4
+# 1-1. Harrods 기념품 BEST 5
 
 ## 1) 해러즈 가방
 
@@ -144,6 +144,18 @@ Harrods 건물, 영국 테마, 화려한 Toile, 보태니컬 패턴 등이 들�
 - **Small Cotton Logo Pouch:** £15
 - **Logo Pocket Shopper Bag:** £15
 - Royal Guard Magnet 등 일부 품목은 재고 변동이 잦음
+
+---
+
+## 5) Harrods 4층 Toys — Jellycat Airlines
+
+![](https://lh3.googleusercontent.com/d/1-v7f1hh_5tcyNEgAfq2dzmRJnx31HkKQ=w560-h420)
+
+![](https://lh3.googleusercontent.com/d/1T0EZJdOYgxg5PpXTmP9jWAGuYs1rNbYN=w560-h420)
+
+- **무엇을 파나:** Jellycat, Harrods 자체 인형
+- **핵심:** 4층 **Jellycat Airlines 전용 부티크**
+- **Jellycat:** Amuseables, Bartholomew Bear 등 인기 라인과 시즌 신상품
 
 ---
 
@@ -290,16 +302,6 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 - 2시간 안에서는 **Lower Ground 자체 굿즈 → Ground Floor Food Halls** 순서로 보면 기념품 쇼핑 동선이 가장 단순함
 
 # 1-4. 런던 기타 쇼핑 스팟
-
-## Harrods 4층 Toys — Jellycat Airlines
-
-![](https://lh3.googleusercontent.com/d/1-v7f1hh_5tcyNEgAfq2dzmRJnx31HkKQ=w560-h420)
-
-![](https://lh3.googleusercontent.com/d/1T0EZJdOYgxg5PpXTmP9jWAGuYs1rNbYN=w560-h420)
-
-- **무엇을 파나:** Jellycat, Harrods 자체 인형
-- **핵심:** 4층 **Jellycat Airlines 전용 부티크**
-- **Jellycat:** Amuseables, Bartholomew Bear 등 인기 라인과 시즌 신상품
 
 ## 코벤트가든
 
