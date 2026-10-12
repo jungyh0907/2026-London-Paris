@@ -259,10 +259,11 @@
 
     // Previous releases tracked both teas separately. Merge their interest flags
     // once, and delete old flags so unchecking the combined row stays unchecked.
-    const newTeaId=idFor('lafayette','마리아주 프레르 홍차');
+    const newTeaId=idFor('lafayette','Mariage Frères 홍차');
     const oldTeaIds=[
       idFor('lafayette','Mariage Frères Marco Polo 홍차'),
-      idFor('lafayette','Mariage Frères Wedding Impérial 홍차')
+      idFor('lafayette','Mariage Frères Wedding Impérial 홍차'),
+      idFor('lafayette','마리아주 프레르 홍차')
     ];
     if(oldTeaIds.some(id=>Object.prototype.hasOwnProperty.call(saved,id))){
       if(oldTeaIds.some(id=>saved[id]))saved[newTeaId]=true;
@@ -308,7 +309,7 @@
         'La Mère Poulard 쿠키':['2-1.','라 메르 풀라르'],
         'Confiture Parisienne 잼':['2-1.','콩피튀르 파리지엔느'],
         'Les Abeilles de Malescot 트러플 꿀':['2-1.','레 자베이 드 말레스코'],
-        '마리아주 프레르 홍차':['2-1.','마리아주 프레르 — 마르코 폴로·웨딩 임페리얼 홍차'],
+        'Mariage Frères 홍차':['2-1.','마리아주 프레르 — 마르코 폴로·웨딩 임페리얼 홍차'],
         'A L’Olivier 트러플 오일':['2-2.','아 롤리비에'],
         'Artisan de la Truffe 트러플 소금':['2-2.','아티장 드 라 트뤼프'],
         'Bordier Butter':['2-2.','보르디에 버터'],
@@ -358,7 +359,20 @@
         while(cell.firstChild)productName.append(cell.firstChild);
         label.append(input,productName);cell.append(label);
         register(input,name,row,group);
-        if(linkTargets.has(group+'|'+name)){
+        if(group==='lafayette'&&name==='Mariage Frères 홍차'){
+          // Direct lookup at click time: always navigate to the tea section,
+          // even if a previously cached heading map did not resolve.
+          productName.addEventListener('click',()=>{
+            const detailSection=sectionFolds.get('2-1.')||
+              [...root.querySelectorAll('section.fold')].find(f=>
+                f.querySelector('.fold-heading')?.textContent.includes('2-1. 라파예트'));
+            if(!detailSection)return;
+            setFold(detailSection,true);
+            const teaHeading=[...detailSection.querySelectorAll('.fold-content h2')]
+              .find(h=>h.textContent.includes('마리아주 프레르'));
+            requestAnimationFrame(()=>scrollToNode(teaHeading||detailSection));
+          });
+        }else if(linkTargets.has(group+'|'+name)){
           productName.addEventListener('click',()=>openProduct(group,name));
         }else{
           // Fall back to ordinary text rather than offer a broken navigation action.
