@@ -2,7 +2,7 @@
   {
     "time": "09:00~\n10:00",
     "activity": "**선택: 아침**\n**베이글, 커피** (비 베이글 뉴 옥스퍼드 스트리트, B Bagel New Oxford Street)",
-    "transport": "🚇 Piccadilly Line: 얼스코트역 (Earl's Court) → 홀본역 (Holborn)\n🚶 B Bagel New Oxford Street",
+    "transport": "🚶 시타딘 숙소 → 글로스터 로드역 (Gloucester Road, 약 5분)\n🚇 Piccadilly Line 직행: 글로스터 로드역 → 홀본역 (Holborn)\n🚶 B Bagel New Oxford Street",
     "shaded": true
   },
   {
@@ -32,7 +32,7 @@
   {
     "time": "19:30~\n21:30",
     "activity": "**저녁**\n**선택 1. 인도 커리** (디슘 카나비, Dishoom Carnaby)\n**선택 2. 한식, 바비큐** (올레 코리안 바비큐, Olle Korean Barbecue)\n**선택 3. 한식** (코앤코, Co&Ko)\n**선택 4. 쌀국수** (포 소호, Pho Soho)\n**선택 5. 나폴리 피자** (피자 필그림스 소호, Pizza Pilgrims Soho)",
-    "transport": "🚶 구역 내\n귀가: 🚇 Piccadilly Line 피카딜리 서커스역 (Piccadilly Circus) → 얼스코트역 (Earl's Court)",
+    "transport": "🚶 구역 내\n귀가: 🚇 Piccadilly Line 피카딜리 서커스역 (Piccadilly Circus) → 글로스터 로드역 (Gloucester Road) 직행\n🚶 역 → 시타딘 숙소 (약 5분)",
     "shaded": true
   }
 ]
