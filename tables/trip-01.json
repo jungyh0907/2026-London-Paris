@@ -1,20 +1,20 @@
 [
   {
     "time": "16:30~\n19:30",
-    "activity": "**도착** \n(Presidential Apartments Kensington 체크인)",
-    "transport": "🚇 Piccadilly Line: 히드로 터미널 4역 (Heathrow Terminal 4) → 얼스코트역 (Earl's Court)",
+    "activity": "**도착** \n(Citadines South Kensington London (시타딘 사우스 켄싱턴 런던) 체크인)",
+    "transport": "🚇 Piccadilly Line 직행: 히드로 터미널 4역 (Heathrow Terminal 4) → 글로스터 로드역 (Gloucester Road), 지하철 약 45분\n🚶 글로스터 로드역 → 숙소 (35A Gloucester Road, 도보 약 5분)",
     "shaded": false
   },
   {
     "time": "19:30~\n20:30",
     "activity": "**선택: 저녁**\n**쌀국수** (메드 살레 비엣 얼스코트, Med Salleh Viet Earl's Court)",
-    "transport": "🚶 구역 내",
+    "transport": "🚇 숙소(Gloucester Road) → 얼스코트역 (Earl's Court), Piccadilly Line 1정거장\n🚶 Hogarth Road 식당 (기존 선택 유지, 새 숙소 바로 근처는 아님)",
     "shaded": true
   },
   {
     "time": "20:30~\n21:30",
-    "activity": "**장보기** (M&S Simply Food Earl's Court, 식료품)",
-    "transport": "🚶 구역 내",
+    "activity": "**장보기** (Waitrose Gloucester Road, 식료품)",
+    "transport": "🚇 저녁 식사 시 얼스코트역 → 글로스터 로드역, Piccadilly Line 1정거장\n🚶 Waitrose Gloucester Road (128 Gloucester Road, 역 앞) → 시타딘 숙소, 도보 약 5분",
     "shaded": false
   }
 ]
