@@ -19,25 +19,27 @@ body[data-document="weather"] main{width:min(calc(100% - 24px),1110px)}
 .w-city{padding:9px 11px;border-bottom:1px solid #e7edf3}
 .w-city:last-child{border-bottom:0}
 .w-name{display:flex;justify-content:space-between;align-items:baseline;gap:5px;flex-wrap:wrap}
-.w-name strong{font-size:13px;line-height:1.3;color:#29445d}
-.w-name small{font-size:10px;color:#7890a2;line-height:1.4}
+.w-name strong{font-size:17px;line-height:1.4;color:#29445d}
+.w-name small{font-size:13px;color:#7890a2;line-height:1.45;font-weight:600}
 .w-weather{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin:5px 0 3px}
 .w-emoji{font-size:18px;line-height:1}
 .w-temp{font-size:17px;color:#1d4058;font-weight:800}
 .w-pop{border-radius:19px;background:#e8f0fa;color:#3b6484;font-size:11px;line-height:1.5;padding:3px 7px;font-weight:800}
 .w-pop.rainy{color:#1c599d;background:#dfeafe}
-.w-sun{font-size:11px;color:#506e80;line-height:1.5}
+.w-sun{font-size:15px;color:#506e80;line-height:1.55;font-weight:650;font-variant-numeric:tabular-nums}
 .w-source{font-size:10px;color:#8b9aaa;line-height:1.4;margin-top:3px}
 .w-caution{font-size:12px;color:#596f82;background:#f4f8fb;border-top:1px solid #e0e9f1;border-radius:9px;padding:12px 13px;margin-top:14px;line-height:1.75}
 .w-caution p{margin:0 0 7px}
 .w-caution p:last-child{margin-bottom:0}
 .w-lead{color:#4c6376;font-size:14px;line-height:1.85;margin:11px 0 17px}
-.w-clothes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
-.w-clothes article{background:#f9fcff;border:1px solid #dce8f1;border-radius:12px;padding:15px 16px}
-.w-clothes small{display:block;color:#6a889e;font-size:11px;font-weight:750}
-.w-clothes h3{font-size:17px;color:#2a4d68;line-height:1.4;margin:4px 0 6px}
-.w-clothes p{color:#496579;font-size:13px;line-height:1.8;margin:0;word-break:keep-all}
+.w-clothes{display:grid;grid-template-columns:1fr;gap:12px}
+.w-clothes article{background:#f9fcff;border:1px solid #dce8f1;border-radius:12px;padding:19px 21px}
+.w-clothes small{display:block;color:#64839a;font-size:13px;font-weight:750}
+.w-clothes h3{font-size:clamp(19px,2.7vw,23px);color:#254b68;line-height:1.5;margin:5px 0 10px;font-weight:800}
+.w-clothes p{color:#496579;font-size:14px;line-height:1.85;margin:7px 0 0;word-break:keep-all}
 .w-clothes strong,.w-lead strong{color:#234b68}
+.w-clothes .w-weather-reason{color:#526c80;font-size:13.5px}
+.w-clothes .w-wear-detail{color:#314e63;font-size:14.5px}
 .w-cites{font-size:12px;color:#697e90;line-height:1.8;margin:0 0 33px;padding:0 9px}
 .w-cites h3{font-size:16px;margin:0 0 5px;color:#31536c}
 .w-cites a{margin-right:12px;display:inline-block;font-size:12px}
@@ -49,13 +51,36 @@ body[data-document="weather"] main{width:min(calc(100% - 24px),1110px)}
 <section class="w-wrap"><div class="w-top"><div><p class="w-kicker">TRAVEL WEATHER CALENDAR</p><h2>2026년 11월 <small>20–28일</small></h2></div><button class="w-ref" type="button" id="weather-reload">↻ 예보 새로고침</button></div>
 <p class="w-intro">실제 여행 일정에 따라 출발지·경유지·도착지를 모두 표시합니다. 기온과 강수확률은 예보가 조회되면 새 수치로 갱신됩니다.</p>
 <div id="weather-status" class="w-status" role="status" aria-live="polite">2026년 11월 14일에 확인한 예보를 표시합니다. 최신 예보를 조회하고 있습니다.</div>
-<div class="w-legend"><span>🌡 최저~최고 °C</span><span>☂ 강수확률</span><span>🌅 일출 · 🌇 일몰 (현지 시각)</span></div>
+<div class="w-legend"><span>🌡 최저~최고 °C</span><span>☂ 강수확률</span><span>일출 · 일몰 (현지 시각)</span></div>
 <div class="w-calendar" id="weather-calendar" aria-label="9일 여행 날씨 캘린더"></div>
 <div class="w-caution"><p><strong>강수확률의 기준:</strong> 최신 Open-Meteo 수치는 <strong>하루 동안 시간대별 강수확률의 최대치</strong>입니다(비·눈 포함). 대체 자료인 Timeanddate는 <strong>하루 전체 강수 가능성</strong>을 사용하므로 두 수치를 같은 통계로 직접 비교하면 안 됩니다.</p><p>11월 15일 기준 후반 일정일수록 예보 불확실성이 큽니다. 조회에 실패한 지역의 기온·강수확률은 추측하지 않고 <strong>미확인</strong>으로 표시합니다. 일출·일몰은 각 지역 현지 시각으로 영국은 GMT, 프랑스는 CET입니다. 일부 대체 일출·일몰은 위치별 천문계산으로 구한 근삿값(약 ±1~3분)입니다.</p></div>
 </section>
-<section class="w-wrap w-outfits"><p class="w-kicker">WHAT TO WEAR</p><h2>여행 추천 옷차림</h2>
-<p class="w-lead">지나치게 두꺼운 옷만 입기보다 <strong>바람을 막는 겉옷 + 쉽게 벗고 입을 수 있는 얇은 보온층</strong>이 좋습니다. 날씨가 쌀쌀하고 비가 오더라도 도보 관광을 오래 할 수 있도록 편안함과 체온 조절을 기준으로 골랐습니다.</p>
-<div class="w-clothes"><article><small>런던·파리 시내</small><h3>걷다가 실내에 들어가도 편하게</h3><p>얇은 긴팔 이너 위에 니트나 가벼운 플리스, 그 위에 바람을 막는 <strong>중간 두께의 패딩 또는 겨울 코트</strong>가 적합합니다. 걸어서 더워지면 겉옷을 벗고, 저녁에는 목도리를 더해 체온을 조절하세요.</p></article><article><small>11/23 · 스톤헨지·근교</small><h3>바람과 야외 대기에 집중</h3><p>스톤헨지는 바람을 피할 곳이 적습니다. <strong>방풍 패딩·목도리·장갑</strong>에 얇은 보온 이너를 더하세요. 윈저성과 옥스퍼드를 오래 걸으므로 과하게 무거운 외투보다는 따뜻하면서 활동하기 편한 겉옷을 추천합니다.</p></article><article><small>11/26 · 베르사유</small><h3>궁전 실내와 정원을 오갈 때</h3><p>궁전 내부에서는 덥게 느낄 수 있지만 정원은 쌀쌀합니다. <strong>니트와 쉽게 벗을 수 있는 패딩</strong> 조합에 목도리를 갖추면 편합니다. 야외 정원에서 오래 머무를 때는 장갑을 사용하세요.</p></article><article><small>11/27 · 콜마르·스트라스부르</small><h3>가장 따뜻하게 입을 날</h3><p>이른 아침 기차부터 해 진 뒤 크리스마스 마켓까지 이어집니다. <strong>얇은 발열 이너 + 니트/플리스 + 방풍·보온 패딩</strong>을 추천하며, 목도리와 장갑을 반드시 준비하세요. 기온이 더 낮게 바뀌면 기모 바지나 얇은 보온 내의를 추가하면 좋습니다.</p></article><article><small>신발·비 오는 날</small><h3>오래 걸어도 발이 편하도록</h3><p>이미 신어서 발에 익숙한 <strong>쿠션 좋은 생활방수 운동화</strong>와 미끄럽지 않은 밑창을 추천합니다. 젖은 길에서 발이 차가워지지 않도록 보온 양말을 신으시고, <strong>접이식 우산과 방수 겉옷</strong>을 이용하세요.</p></article><article><small>부모님과 함께하는 일정</small><h3>오래 서 있을 때 체온 유지</h3><p>교대식 대기·스톤헨지·저녁 크리스마스 마켓은 걷는 시간보다 가만히 서 있을 때 더 춥습니다. <strong>보온되는 외투와 장갑·목도리</strong>를 준비하고, 실내에서는 조절하기 쉬운 여러 겹을 입는 편이 좋습니다. 중간중간 실내에서 휴식하세요.</p></article></div></section>
+<section class="w-wrap w-outfits">
+<p class="w-kicker">WHAT TO WEAR</p>
+<h2>여행 추천 옷차림</h2>
+<p class="w-lead"><strong>기본은 긴팔 이너 + 니트 + 패딩입니다.</strong> 런던과 파리는 실내에서 쉽게 벗을 수 있는 중간 두께 패딩이 편하고, 알자스에 가는 날은 보온을 더 강화하세요. 하루 종일 걷는 여행이므로 두껍기만 한 복장보다 바람을 막고 체온을 조절할 수 있는 조합을 추천합니다.</p>
+<div class="w-clothes">
+<article>
+<small>11월 20~24일 · 런던, 스톤헨지·윈저·옥스퍼드 포함</small>
+<h3>런던 — 긴팔 이너 + 니트 + 중간 두께 패딩 + 목도리</h3>
+<p class="w-weather-reason"><strong>날씨:</strong> 아침·저녁은 한 자릿수 기온으로 쌀쌀하고, 낮에도 대체로 10°C 안팎입니다. 흐리거나 비가 오고 바람이 불면 체감온도가 낮아집니다.</p>
+<p class="w-wear-detail"><strong>이렇게 입으세요:</strong> 얇은 긴팔 이너에 니트를 입고, 겉에는 <strong>방풍되는 중간 두께 겨울 패딩</strong>을 입으세요. <strong>목도리는 권장</strong>하며 시내에서 많이 걸어 더워지면 풀면 됩니다. <strong>11/23 스톤헨지</strong>에서는 바람을 막을 수 있는 따뜻한 패딩에 <strong>장갑도 추가</strong>하세요.</p>
+</article>
+<article>
+<small>11월 24~28일 · 파리, 베르사유·라발레 아울렛 포함</small>
+<h3>파리 — 긴팔 이너 + 니트 + 패딩, 비 대비 우산</h3>
+<p class="w-weather-reason"><strong>날씨:</strong> 아침과 저녁은 쌀쌀하고 낮에는 대체로 10°C 전후~초반까지 올라가는 날이 있습니다. 흐리고 비가 내리는 날에는 바람과 습기로 더 춥게 느껴집니다.</p>
+<p class="w-wear-detail"><strong>이렇게 입으세요:</strong> <strong>긴팔 이너 + 니트 + 중간 두께 패딩</strong>을 기본으로 하세요. 비 예보가 있으면 <strong>생활방수·방풍 겉옷과 접이식 우산</strong>을 챙기세요. 목도리는 아침·저녁에 유용하지만, 루브르·백화점 등 실내에서는 외투를 벗어 더위를 조절하시면 됩니다.</p>
+</article>
+<article>
+<small>11월 27일 · 콜마르·스트라스부르</small>
+<h3>알자스 — 발열 이너 + 니트 + 두꺼운 패딩 + 목도리·장갑</h3>
+<p class="w-weather-reason"><strong>날씨:</strong> 런던·파리보다 추워질 가능성에 대비해야 하며, 특히 해 진 뒤 크리스마스 마켓에서는 오랜 야외 체류와 바람 때문에 춥게 느껴질 수 있습니다. 당일 기온 변동이 큰 만큼 출발 직전 예보를 확인하세요.</p>
+<p class="w-wear-detail"><strong>이렇게 입으세요:</strong> <strong>얇은 발열 이너 위에 니트나 플리스, 겉에 방풍되는 두꺼운 겨울 패딩</strong>을 입으세요. <strong>목도리·장갑·보온 양말</strong>도 권합니다. 추위를 많이 타시거나 영하권으로 예보가 바뀌면 <strong>기모 바지 또는 얇은 보온 내의</strong>를 추가하세요.</p>
+</article>
+</div>
+<p class="w-lead"><strong>신발은 모든 날 공통으로</strong> 오래 걸어도 발이 편한 <strong>쿠션 좋은 생활방수 운동화</strong>와 미끄럽지 않은 밑창이 적합합니다. 가죽 구두나 새 신발보다는 발에 익숙한 운동화를 추천합니다.</p>
+</section>
 <section class="w-cites"><h3>날씨 출처 · 예보 근거</h3><p>최신 예보: <strong>Open-Meteo Forecast API</strong>의 일별 2m 기온, 시간대별 최대 강수확률, WMO 날씨 코드, 일출·일몰. 대체 자료: 2026년 11월 14일 확인한 <strong>Timeanddate / CustomWeather</strong> 장기예보. 날짜별 방문 지역은 원래 여행 일정표를 기준으로 작성했습니다.</p>
 <a href="https://open-meteo.com/en/docs" target="_blank" rel="noopener">Open-Meteo 공식 예보 자료 정의</a>
 <a href="https://www.timeanddate.com/weather/uk/london/ext" target="_blank" rel="noopener">런던 예보</a>
@@ -120,7 +145,7 @@ function show(c,d,value){
  el.temp.textContent=valid?v[0]+'~'+v[1]+'°C':'예보 미확인';
  el.rain.textContent=valid?'☂ '+v[2]+'%':'☂ 미확인';
  el.rain.classList.toggle('rainy',valid&&v[2]>=50);
- el.sun.textContent=s?'🌅 '+s[0]+' · 🌇 '+s[1]:'일출·일몰 미확인';
+ el.sun.textContent=s?'일출 '+s[0]+' · 일몰 '+s[1]:'일출·일몰 미확인';
  el.src.textContent=value?'Open-Meteo 최신 예보':fb?'11/14 확인 · Timeanddate':'기온·강수 예보 미확인';
 }
 function node(tag,cls,txt){
