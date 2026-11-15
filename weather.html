@@ -1,0 +1,179 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f7f5f0"><title>여행 날씨 | 2026 런던·파리</title><link rel="stylesheet" href="site.css?v=20261012-shop-jelly-nav-01"><style>
+body[data-document="weather"] main{width:min(calc(100% - 24px),1110px)}
+.w-wrap{background:white;border:1px solid #d9e3ec;border-radius:17px;padding:clamp(13px,2.4vw,26px);margin:0 0 19px}
+.w-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.w-top h2,.w-outfits h2{font-size:clamp(23px,3vw,29px);line-height:1.35;color:#29435c;margin:0}
+.w-top small{color:#8796a6;font-size:.7em}
+.w-kicker{font-size:11px;color:#6a89a1;letter-spacing:.15em;font-weight:800;margin:0 0 2px}
+.w-ref{border:1px solid #abc7dd;color:#315d7c;background:#f5faff;border-radius:24px;padding:9px 12px;cursor:pointer;white-space:nowrap;font:inherit;font-size:12px;font-weight:700}
+.w-ref:disabled{opacity:.6;cursor:wait}
+.w-intro{font-size:13px;line-height:1.7;color:#61788e;margin:9px 0}
+.w-status{font-size:12px;line-height:1.6;color:#36556e;background:#eaf3fa;padding:9px 12px;border-radius:9px;margin:10px 0}
+.w-legend{font-size:11px;color:#647e91;margin:12px 0;display:flex;flex-wrap:wrap;gap:6px 15px}
+.w-calendar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.w-day{min-width:0;background:#fbfdff;border:1px solid #d5e2ed;border-radius:13px;overflow:hidden}
+.w-date{display:flex;align-items:center;gap:8px;background:linear-gradient(110deg,#dfecf7,#f2f7fc);border-bottom:1px solid #dce7f0;padding:10px 12px}
+.w-num{font-size:27px;font-weight:850;line-height:1;color:#254763;letter-spacing:-.06em;flex-shrink:0}
+.w-week{font-size:13px;margin-left:4px;letter-spacing:0}
+.w-desc{font-size:12px;font-weight:750;color:#365b78;line-height:1.35;min-width:0}
+.w-city{padding:9px 11px;border-bottom:1px solid #e7edf3}
+.w-city:last-child{border-bottom:0}
+.w-name{display:flex;justify-content:space-between;align-items:baseline;gap:5px;flex-wrap:wrap}
+.w-name strong{font-size:13px;line-height:1.3;color:#29445d}
+.w-name small{font-size:10px;color:#7890a2;line-height:1.4}
+.w-weather{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin:5px 0 3px}
+.w-emoji{font-size:18px;line-height:1}
+.w-temp{font-size:17px;color:#1d4058;font-weight:800}
+.w-pop{border-radius:19px;background:#e8f0fa;color:#3b6484;font-size:11px;line-height:1.5;padding:3px 7px;font-weight:800}
+.w-pop.rainy{color:#1c599d;background:#dfeafe}
+.w-sun{font-size:11px;color:#506e80;line-height:1.5}
+.w-source{font-size:10px;color:#8b9aaa;line-height:1.4;margin-top:3px}
+.w-caution{font-size:12px;color:#596f82;background:#f4f8fb;border-top:1px solid #e0e9f1;border-radius:9px;padding:12px 13px;margin-top:14px;line-height:1.75}
+.w-caution p{margin:0 0 7px}
+.w-caution p:last-child{margin-bottom:0}
+.w-lead{color:#4c6376;font-size:14px;line-height:1.85;margin:11px 0 17px}
+.w-clothes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.w-clothes article{background:#f9fcff;border:1px solid #dce8f1;border-radius:12px;padding:15px 16px}
+.w-clothes small{display:block;color:#6a889e;font-size:11px;font-weight:750}
+.w-clothes h3{font-size:17px;color:#2a4d68;line-height:1.4;margin:4px 0 6px}
+.w-clothes p{color:#496579;font-size:13px;line-height:1.8;margin:0;word-break:keep-all}
+.w-clothes strong,.w-lead strong{color:#234b68}
+.w-cites{font-size:12px;color:#697e90;line-height:1.8;margin:0 0 33px;padding:0 9px}
+.w-cites h3{font-size:16px;margin:0 0 5px;color:#31536c}
+.w-cites a{margin-right:12px;display:inline-block;font-size:12px}
+@media(max-width:850px){.w-calendar{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:570px){.w-calendar,.w-clothes{grid-template-columns:1fr}.w-wrap{border-radius:14px;padding:13px;margin-bottom:14px}.w-top{align-items:flex-start}.w-ref{font-size:11px;padding:8px}.w-date{padding:11px}.w-city{padding:10px 12px}.w-temp{font-size:18px}body[data-document="weather"] .hero{padding-top:29px}}
+</style></head>
+<body data-document="weather"><header><nav aria-label="사이트 메뉴"><a href="index.html">여행 일정</a><a href="shopping.html">쇼핑리스트</a><a class="active" aria-current="page" href="weather.html">여행 날씨</a></nav></header><main>
+<section class="hero"><p>LONDON · PARIS · ALSACE · 2026</p><h1>여행 날씨</h1><div>2026.11.20(금) ~ 11.28(토) · 날짜별 방문 지역 날씨와 옷차림</div></section>
+<section class="w-wrap"><div class="w-top"><div><p class="w-kicker">TRAVEL WEATHER CALENDAR</p><h2>2026년 11월 <small>20–28일</small></h2></div><button class="w-ref" type="button" id="weather-reload">↻ 예보 새로고침</button></div>
+<p class="w-intro">실제 여행 일정에 따라 출발지·경유지·도착지를 모두 표시합니다. 기온과 강수확률은 예보가 조회되면 새 수치로 갱신됩니다.</p>
+<div id="weather-status" class="w-status" role="status" aria-live="polite">2026년 11월 14일에 확인한 예보를 표시합니다. 최신 예보를 조회하고 있습니다.</div>
+<div class="w-legend"><span>🌡 최저~최고 °C</span><span>☂ 강수확률</span><span>🌅 일출 · 🌇 일몰 (현지 시각)</span></div>
+<div class="w-calendar" id="weather-calendar" aria-label="9일 여행 날씨 캘린더"></div>
+<div class="w-caution"><p><strong>강수확률의 기준:</strong> 최신 Open-Meteo 수치는 <strong>하루 동안 시간대별 강수확률의 최대치</strong>입니다(비·눈 포함). 대체 자료인 Timeanddate는 <strong>하루 전체 강수 가능성</strong>을 사용하므로 두 수치를 같은 통계로 직접 비교하면 안 됩니다.</p><p>11월 15일 기준 후반 일정일수록 예보 불확실성이 큽니다. 조회에 실패한 지역의 기온·강수확률은 추측하지 않고 <strong>미확인</strong>으로 표시합니다. 일출·일몰은 각 지역 현지 시각으로 영국은 GMT, 프랑스는 CET입니다. 일부 대체 일출·일몰은 위치별 천문계산으로 구한 근삿값(약 ±1~3분)입니다.</p></div>
+</section>
+<section class="w-wrap w-outfits"><p class="w-kicker">WHAT TO WEAR</p><h2>여행 추천 옷차림</h2>
+<p class="w-lead">지나치게 두꺼운 옷만 입기보다 <strong>바람을 막는 겉옷 + 쉽게 벗고 입을 수 있는 얇은 보온층</strong>이 좋습니다. 날씨가 쌀쌀하고 비가 오더라도 도보 관광을 오래 할 수 있도록 편안함과 체온 조절을 기준으로 골랐습니다.</p>
+<div class="w-clothes"><article><small>런던·파리 시내</small><h3>걷다가 실내에 들어가도 편하게</h3><p>얇은 긴팔 이너 위에 니트나 가벼운 플리스, 그 위에 바람을 막는 <strong>중간 두께의 패딩 또는 겨울 코트</strong>가 적합합니다. 걸어서 더워지면 겉옷을 벗고, 저녁에는 목도리를 더해 체온을 조절하세요.</p></article><article><small>11/23 · 스톤헨지·근교</small><h3>바람과 야외 대기에 집중</h3><p>스톤헨지는 바람을 피할 곳이 적습니다. <strong>방풍 패딩·목도리·장갑</strong>에 얇은 보온 이너를 더하세요. 윈저성과 옥스퍼드를 오래 걸으므로 과하게 무거운 외투보다는 따뜻하면서 활동하기 편한 겉옷을 추천합니다.</p></article><article><small>11/26 · 베르사유</small><h3>궁전 실내와 정원을 오갈 때</h3><p>궁전 내부에서는 덥게 느낄 수 있지만 정원은 쌀쌀합니다. <strong>니트와 쉽게 벗을 수 있는 패딩</strong> 조합에 목도리를 갖추면 편합니다. 야외 정원에서 오래 머무를 때는 장갑을 사용하세요.</p></article><article><small>11/27 · 콜마르·스트라스부르</small><h3>가장 따뜻하게 입을 날</h3><p>이른 아침 기차부터 해 진 뒤 크리스마스 마켓까지 이어집니다. <strong>얇은 발열 이너 + 니트/플리스 + 방풍·보온 패딩</strong>을 추천하며, 목도리와 장갑을 반드시 준비하세요. 기온이 더 낮게 바뀌면 기모 바지나 얇은 보온 내의를 추가하면 좋습니다.</p></article><article><small>신발·비 오는 날</small><h3>오래 걸어도 발이 편하도록</h3><p>이미 신어서 발에 익숙한 <strong>쿠션 좋은 생활방수 운동화</strong>와 미끄럽지 않은 밑창을 추천합니다. 젖은 길에서 발이 차가워지지 않도록 보온 양말을 신으시고, <strong>접이식 우산과 방수 겉옷</strong>을 이용하세요.</p></article><article><small>부모님과 함께하는 일정</small><h3>오래 서 있을 때 체온 유지</h3><p>교대식 대기·스톤헨지·저녁 크리스마스 마켓은 걷는 시간보다 가만히 서 있을 때 더 춥습니다. <strong>보온되는 외투와 장갑·목도리</strong>를 준비하고, 실내에서는 조절하기 쉬운 여러 겹을 입는 편이 좋습니다. 중간중간 실내에서 휴식하세요.</p></article></div></section>
+<section class="w-cites"><h3>날씨 출처 · 예보 근거</h3><p>최신 예보: <strong>Open-Meteo Forecast API</strong>의 일별 2m 기온, 시간대별 최대 강수확률, WMO 날씨 코드, 일출·일몰. 대체 자료: 2026년 11월 14일 확인한 <strong>Timeanddate / CustomWeather</strong> 장기예보. 날짜별 방문 지역은 원래 여행 일정표를 기준으로 작성했습니다.</p>
+<a href="https://open-meteo.com/en/docs" target="_blank" rel="noopener">Open-Meteo 공식 예보 자료 정의</a>
+<a href="https://www.timeanddate.com/weather/uk/london/ext" target="_blank" rel="noopener">런던 예보</a>
+<a href="https://www.timeanddate.com/weather/uk/oxford/ext" target="_blank" rel="noopener">옥스퍼드 예보</a>
+<a href="https://www.timeanddate.com/weather/france/paris/ext" target="_blank" rel="noopener">파리 예보</a>
+<a href="https://www.timeanddate.com/weather/france/versailles/ext" target="_blank" rel="noopener">베르사유 예보</a>
+<a href="https://www.timeanddate.com/weather/france/strasbourg/ext" target="_blank" rel="noopener">스트라스부르 예보</a>
+<a href="https://www.timeanddate.com/sun/uk/london?month=11&year=2026" target="_blank" rel="noopener">일출·일몰 기준</a>
+</section></main><script>
+(()=>{
+'use strict';
+const calendar=document.getElementById('weather-calendar'),note=document.getElementById('weather-status'),button=document.getElementById('weather-reload');
+if(!calendar||!note||!button)return;
+const city={
+ london:['런던',51.5074,-.1278,'Europe/London'],stonehenge:['스톤헨지',51.1789,-1.8262,'Europe/London'],
+ windsor:['윈저',51.4839,-.6044,'Europe/London'],oxford:['옥스퍼드',51.752,-1.2577,'Europe/London'],
+ paris:['파리',48.8566,2.3522,'Europe/Paris'],versailles:['베르사유',48.8049,2.1204,'Europe/Paris'],
+ colmar:['콜마르',48.0794,7.3585,'Europe/Paris'],strasbourg:['스트라스부르',48.5734,7.7521,'Europe/Paris'],
+ serris:['라발레 빌리지',48.8569,2.7886,'Europe/Paris'],cdg:['샤를드골 공항',49.0097,2.5479,'Europe/Paris']
+};
+const days=[
+ [20,'금','런던 도착',[['london','공항·숙소']]],
+ [21,'토','런던 시내·해러즈',[['london','대영박물관·웨스트엔드']]],
+ [22,'일','런던 시내·야경',[['london','버킹엄궁·스카이가든']]],
+ [23,'월','근교 투어',[['london','출발·귀가'],['stonehenge','스톤헨지'],['windsor','윈저성'],['oxford','옥스퍼드']]],
+ [24,'화','런던 → 파리',[['london','유로스타 출발'],['paris','도착·시내']]],
+ [25,'수','파리 시내',[['paris','루브르·몽마르트르']]],
+ [26,'목','베르사유 → 파리',[['versailles','오전 궁전·정원'],['paris','오후 백화점·방돔']]],
+ [27,'금','알자스 당일 여행',[['paris','출발·귀환'],['colmar','오전·낮'],['strasbourg','오후·야경']]],
+ [28,'토','아울렛·출국',[['paris','아침·체크아웃'],['serris','라발레 빌리지'],['cdg','공항·출국']]]
+];
+// 2026-11-14 Timeanddate CustomWeather snapshot; °F to °C rounded.
+// Each array is [low°C, high°C, daily precipitation chance %, condition].
+// Unsupported cities intentionally have no probability.
+const snapshot={
+ 'london|20':[6,11,5,3],'london|21':[7,11,47,4],'london|22':[9,11,72,5],
+ 'london|23':[8,12,56,4],'london|24':[9,12,57,4],
+ 'oxford|23':[7,11,51,4],
+ 'paris|24':[8,11,60,4],'paris|25':[7,11,54,4],
+ 'paris|26':[8,12,59,4],'paris|27':[6,13,50,4],'paris|28':[6,12,61,5],
+ 'versailles|26':[7,11,68,5],'strasbourg|27':[5,9,58,4]
+};
+// Date-specific local sunrise/sunset; published almanac when available,
+// coordinate-derived astronomical estimate for missing localities (±1-3 min).
+const sun={
+ 'london|20':['07:26','16:04'],'london|21':['07:28','16:03'],'london|22':['07:30','16:02'],
+ 'london|23':['07:31','16:01'],'london|24':['07:33','16:00'],
+ 'stonehenge|23':['07:37','16:10'],'windsor|23':['07:33','16:04'],'oxford|23':['07:37','16:05'],
+ 'paris|24':['08:12','17:01'],'paris|25':['08:14','17:00'],'paris|26':['08:15','16:59'],
+ 'paris|27':['08:17','16:58'],'paris|28':['08:18','16:58'],
+ 'versailles|26':['08:16','17:00'],'colmar|27':['07:54','16:42'],
+ 'strasbourg|27':['07:54','16:38'],'serris|28':['08:16','16:57'],'cdg|28':['08:18','16:57']
+};
+const emoji=['☀️','⛅','⛅','☁️','🌦️','🌧️','🌨️','🌫️','⛈️'];
+const weatherCode=n=>n===0?0:[1,2].includes(n)?2:n===3?3:[45,48].includes(n)?7:[51,53,55,56,57,61,66,80].includes(n)?4:[63,65,67,81,82].includes(n)?5:[71,73,75,77,85,86].includes(n)?6:n>=95?8:3;
+const refs=new Map(),key=(c,d)=>c+'|'+d;
+function show(c,d,value){
+ const el=refs.get(key(c,d));if(!el)return;
+ const fb=snapshot[key(c,d)],v=value||fb,s=value?.sun||sun[key(c,d)];
+ const valid=v&&Number.isFinite(v[0])&&Number.isFinite(v[1])&&Number.isFinite(v[2]);
+ el.icon.textContent=valid?emoji[v[3]]||'☁️':'🕒';
+ el.temp.textContent=valid?v[0]+'~'+v[1]+'°C':'예보 미확인';
+ el.rain.textContent=valid?'☂ '+v[2]+'%':'☂ 미확인';
+ el.rain.classList.toggle('rainy',valid&&v[2]>=50);
+ el.sun.textContent=s?'🌅 '+s[0]+' · 🌇 '+s[1]:'일출·일몰 미확인';
+ el.src.textContent=value?'Open-Meteo 최신 예보':fb?'11/14 확인 · Timeanddate':'기온·강수 예보 미확인';
+}
+function node(tag,cls,txt){
+ const el=document.createElement(tag);if(cls)el.className=cls;if(txt!==undefined)el.textContent=txt;return el;
+}
+for(const [day,weekday,title,stops] of days){
+ const card=node('article','w-day');card.setAttribute('aria-label','11월 '+day+'일 '+weekday+'요일 '+title);
+ const head=node('div','w-date'),number=node('div','w-num',String(day)),week=node('span','w-week',weekday);
+ number.append(week);head.append(number,node('div','w-desc',title));card.append(head);
+ for(const [id,reason] of stops){
+  const box=node('div','w-city'),title=node('div','w-name'),main=node('div','w-weather');
+  title.append(node('strong','',city[id][0]),node('small','',reason));
+  const icon=node('span','w-emoji'),temp=node('span','w-temp'),rain=node('span','w-pop'),sr=node('div','w-sun'),src=node('div','w-source');
+  main.append(icon,temp,rain);box.append(title,main,sr,src);card.append(box);
+  refs.set(key(id,day),{icon,temp,rain,sun:sr,src});show(id,day,null);
+ }
+ calendar.append(card);
+}
+let sequence=0;
+async function reload(){
+ const ticket=++sequence,ids=[...new Set(days.flatMap(d=>d[3].map(x=>x[0])))];
+ button.disabled=true;button.textContent='조회 중…';
+ note.textContent='최신 예보 조회 중입니다. 지역별로 반영하고 있습니다.';
+ let ok=0,updated=0;
+ await Promise.all(ids.map(async id=>{
+  try{
+   const c=city[id],url=new URL('https://api.open-meteo.com/v1/forecast');
+   url.searchParams.set('latitude',String(c[1]));url.searchParams.set('longitude',String(c[2]));
+   url.searchParams.set('timezone',c[3]);url.searchParams.set('forecast_days','16');
+   url.searchParams.set('daily','temperature_2m_min,temperature_2m_max,precipitation_probability_max,weather_code,sunrise,sunset');
+   const res=await fetch(url,{cache:'no-store'});if(!res.ok)throw Error('HTTP '+res.status);
+   const body=await res.json(),daily=body.daily;
+   if(!daily||!Array.isArray(daily.time))throw Error('No daily forecast');
+   if(ticket!==sequence)return;
+   ok++;
+   for(const d of days){
+    const date='2026-11-'+String(d[0]).padStart(2,'0'),idx=daily.time.indexOf(date);
+    if(idx<0||!d[3].some(x=>x[0]===id))continue;
+    const lo=daily.temperature_2m_min?.[idx],hi=daily.temperature_2m_max?.[idx],pop=daily.precipitation_probability_max?.[idx];
+    if(!Number.isFinite(lo)||!Number.isFinite(hi)||!Number.isFinite(pop))continue;
+    const rise=daily.sunrise?.[idx],set=daily.sunset?.[idx];
+    const st=typeof rise==='string'&&typeof set==='string'?[rise.slice(11,16),set.slice(11,16)]:sun[key(id,d[0])];
+    show(id,d[0],Object.assign([Math.round(lo),Math.round(hi),Math.round(pop),weatherCode(daily.weather_code?.[idx])],{sun:st}));
+    updated++;
+   }
+  }catch(error){console.warn('Weather unavailable',id,error)}
+ }));
+ if(ticket!==sequence)return;
+ button.disabled=false;button.textContent='↻ 예보 새로고침';
+ const stamp=new Intl.DateTimeFormat('ko-KR',{dateStyle:'short',timeStyle:'short',timeZone:'Asia/Seoul'}).format(new Date());
+ note.textContent=updated?stamp+' 조회 · '+ok+'/'+ids.length+'개 지역 연결 · '+updated+'개 방문지 예보 갱신 (미갱신 항목은 11/14 예보 또는 미확인).':
+  '최신 예보 연결에 실패했습니다. 11/14 확인 자료만 표시하고, 근거 없는 수치는 미확인으로 둡니다.';
+}
+button.addEventListener('click',reload);reload();
+})();
+</script></body></html>
