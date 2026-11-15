@@ -50,6 +50,7 @@ body[data-document="weather"] main{width:min(calc(100% - 24px),1110px)}
 .w-caution p{margin:0 0 7px}
 .w-caution p:last-child{margin-bottom:0}
 .w-lead{color:#4c6376;font-size:15px;line-height:1.85;margin:11px 0 17px}
+.w-lead[data-weather-field="outfit_intro"]{white-space:pre-line}
 .w-clothes{display:grid;grid-template-columns:1fr;gap:12px}
 .w-clothes article{background:#fff;border:1px solid #dce8f1;border-radius:12px;padding:0;overflow:hidden}
 .w-outfit-heading{background:linear-gradient(110deg,#dfecf7,#f2f7fc);padding:15px 20px;border-bottom:1px solid #dce7f0}
@@ -88,7 +89,7 @@ body[data-document="weather"] main{width:min(calc(100% - 24px),1110px)}
 <section class="w-wrap w-outfits">
 <p class="w-kicker">WHAT TO WEAR</p>
 <h2>여행 추천 옷차림</h2>
-<p class="w-lead" data-weather-field="outfit_intro"><strong>기본은 긴팔 이너 + 니트 + 패딩입니다.</strong> 런던과 파리는 실내에서 쉽게 벗을 수 있는 중간 두께 패딩이 편하고, 알자스에 가는 날은 보온을 더 강화하세요. 하루 종일 걷는 여행이므로 두껍기만 한 복장보다 바람을 막고 체온을 조절할 수 있는 조합을 추천합니다.</p>
+<p class="w-lead" data-weather-field="outfit_intro"><strong>기본은 긴팔 이너 + 니트 + 패딩입니다.</strong> 런던과 파리는 실내에서 쉽게 벗을 수 있는 중간 두께 패딩이 편하고, 알자스에 가는 날은 보온을 더 강화하세요. 바람을 막고 체온을 조절할 수 있는 조합을 추천합니다.<br><br><strong>신발은</strong> 오래 걸어도 발이 편한 <strong>쿠션 좋은 생활방수 운동화</strong>와 미끄럽지 않은 밑창이 적합합니다. 가죽 구두나 새 신발보다는 발에 익숙한 운동화를 추천합니다.</p>
 <div class="w-clothes">
 <article><div class="w-outfit-heading"><small data-weather-field="london_period">11월 20~24일 · 런던, 스톤헨지·윈저·옥스퍼드 포함</small>
 <h3 data-weather-field="london_title">런던 — 긴팔 이너 + 니트 + 중간 두께 패딩 + 목도리</h3></div><div class="w-outfit-body"><p class="w-weather-reason" data-weather-field="london_weather"><strong>날씨:</strong> 아침·저녁은 한 자릿수 기온으로 쌀쌀하고, 낮에도 대체로 10°C 안팎입니다. 흐리거나 비가 오고 바람이 불면 체감온도가 낮아집니다.</p>
@@ -100,7 +101,7 @@ body[data-document="weather"] main{width:min(calc(100% - 24px),1110px)}
 <h3 data-weather-field="alsace_title">알자스 — 발열 이너 + 니트 + 두꺼운 패딩 + 목도리·장갑</h3></div><div class="w-outfit-body"><p class="w-weather-reason" data-weather-field="alsace_weather"><strong>날씨:</strong> 런던·파리보다 추워질 가능성에 대비해야 하며, 특히 해 진 뒤 크리스마스 마켓에서는 오랜 야외 체류와 바람 때문에 춥게 느껴질 수 있습니다. 당일 기온 변동이 큰 만큼 출발 직전 예보를 확인하세요.</p>
 <p class="w-wear-detail" data-weather-field="alsace_clothing"><strong>이렇게 입으세요:</strong> <strong>얇은 발열 이너 위에 니트나 플리스, 겉에 방풍되는 두꺼운 겨울 패딩</strong>을 입으세요. <strong>목도리·장갑·보온 양말</strong>도 권합니다. 추위를 많이 타시거나 영하권으로 예보가 바뀌면 <strong>기모 바지 또는 얇은 보온 내의</strong>를 추가하세요.</p></div></article>
 </div>
-<p class="w-lead" data-weather-field="shoes"><strong>신발은 모든 날 공통으로</strong> 오래 걸어도 발이 편한 <strong>쿠션 좋은 생활방수 운동화</strong>와 미끄럽지 않은 밑창이 적합합니다. 가죽 구두나 새 신발보다는 발에 익숙한 운동화를 추천합니다.</p>
+
 </section>
 <section class="w-cites"><h3>날씨 출처 · 예보 근거</h3><p>최신 예보: <strong>Open-Meteo Forecast API</strong>의 일별 2m 기온, 시간대별 최대 강수확률, WMO 날씨 코드, 일출·일몰. 대체 자료: 2026년 11월 14일 확인한 <strong>Timeanddate / CustomWeather</strong> 장기예보. 날짜별 방문 지역은 원래 여행 일정표를 기준으로 작성했습니다.</p>
 <a href="https://open-meteo.com/en/docs" target="_blank" rel="noopener">Open-Meteo 공식 예보 자료 정의</a>

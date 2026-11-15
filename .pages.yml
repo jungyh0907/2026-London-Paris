@@ -110,12 +110,6 @@ content:
             options:
               format: markdown
               switcher: true
-          - name: shoes
-            label: "신발 추천 문구"
-            type: rich-text
-            options:
-              format: markdown
-              switcher: true
       - name: weather_days
         label: "날짜별 날씨 · 방문 도시와 일정 제목"
         type: file
