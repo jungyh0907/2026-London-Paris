@@ -70,11 +70,11 @@ body[data-document="weather"] main{width:min(calc(100% - 24px),1110px)}
 <body data-document="weather"><header><nav aria-label="사이트 메뉴"><a href="index.html">여행 일정</a><a href="shopping.html">쇼핑리스트</a><a class="active" aria-current="page" href="weather.html">여행 날씨</a></nav></header><main>
 <section class="hero"><p>LONDON · PARIS · ALSACE · 2026</p><h1>여행 날씨</h1><div><strong>2026.11.20(금) ~ 11.28(토)</strong><br>날짜별 방문 지역 날씨와 옷차림</div></section>
 <section class="w-wrap"><div class="w-top"><div><p class="w-kicker">TRAVEL WEATHER CALENDAR</p><h2>2026년 11월 <small>20–28일</small></h2></div><button class="w-ref" type="button" id="weather-reload">↻ 예보 새로고침</button></div>
-<p class="w-intro">실제 여행 일정에 따라 출발지·경유지·도착지를 모두 표시합니다. 기온과 강수확률은 예보가 조회되면 새 수치로 갱신됩니다.</p>
+<p class="w-intro" data-weather-field="calendar_intro">실제 여행 일정에 따라 출발지·경유지·도착지를 모두 표시합니다. 기온과 강수확률은 예보가 조회되면 새 수치로 갱신됩니다.</p>
 <div id="weather-status" class="w-status" role="status" aria-live="polite">예보 조회 중…</div>
 <section class="w-region-overview" aria-labelledby="w-region-title">
 <h3 id="w-region-title">방문 지역별 날씨 요약</h3>
-<p class="w-overview-desc">여행 기간의 일별 예보를 평균한 기온입니다. 날짜별 예보가 갱신되면 함께 바뀝니다.</p>
+<p class="w-overview-desc" data-weather-field="overview_intro">여행 기간의 일별 예보를 평균한 기온입니다. 날짜별 예보가 갱신되면 함께 바뀝니다.</p>
 <div id="weather-region-summary" class="w-region-grid" aria-live="polite">
 <article class="w-region-card"><div class="w-region-head"><strong>런던</strong><small>11/20~24</small></div><div class="w-region-body"><b>기온 계산 중…</b></div></article>
 <article class="w-region-card"><div class="w-region-head"><strong>파리</strong><small>11/24~28</small></div><div class="w-region-body"><b>기온 계산 중…</b></div></article>
@@ -88,19 +88,19 @@ body[data-document="weather"] main{width:min(calc(100% - 24px),1110px)}
 <section class="w-wrap w-outfits">
 <p class="w-kicker">WHAT TO WEAR</p>
 <h2>여행 추천 옷차림</h2>
-<p class="w-lead"><strong>기본은 긴팔 이너 + 니트 + 패딩입니다.</strong> 런던과 파리는 실내에서 쉽게 벗을 수 있는 중간 두께 패딩이 편하고, 알자스에 가는 날은 보온을 더 강화하세요. 하루 종일 걷는 여행이므로 두껍기만 한 복장보다 바람을 막고 체온을 조절할 수 있는 조합을 추천합니다.</p>
+<p class="w-lead" data-weather-field="outfit_intro"><strong>기본은 긴팔 이너 + 니트 + 패딩입니다.</strong> 런던과 파리는 실내에서 쉽게 벗을 수 있는 중간 두께 패딩이 편하고, 알자스에 가는 날은 보온을 더 강화하세요. 하루 종일 걷는 여행이므로 두껍기만 한 복장보다 바람을 막고 체온을 조절할 수 있는 조합을 추천합니다.</p>
 <div class="w-clothes">
-<article><div class="w-outfit-heading"><small>11월 20~24일 · 런던, 스톤헨지·윈저·옥스퍼드 포함</small>
-<h3>런던 — 긴팔 이너 + 니트 + 중간 두께 패딩 + 목도리</h3></div><div class="w-outfit-body"><p class="w-weather-reason"><strong>날씨:</strong> 아침·저녁은 한 자릿수 기온으로 쌀쌀하고, 낮에도 대체로 10°C 안팎입니다. 흐리거나 비가 오고 바람이 불면 체감온도가 낮아집니다.</p>
-<p class="w-wear-detail"><strong>이렇게 입으세요:</strong> 얇은 긴팔 이너에 니트를 입고, 겉에는 <strong>방풍되는 중간 두께 겨울 패딩</strong>을 입으세요. <strong>목도리는 권장</strong>하며 시내에서 많이 걸어 더워지면 풀면 됩니다. <strong>11/23 스톤헨지</strong>에서는 바람을 막을 수 있는 따뜻한 패딩에 <strong>장갑도 추가</strong>하세요.</p></div></article>
-<article><div class="w-outfit-heading"><small>11월 24~28일 · 파리, 베르사유·라발레 아울렛 포함</small>
-<h3>파리 — 긴팔 이너 + 니트 + 패딩, 비 대비 우산</h3></div><div class="w-outfit-body"><p class="w-weather-reason"><strong>날씨:</strong> 아침과 저녁은 쌀쌀하고 낮에는 대체로 10°C 전후~초반까지 올라가는 날이 있습니다. 흐리고 비가 내리는 날에는 바람과 습기로 더 춥게 느껴집니다.</p>
-<p class="w-wear-detail"><strong>이렇게 입으세요:</strong> <strong>긴팔 이너 + 니트 + 중간 두께 패딩</strong>을 기본으로 하세요. 비 예보가 있으면 <strong>생활방수·방풍 겉옷과 접이식 우산</strong>을 챙기세요. 목도리는 아침·저녁에 유용하지만, 루브르·백화점 등 실내에서는 외투를 벗어 더위를 조절하시면 됩니다.</p></div></article>
-<article><div class="w-outfit-heading"><small>11월 27일 · 콜마르·스트라스부르</small>
-<h3>알자스 — 발열 이너 + 니트 + 두꺼운 패딩 + 목도리·장갑</h3></div><div class="w-outfit-body"><p class="w-weather-reason"><strong>날씨:</strong> 런던·파리보다 추워질 가능성에 대비해야 하며, 특히 해 진 뒤 크리스마스 마켓에서는 오랜 야외 체류와 바람 때문에 춥게 느껴질 수 있습니다. 당일 기온 변동이 큰 만큼 출발 직전 예보를 확인하세요.</p>
-<p class="w-wear-detail"><strong>이렇게 입으세요:</strong> <strong>얇은 발열 이너 위에 니트나 플리스, 겉에 방풍되는 두꺼운 겨울 패딩</strong>을 입으세요. <strong>목도리·장갑·보온 양말</strong>도 권합니다. 추위를 많이 타시거나 영하권으로 예보가 바뀌면 <strong>기모 바지 또는 얇은 보온 내의</strong>를 추가하세요.</p></div></article>
+<article><div class="w-outfit-heading"><small data-weather-field="london_period">11월 20~24일 · 런던, 스톤헨지·윈저·옥스퍼드 포함</small>
+<h3 data-weather-field="london_title">런던 — 긴팔 이너 + 니트 + 중간 두께 패딩 + 목도리</h3></div><div class="w-outfit-body"><p class="w-weather-reason" data-weather-field="london_weather"><strong>날씨:</strong> 아침·저녁은 한 자릿수 기온으로 쌀쌀하고, 낮에도 대체로 10°C 안팎입니다. 흐리거나 비가 오고 바람이 불면 체감온도가 낮아집니다.</p>
+<p class="w-wear-detail" data-weather-field="london_clothing"><strong>이렇게 입으세요:</strong> 얇은 긴팔 이너에 니트를 입고, 겉에는 <strong>방풍되는 중간 두께 겨울 패딩</strong>을 입으세요. <strong>목도리는 권장</strong>하며 시내에서 많이 걸어 더워지면 풀면 됩니다. <strong>11/23 스톤헨지</strong>에서는 바람을 막을 수 있는 따뜻한 패딩에 <strong>장갑도 추가</strong>하세요.</p></div></article>
+<article><div class="w-outfit-heading"><small data-weather-field="paris_period">11월 24~28일 · 파리, 베르사유·라발레 아울렛 포함</small>
+<h3 data-weather-field="paris_title">파리 — 긴팔 이너 + 니트 + 패딩, 비 대비 우산</h3></div><div class="w-outfit-body"><p class="w-weather-reason" data-weather-field="paris_weather"><strong>날씨:</strong> 아침과 저녁은 쌀쌀하고 낮에는 대체로 10°C 전후~초반까지 올라가는 날이 있습니다. 흐리고 비가 내리는 날에는 바람과 습기로 더 춥게 느껴집니다.</p>
+<p class="w-wear-detail" data-weather-field="paris_clothing"><strong>이렇게 입으세요:</strong> <strong>긴팔 이너 + 니트 + 중간 두께 패딩</strong>을 기본으로 하세요. 비 예보가 있으면 <strong>생활방수·방풍 겉옷과 접이식 우산</strong>을 챙기세요. 목도리는 아침·저녁에 유용하지만, 루브르·백화점 등 실내에서는 외투를 벗어 더위를 조절하시면 됩니다.</p></div></article>
+<article><div class="w-outfit-heading"><small data-weather-field="alsace_period">11월 27일 · 콜마르·스트라스부르</small>
+<h3 data-weather-field="alsace_title">알자스 — 발열 이너 + 니트 + 두꺼운 패딩 + 목도리·장갑</h3></div><div class="w-outfit-body"><p class="w-weather-reason" data-weather-field="alsace_weather"><strong>날씨:</strong> 런던·파리보다 추워질 가능성에 대비해야 하며, 특히 해 진 뒤 크리스마스 마켓에서는 오랜 야외 체류와 바람 때문에 춥게 느껴질 수 있습니다. 당일 기온 변동이 큰 만큼 출발 직전 예보를 확인하세요.</p>
+<p class="w-wear-detail" data-weather-field="alsace_clothing"><strong>이렇게 입으세요:</strong> <strong>얇은 발열 이너 위에 니트나 플리스, 겉에 방풍되는 두꺼운 겨울 패딩</strong>을 입으세요. <strong>목도리·장갑·보온 양말</strong>도 권합니다. 추위를 많이 타시거나 영하권으로 예보가 바뀌면 <strong>기모 바지 또는 얇은 보온 내의</strong>를 추가하세요.</p></div></article>
 </div>
-<p class="w-lead"><strong>신발은 모든 날 공통으로</strong> 오래 걸어도 발이 편한 <strong>쿠션 좋은 생활방수 운동화</strong>와 미끄럽지 않은 밑창이 적합합니다. 가죽 구두나 새 신발보다는 발에 익숙한 운동화를 추천합니다.</p>
+<p class="w-lead" data-weather-field="shoes"><strong>신발은 모든 날 공통으로</strong> 오래 걸어도 발이 편한 <strong>쿠션 좋은 생활방수 운동화</strong>와 미끄럽지 않은 밑창이 적합합니다. 가죽 구두나 새 신발보다는 발에 익숙한 운동화를 추천합니다.</p>
 </section>
 <section class="w-cites"><h3>날씨 출처 · 예보 근거</h3><p>최신 예보: <strong>Open-Meteo Forecast API</strong>의 일별 2m 기온, 시간대별 최대 강수확률, WMO 날씨 코드, 일출·일몰. 대체 자료: 2026년 11월 14일 확인한 <strong>Timeanddate / CustomWeather</strong> 장기예보. 날짜별 방문 지역은 원래 여행 일정표를 기준으로 작성했습니다.</p>
 <a href="https://open-meteo.com/en/docs" target="_blank" rel="noopener">Open-Meteo 공식 예보 자료 정의</a>
@@ -122,7 +122,7 @@ const city={
  colmar:['콜마르',48.0794,7.3585,'Europe/Paris'],strasbourg:['스트라스부르',48.5734,7.7521,'Europe/Paris'],
  serris:['라발레 빌리지',48.8569,2.7886,'Europe/Paris'],cdg:['샤를드골 공항',49.0097,2.5479,'Europe/Paris']
 };
-const days=[
+let days=[
  [20,'금','런던 도착',[['london','공항·숙소']]],
  [21,'토','런던 시내·해러즈',[['london','대영박물관·웨스트엔드']]],
  [22,'일','런던 시내·야경',[['london','버킹엄궁·스카이가든']]],
@@ -229,7 +229,10 @@ function renderForecasts(){
 function node(tag,cls,txt){
  const el=document.createElement(tag);if(cls)el.className=cls;if(txt!==undefined)el.textContent=txt;return el;
 }
-for(const [day,weekday,title,stops] of days){
+function renderCalendar(){
+ calendar.textContent='';
+ refs.clear();
+ for(const [day,weekday,title,stops] of days){
  const card=node('article','w-day');card.setAttribute('aria-label','11월 '+day+'일 '+weekday+'요일 '+title);
  const head=node('button','w-date w-date-toggle'),number=node('div','w-num',String(day)),week=node('span','w-week',weekday);
  head.type='button';
@@ -253,8 +256,9 @@ for(const [day,weekday,title,stops] of days){
   refs.set(key(id,day),{icon,temp,rain,sun:sr,src});show(id,day);
  }
  calendar.append(card);
+ }
+ renderRegionSummary();
 }
-renderRegionSummary();
 let sequence=0;
 async function reload(){
  const ticket=++sequence,ids=[...new Set(days.flatMap(d=>d[3].map(x=>x[0])))];
@@ -291,6 +295,57 @@ async function reload(){
  const stamp=new Intl.DateTimeFormat('ko-KR',{dateStyle:'short',timeStyle:'short',timeZone:'Asia/Seoul'}).format(new Date());
  note.textContent=stamp+' 조회';
 }
-button.addEventListener('click',reload);reload();
+// Pages CMS data changes are stored in JSON rather than in weather.html.
+function writeFormatted(node,value){
+ node.textContent='';
+ const pieces=value.split(/(\*\*[\s\S]+?\*\*)/g);
+ for(const piece of pieces){
+  if(!piece)continue;
+  if(piece.startsWith('**')&&piece.endsWith('**')&&piece.length>4){
+   const bold=document.createElement('strong');
+   bold.textContent=piece.slice(2,-2);
+   node.append(bold);
+  }else node.append(document.createTextNode(piece));
+ }
+}
+function applyWeatherContent(data){
+ if(!data||typeof data!=='object'||Array.isArray(data))return;
+ for(const node of document.querySelectorAll('[data-weather-field]')){
+  const name=node.dataset.weatherField;
+  if(typeof data[name]==='string')writeFormatted(node,data[name]);
+ }
+ for(const [i,name] of ['region_london_note','region_paris_note','region_alsace_note'].entries()){
+  if(typeof data[name]==='string')regions[i].hint=data[name];
+ }
+ renderRegionSummary();
+}
+function validWeatherDays(data){
+ return Array.isArray(data)&&data.length===9&&
+  data.every(row=>Number.isInteger(row.day)&&row.day>=20&&row.day<=28&&
+   typeof row.weekday==='string'&&typeof row.title==='string'&&
+   Array.isArray(row.stops)&&row.stops.length>0&&
+   row.stops.every(stop=>typeof stop.city==='string'&&city[stop.city]&&typeof stop.description==='string'))&&
+  new Set(data.map(row=>row.day)).size===9;
+}
+async function getEditedFile(path){
+ const res=await fetch(path+'?ts='+Date.now(),{cache:'no-store'});
+ if(!res.ok)throw Error(path+' HTTP '+res.status);
+ return res.json();
+}
+button.addEventListener('click',reload);
+renderCalendar();
+(async()=>{
+ const [copy,calendarData]=await Promise.allSettled([
+   getEditedFile('weather-content.json'),getEditedFile('weather-days.json')
+ ]);
+ if(copy.status==='fulfilled')applyWeatherContent(copy.value);
+ else console.warn('CMS weather text unavailable; default content retained.',copy.reason);
+ if(calendarData.status==='fulfilled'&&validWeatherDays(calendarData.value)){
+  days=calendarData.value.slice().sort((a,b)=>a.day-b.day)
+   .map(d=>[d.day,d.weekday,d.title,d.stops.map(stop=>[stop.city,stop.description])]);
+  renderCalendar();
+ }else console.warn('CMS weather itinerary unavailable; default itinerary retained.');
+ reload();
+})();
 })();
 </script></body></html>

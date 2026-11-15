@@ -22,6 +22,156 @@ content:
         options:
           format: markdown
           switcher: true
+
+  - name: weather
+    label: "여행 날씨 · 캘린더와 옷차림"
+    type: group
+    items:
+      - name: weather_content
+        label: "날씨 설명 · 런던·파리·알자스 옷차림"
+        type: file
+        path: weather-content.json
+        format: json
+        operations:
+          delete: false
+        fields:
+          - name: calendar_intro
+            label: "날짜별 날씨 안내"
+            type: text
+          - name: overview_intro
+            label: "지역별 요약 설명"
+            type: text
+          - name: region_london_note
+            label: "런던 요약 참고 문구"
+            type: text
+          - name: region_paris_note
+            label: "파리 요약 참고 문구"
+            type: text
+          - name: region_alsace_note
+            label: "알자스 요약 참고 문구"
+            type: text
+          - name: outfit_intro
+            label: "추천 옷차림 소개"
+            type: rich-text
+            options:
+              format: markdown
+              switcher: true
+          - name: london_period
+            label: "런던 날짜·지역"
+            type: text
+          - name: london_title
+            label: "런던 추천 복장 제목"
+            type: text
+          - name: london_weather
+            label: "런던 날씨 설명"
+            type: rich-text
+            options:
+              format: markdown
+              switcher: true
+          - name: london_clothing
+            label: "런던 옷차림 상세 설명"
+            type: rich-text
+            options:
+              format: markdown
+              switcher: true
+          - name: paris_period
+            label: "파리 날짜·지역"
+            type: text
+          - name: paris_title
+            label: "파리 추천 복장 제목"
+            type: text
+          - name: paris_weather
+            label: "파리 날씨 설명"
+            type: rich-text
+            options:
+              format: markdown
+              switcher: true
+          - name: paris_clothing
+            label: "파리 옷차림 상세 설명"
+            type: rich-text
+            options:
+              format: markdown
+              switcher: true
+          - name: alsace_period
+            label: "알자스 날짜·지역"
+            type: text
+          - name: alsace_title
+            label: "알자스 추천 복장 제목"
+            type: text
+          - name: alsace_weather
+            label: "알자스 날씨 설명"
+            type: rich-text
+            options:
+              format: markdown
+              switcher: true
+          - name: alsace_clothing
+            label: "알자스 옷차림 상세 설명"
+            type: rich-text
+            options:
+              format: markdown
+              switcher: true
+          - name: shoes
+            label: "신발 추천 문구"
+            type: rich-text
+            options:
+              format: markdown
+              switcher: true
+      - name: weather_days
+        label: "날짜별 날씨 · 방문 도시와 일정 제목"
+        type: file
+        path: weather-days.json
+        format: json
+        list: true
+        operations:
+          delete: false
+        fields:
+          - name: day
+            label: "11월 날짜 (20~28)"
+            type: number
+            required: true
+          - name: weekday
+            label: "요일"
+            type: string
+          - name: title
+            label: "날짜 카드 제목"
+            type: string
+          - name: stops
+            label: "방문 지역 (순서대로)"
+            type: object
+            list:
+              min: 1
+              collapsible:
+                collapsed: true
+                summary: "{city}: {description}"
+            fields:
+              - name: city
+                label: "도시 · 날씨 조회 지역"
+                type: select
+                options:
+                  values:
+                    - name: london
+                      label: "런던"
+                    - name: stonehenge
+                      label: "스톤헨지"
+                    - name: windsor
+                      label: "윈저"
+                    - name: oxford
+                      label: "옥스퍼드"
+                    - name: paris
+                      label: "파리"
+                    - name: versailles
+                      label: "베르사유"
+                    - name: colmar
+                      label: "콜마르"
+                    - name: strasbourg
+                      label: "스트라스부르"
+                    - name: serris
+                      label: "라발레 빌리지"
+                    - name: cdg
+                      label: "샤를드골 공항"
+              - name: description
+                label: "장소 설명"
+                type: string
   - name: daily_details
     label: "날짜별 상세 일정 · 사진과 설명 수정"
     type: group

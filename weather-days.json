@@ -1,0 +1,137 @@
+[
+  {
+    "day": 20,
+    "weekday": "금",
+    "title": "런던 도착",
+    "stops": [
+      {
+        "city": "london",
+        "description": "공항·숙소"
+      }
+    ]
+  },
+  {
+    "day": 21,
+    "weekday": "토",
+    "title": "런던 시내·해러즈",
+    "stops": [
+      {
+        "city": "london",
+        "description": "대영박물관·웨스트엔드"
+      }
+    ]
+  },
+  {
+    "day": 22,
+    "weekday": "일",
+    "title": "런던 시내·야경",
+    "stops": [
+      {
+        "city": "london",
+        "description": "버킹엄궁·스카이가든"
+      }
+    ]
+  },
+  {
+    "day": 23,
+    "weekday": "월",
+    "title": "근교 투어",
+    "stops": [
+      {
+        "city": "london",
+        "description": "출발·귀가"
+      },
+      {
+        "city": "stonehenge",
+        "description": "스톤헨지"
+      },
+      {
+        "city": "windsor",
+        "description": "윈저성"
+      },
+      {
+        "city": "oxford",
+        "description": "옥스퍼드"
+      }
+    ]
+  },
+  {
+    "day": 24,
+    "weekday": "화",
+    "title": "런던 → 파리",
+    "stops": [
+      {
+        "city": "london",
+        "description": "유로스타 출발"
+      },
+      {
+        "city": "paris",
+        "description": "도착·시내"
+      }
+    ]
+  },
+  {
+    "day": 25,
+    "weekday": "수",
+    "title": "파리 시내",
+    "stops": [
+      {
+        "city": "paris",
+        "description": "루브르·몽마르트르"
+      }
+    ]
+  },
+  {
+    "day": 26,
+    "weekday": "목",
+    "title": "베르사유 → 파리",
+    "stops": [
+      {
+        "city": "versailles",
+        "description": "오전 궁전·정원"
+      },
+      {
+        "city": "paris",
+        "description": "오후 백화점·방돔"
+      }
+    ]
+  },
+  {
+    "day": 27,
+    "weekday": "금",
+    "title": "알자스 당일 여행",
+    "stops": [
+      {
+        "city": "paris",
+        "description": "출발·귀환"
+      },
+      {
+        "city": "colmar",
+        "description": "오전·낮"
+      },
+      {
+        "city": "strasbourg",
+        "description": "오후·야경"
+      }
+    ]
+  },
+  {
+    "day": 28,
+    "weekday": "토",
+    "title": "아울렛·출국",
+    "stops": [
+      {
+        "city": "paris",
+        "description": "아침·체크아웃"
+      },
+      {
+        "city": "serris",
+        "description": "라발레 빌리지"
+      },
+      {
+        "city": "cdg",
+        "description": "공항·출국"
+      }
+    ]
+  }
+]
