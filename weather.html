@@ -10,36 +10,43 @@ body[data-document="weather"] main{width:min(calc(100% - 24px),1110px)}
 .w-intro{font-size:14px;line-height:1.7;color:#61788e;margin:9px 0}
 .w-status{font-size:13px;line-height:1.6;color:#36556e;background:#eaf3fa;padding:9px 12px;border-radius:9px;margin:10px 0}
 .w-legend{font-size:12px;color:#647e91;margin:12px 0;display:flex;flex-wrap:wrap;gap:6px 15px}
-.w-calendar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-.w-day{min-width:0;background:#fbfdff;border:1px solid #d5e2ed;border-radius:13px;overflow:hidden}
-.w-date{display:flex;align-items:center;gap:8px;background:linear-gradient(110deg,#dfecf7,#f2f7fc);border-bottom:1px solid #dce7f0;padding:10px 12px}
+.w-calendar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:start}
+.w-day{min-width:0;background:#fff;border:1px solid #d5e2ed;border-radius:13px;overflow:hidden}
+.w-date{display:flex;align-items:center;gap:8px;background:linear-gradient(110deg,#dfecf7,#f2f7fc);border:0;border-bottom:1px solid #dce7f0;padding:10px 12px;width:100%;font:inherit;text-align:left;cursor:pointer;appearance:none}
+.w-date:focus-visible{outline:3px solid #7ca6c5;outline-offset:-3px}
+.w-toggle{font-size:12px;font-weight:800;color:#365c78;white-space:nowrap;margin-left:auto}
+.w-day-body{background:#fff}
+.w-day-body[hidden]{display:none!important}
 .w-num{font-size:27px;font-weight:850;line-height:1;color:#254763;letter-spacing:-.06em;flex-shrink:0}
 .w-week{font-size:13px;margin-left:4px;letter-spacing:0}
 .w-desc{font-size:12px;font-weight:750;color:#365b78;line-height:1.35;min-width:0}
-.w-city{padding:9px 11px;border-bottom:1px solid #e7edf3}
+.w-city{padding:9px 11px;border-bottom:1px solid #e7edf3;background:#fff;color:#191919}
 .w-city:last-child{border-bottom:0}
 .w-name{display:flex;justify-content:space-between;align-items:baseline;gap:5px;flex-wrap:wrap}
-.w-name strong{font-size:17px;line-height:1.4;color:#29445d}
-.w-name small{font-size:14px;color:#7890a2;line-height:1.45;font-weight:600}
+.w-name strong{font-size:17px;line-height:1.4;color:#191919}
+.w-name small{font-size:14px;color:#323232;line-height:1.45;font-weight:600}
 .w-weather{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin:5px 0 3px}
 .w-emoji{font-size:18px;line-height:1}
-.w-temp{font-size:18px;color:#1d4058;font-weight:800}
-.w-pop{border-radius:19px;background:#e8f0fa;color:#3b6484;font-size:12px;line-height:1.5;padding:3px 7px;font-weight:800}
-.w-pop.rainy{color:#1c599d;background:#dfeafe}
-.w-sun{font-size:16px;color:#506e80;line-height:1.55;font-weight:650;font-variant-numeric:tabular-nums}
-.w-source{font-size:11px;color:#8b9aaa;line-height:1.4;margin-top:3px}
+.w-temp{font-size:18px;color:#161616;font-weight:800}
+.w-pop{border-radius:19px;background:#e8f0fa;color:#183d62;font-size:12px;line-height:1.5;padding:3px 7px;font-weight:800}
+.w-pop.rainy{color:#153e72;background:#dfeafe}
+.w-sun{font-size:16px;color:#222;line-height:1.55;font-weight:650;font-variant-numeric:tabular-nums}
+.w-source{font-size:11px;color:#444;line-height:1.4;margin-top:3px}
 .w-caution{font-size:13px;color:#596f82;background:#f4f8fb;border-top:1px solid #e0e9f1;border-radius:9px;padding:12px 13px;margin-top:14px;line-height:1.75}
 .w-caution p{margin:0 0 7px}
 .w-caution p:last-child{margin-bottom:0}
 .w-lead{color:#4c6376;font-size:15px;line-height:1.85;margin:11px 0 17px}
 .w-clothes{display:grid;grid-template-columns:1fr;gap:12px}
-.w-clothes article{background:#f9fcff;border:1px solid #dce8f1;border-radius:12px;padding:19px 21px}
+.w-clothes article{background:#fff;border:1px solid #dce8f1;border-radius:12px;padding:0;overflow:hidden}
+.w-outfit-heading{background:linear-gradient(110deg,#dfecf7,#f2f7fc);padding:15px 20px;border-bottom:1px solid #dce7f0}
+.w-outfit-body{background:#fff;padding:14px 20px 17px;color:#161616}
+.w-outfit-body strong{color:#111}
 .w-clothes small{display:block;color:#64839a;font-size:13px;font-weight:750}
 .w-clothes h3{font-size:clamp(19px,2.7vw,23px);color:#254b68;line-height:1.5;margin:5px 0 10px;font-weight:800}
-.w-clothes p{color:#496579;font-size:15px;line-height:1.85;margin:7px 0 0;word-break:keep-all}
+.w-clothes p{color:#1d1d1d;font-size:15px;line-height:1.85;margin:7px 0 0;word-break:keep-all}
 .w-clothes strong,.w-lead strong{color:#234b68}
-.w-clothes .w-weather-reason{color:#526c80;font-size:14.5px}
-.w-clothes .w-wear-detail{color:#314e63;font-size:15.5px}
+.w-clothes .w-weather-reason{color:#1c1c1c;font-size:14.5px}
+.w-clothes .w-wear-detail{color:#1c1c1c;font-size:15.5px}
 .w-cites{font-size:13px;color:#697e90;line-height:1.8;margin:0 0 33px;padding:0 9px}
 .w-cites h3{font-size:16px;margin:0 0 5px;color:#31536c}
 .w-cites a{margin-right:12px;display:inline-block;font-size:13px}
@@ -47,7 +54,7 @@ body[data-document="weather"] main{width:min(calc(100% - 24px),1110px)}
 @media(max-width:570px){.w-calendar,.w-clothes{grid-template-columns:1fr}.w-wrap{border-radius:14px;padding:13px;margin-bottom:14px}.w-top{align-items:flex-start}.w-ref{font-size:11px;padding:8px}.w-date{padding:11px}.w-city{padding:10px 12px}.w-temp{font-size:19px}body[data-document="weather"] .hero{padding-top:29px}}
 </style></head>
 <body data-document="weather"><header><nav aria-label="사이트 메뉴"><a href="index.html">여행 일정</a><a href="shopping.html">쇼핑리스트</a><a class="active" aria-current="page" href="weather.html">여행 날씨</a></nav></header><main>
-<section class="hero"><p>LONDON · PARIS · ALSACE · 2026</p><h1>여행 날씨</h1><div>2026.11.20(금) ~ 11.28(토) · 날짜별 방문 지역 날씨와 옷차림</div></section>
+<section class="hero"><p>LONDON · PARIS · ALSACE · 2026</p><h1>여행 날씨</h1><div><strong>2026.11.20(금) ~ 11.28(토)</strong><br>날짜별 방문 지역 날씨와 옷차림</div></section>
 <section class="w-wrap"><div class="w-top"><div><p class="w-kicker">TRAVEL WEATHER CALENDAR</p><h2>2026년 11월 <small>20–28일</small></h2></div><button class="w-ref" type="button" id="weather-reload">↻ 예보 새로고침</button></div>
 <p class="w-intro">실제 여행 일정에 따라 출발지·경유지·도착지를 모두 표시합니다. 기온과 강수확률은 예보가 조회되면 새 수치로 갱신됩니다.</p>
 <div id="weather-status" class="w-status" role="status" aria-live="polite">2026년 11월 14일에 확인한 예보를 표시합니다. 최신 예보를 조회하고 있습니다.</div>
@@ -60,24 +67,15 @@ body[data-document="weather"] main{width:min(calc(100% - 24px),1110px)}
 <h2>여행 추천 옷차림</h2>
 <p class="w-lead"><strong>기본은 긴팔 이너 + 니트 + 패딩입니다.</strong> 런던과 파리는 실내에서 쉽게 벗을 수 있는 중간 두께 패딩이 편하고, 알자스에 가는 날은 보온을 더 강화하세요. 하루 종일 걷는 여행이므로 두껍기만 한 복장보다 바람을 막고 체온을 조절할 수 있는 조합을 추천합니다.</p>
 <div class="w-clothes">
-<article>
-<small>11월 20~24일 · 런던, 스톤헨지·윈저·옥스퍼드 포함</small>
-<h3>런던 — 긴팔 이너 + 니트 + 중간 두께 패딩 + 목도리</h3>
-<p class="w-weather-reason"><strong>날씨:</strong> 아침·저녁은 한 자릿수 기온으로 쌀쌀하고, 낮에도 대체로 10°C 안팎입니다. 흐리거나 비가 오고 바람이 불면 체감온도가 낮아집니다.</p>
-<p class="w-wear-detail"><strong>이렇게 입으세요:</strong> 얇은 긴팔 이너에 니트를 입고, 겉에는 <strong>방풍되는 중간 두께 겨울 패딩</strong>을 입으세요. <strong>목도리는 권장</strong>하며 시내에서 많이 걸어 더워지면 풀면 됩니다. <strong>11/23 스톤헨지</strong>에서는 바람을 막을 수 있는 따뜻한 패딩에 <strong>장갑도 추가</strong>하세요.</p>
-</article>
-<article>
-<small>11월 24~28일 · 파리, 베르사유·라발레 아울렛 포함</small>
-<h3>파리 — 긴팔 이너 + 니트 + 패딩, 비 대비 우산</h3>
-<p class="w-weather-reason"><strong>날씨:</strong> 아침과 저녁은 쌀쌀하고 낮에는 대체로 10°C 전후~초반까지 올라가는 날이 있습니다. 흐리고 비가 내리는 날에는 바람과 습기로 더 춥게 느껴집니다.</p>
-<p class="w-wear-detail"><strong>이렇게 입으세요:</strong> <strong>긴팔 이너 + 니트 + 중간 두께 패딩</strong>을 기본으로 하세요. 비 예보가 있으면 <strong>생활방수·방풍 겉옷과 접이식 우산</strong>을 챙기세요. 목도리는 아침·저녁에 유용하지만, 루브르·백화점 등 실내에서는 외투를 벗어 더위를 조절하시면 됩니다.</p>
-</article>
-<article>
-<small>11월 27일 · 콜마르·스트라스부르</small>
-<h3>알자스 — 발열 이너 + 니트 + 두꺼운 패딩 + 목도리·장갑</h3>
-<p class="w-weather-reason"><strong>날씨:</strong> 런던·파리보다 추워질 가능성에 대비해야 하며, 특히 해 진 뒤 크리스마스 마켓에서는 오랜 야외 체류와 바람 때문에 춥게 느껴질 수 있습니다. 당일 기온 변동이 큰 만큼 출발 직전 예보를 확인하세요.</p>
-<p class="w-wear-detail"><strong>이렇게 입으세요:</strong> <strong>얇은 발열 이너 위에 니트나 플리스, 겉에 방풍되는 두꺼운 겨울 패딩</strong>을 입으세요. <strong>목도리·장갑·보온 양말</strong>도 권합니다. 추위를 많이 타시거나 영하권으로 예보가 바뀌면 <strong>기모 바지 또는 얇은 보온 내의</strong>를 추가하세요.</p>
-</article>
+<article><div class="w-outfit-heading"><small>11월 20~24일 · 런던, 스톤헨지·윈저·옥스퍼드 포함</small>
+<h3>런던 — 긴팔 이너 + 니트 + 중간 두께 패딩 + 목도리</h3></div><div class="w-outfit-body"><p class="w-weather-reason"><strong>날씨:</strong> 아침·저녁은 한 자릿수 기온으로 쌀쌀하고, 낮에도 대체로 10°C 안팎입니다. 흐리거나 비가 오고 바람이 불면 체감온도가 낮아집니다.</p>
+<p class="w-wear-detail"><strong>이렇게 입으세요:</strong> 얇은 긴팔 이너에 니트를 입고, 겉에는 <strong>방풍되는 중간 두께 겨울 패딩</strong>을 입으세요. <strong>목도리는 권장</strong>하며 시내에서 많이 걸어 더워지면 풀면 됩니다. <strong>11/23 스톤헨지</strong>에서는 바람을 막을 수 있는 따뜻한 패딩에 <strong>장갑도 추가</strong>하세요.</p></div></article>
+<article><div class="w-outfit-heading"><small>11월 24~28일 · 파리, 베르사유·라발레 아울렛 포함</small>
+<h3>파리 — 긴팔 이너 + 니트 + 패딩, 비 대비 우산</h3></div><div class="w-outfit-body"><p class="w-weather-reason"><strong>날씨:</strong> 아침과 저녁은 쌀쌀하고 낮에는 대체로 10°C 전후~초반까지 올라가는 날이 있습니다. 흐리고 비가 내리는 날에는 바람과 습기로 더 춥게 느껴집니다.</p>
+<p class="w-wear-detail"><strong>이렇게 입으세요:</strong> <strong>긴팔 이너 + 니트 + 중간 두께 패딩</strong>을 기본으로 하세요. 비 예보가 있으면 <strong>생활방수·방풍 겉옷과 접이식 우산</strong>을 챙기세요. 목도리는 아침·저녁에 유용하지만, 루브르·백화점 등 실내에서는 외투를 벗어 더위를 조절하시면 됩니다.</p></div></article>
+<article><div class="w-outfit-heading"><small>11월 27일 · 콜마르·스트라스부르</small>
+<h3>알자스 — 발열 이너 + 니트 + 두꺼운 패딩 + 목도리·장갑</h3></div><div class="w-outfit-body"><p class="w-weather-reason"><strong>날씨:</strong> 런던·파리보다 추워질 가능성에 대비해야 하며, 특히 해 진 뒤 크리스마스 마켓에서는 오랜 야외 체류와 바람 때문에 춥게 느껴질 수 있습니다. 당일 기온 변동이 큰 만큼 출발 직전 예보를 확인하세요.</p>
+<p class="w-wear-detail"><strong>이렇게 입으세요:</strong> <strong>얇은 발열 이너 위에 니트나 플리스, 겉에 방풍되는 두꺼운 겨울 패딩</strong>을 입으세요. <strong>목도리·장갑·보온 양말</strong>도 권합니다. 추위를 많이 타시거나 영하권으로 예보가 바뀌면 <strong>기모 바지 또는 얇은 보온 내의</strong>를 추가하세요.</p></div></article>
 </div>
 <p class="w-lead"><strong>신발은 모든 날 공통으로</strong> 오래 걸어도 발이 편한 <strong>쿠션 좋은 생활방수 운동화</strong>와 미끄럽지 않은 밑창이 적합합니다. 가죽 구두나 새 신발보다는 발에 익숙한 운동화를 추천합니다.</p>
 </section>
@@ -172,13 +170,25 @@ function node(tag,cls,txt){
 }
 for(const [day,weekday,title,stops] of days){
  const card=node('article','w-day');card.setAttribute('aria-label','11월 '+day+'일 '+weekday+'요일 '+title);
- const head=node('div','w-date'),number=node('div','w-num',String(day)),week=node('span','w-week',weekday);
- number.append(week);head.append(number,node('div','w-desc',title));card.append(head);
+ const head=node('button','w-date w-date-toggle'),number=node('div','w-num',String(day)),week=node('span','w-week',weekday);
+ head.type='button';
+ const body=node('div','w-day-body');body.id='weather-day-'+day;body.hidden=true;
+ head.setAttribute('aria-controls',body.id);head.setAttribute('aria-expanded','false');
+ const indicator=node('span','w-toggle','펼치기 +');
+ number.append(week);head.append(number,node('div','w-desc',title),indicator);
+ head.addEventListener('click',()=>{
+  const expand=body.hidden;
+  body.hidden=!expand;
+  head.setAttribute('aria-expanded',String(expand));
+  indicator.textContent=expand?'접기 −':'펼치기 +';
+  card.classList.toggle('expanded',expand);
+ });
+ card.append(head,body);
  for(const [id,reason] of stops){
   const box=node('div','w-city'),title=node('div','w-name'),main=node('div','w-weather');
   title.append(node('strong','',city[id][0]),node('small','',reason));
   const icon=node('span','w-emoji'),temp=node('span','w-temp'),rain=node('span','w-pop'),sr=node('div','w-sun'),src=node('div','w-source');
-  main.append(icon,temp,rain);box.append(title,main,sr,src);card.append(box);
+  main.append(icon,temp,rain);box.append(title,main,sr,src);body.append(box);
   refs.set(key(id,day),{icon,temp,rain,sun:sr,src});show(id,day);
  }
  calendar.append(card);
