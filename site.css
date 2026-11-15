@@ -407,3 +407,28 @@ body[data-document="trip"] #document-content p.flight-time-note{
   body[data-document="trip"] #document-content .flight-card{padding:15px}
   body[data-document="trip"] #document-content .flight-clock{font-size:25px}
 }
+
+
+/* Flight bookings displayed before the daily itinerary; independent of CMS folds. */
+.flight-summary{margin:0 0 22px;padding:clamp(15px,3vw,24px);border:1px solid var(--line);border-radius:20px;background:var(--card);box-shadow:0 10px 30px #1f2b240a}
+.flight-heading{margin:0 0 15px}
+.flight-heading h2{margin:0;color:#29435c;font-size:clamp(21px,3vw,26px);line-height:1.4}
+.flight-heading p{margin:3px 0 0;color:var(--muted);font-size:12px;line-height:1.6}
+.flight-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.flight-card{min-width:0;padding:15px 14px 12px;border:1px solid #cbdce9;border-radius:15px;background:#f7fafd}
+.flight-card-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:5px 9px;margin-bottom:13px;color:#29435c;font-size:13px;line-height:1.5}
+.flight-card-head strong{font-size:13px;white-space:nowrap}
+.flight-direction{font-weight:700;color:#315d7c}
+.flight-route{display:grid;grid-template-columns:minmax(0,1fr) 64px minmax(0,1fr);align-items:start;gap:6px}
+.flight-stop{display:flex;flex-direction:column;align-items:flex-start;gap:3px;min-width:0;line-height:1.35}
+.flight-time{font-size:clamp(24px,3.4vw,31px);font-weight:700;letter-spacing:-.035em;color:#193a58;white-space:nowrap}
+.flight-time em{font-size:11px;font-weight:700;font-style:normal;color:#3f8061;letter-spacing:0}
+.flight-code{font-size:16px;color:#29435c}
+.flight-airport{font-size:12px;color:var(--muted);word-break:keep-all}
+.flight-terminal{display:inline-block;margin-top:5px;padding:5px 7px;border-radius:8px;background:#dcebf7;color:#244e71;font-size:12px;font-weight:700;line-height:1.35;word-break:keep-all}
+.flight-journey{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-width:0;margin-top:11px;color:#668eae;line-height:1.3}
+.flight-journey span{font-size:23px}
+.flight-journey small{font-size:10px;color:var(--muted);text-align:center;word-break:keep-all}
+.flight-card-foot{margin-top:13px;padding-top:10px;border-top:1px solid #dce6ee;color:var(--muted);font-size:12px;line-height:1.6;word-break:keep-all}
+@media(max-width:760px){.flight-cards{grid-template-columns:1fr}.flight-route{grid-template-columns:minmax(0,1fr) 70px minmax(0,1fr)}.flight-card{padding:16px}.flight-time{font-size:28px}}
+@media(max-width:380px){.flight-summary{padding:14px}.flight-card{padding:11px}.flight-route{grid-template-columns:minmax(0,1fr) 50px minmax(0,1fr);gap:3px}.flight-time{font-size:24px}.flight-terminal{font-size:11px;padding:4px 5px}.flight-journey small{font-size:9px}}
