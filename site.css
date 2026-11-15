@@ -343,3 +343,67 @@ body[data-document="shopping"] #document-content .fold-content li,
 body[data-document="shopping"] #document-content .quick-list-fold{
   scroll-margin-top:82px;
 }
+
+
+/* Flight itinerary is displayed separately before the daily timetable. */
+body[data-document="trip"] #document-content .flight-cards{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:15px 0 9px;
+}
+body[data-document="trip"] #document-content .flight-card{
+  min-width:0;padding:17px;border:1px solid #cadce9;border-radius:15px;
+  background:linear-gradient(160deg,#f7fbff 0%,#fff 70%);
+  box-shadow:0 3px 12px #2749680a;
+}
+body[data-document="trip"] #document-content .flight-card-head{
+  display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;
+  gap:6px 12px;padding-bottom:14px;border-bottom:1px solid #e1eaf2;
+}
+body[data-document="trip"] #document-content .flight-badge{
+  font-size:14px;font-weight:700;color:#315d7c;
+}
+body[data-document="trip"] #document-content .flight-number{
+  font-size:13px;font-weight:600;color:#5d7184;
+}
+body[data-document="trip"] #document-content .flight-route{
+  display:grid;grid-template-columns:minmax(0,1fr) 52px minmax(0,1fr);
+  align-items:start;gap:6px;margin-top:17px;
+}
+body[data-document="trip"] #document-content .flight-stop{
+  display:flex;flex-direction:column;align-items:flex-start;min-width:0;gap:4px;
+}
+body[data-document="trip"] #document-content .flight-stop-label{
+  font-size:12px;line-height:1.4;color:#6b8193;
+}
+body[data-document="trip"] #document-content .flight-clock{
+  font-size:clamp(21px,2.6vw,27px);font-weight:700;letter-spacing:-.035em;line-height:1.25;
+  font-variant-numeric:tabular-nums;color:#203b55;
+}
+body[data-document="trip"] #document-content .flight-airport{
+  font-size:14px;font-weight:700;line-height:1.5;color:#29435c;
+}
+body[data-document="trip"] #document-content .flight-terminal{
+  display:inline-block;margin-top:4px;padding:5px 7px;background:#e7f1f9;
+  border:1px solid #d0e3f1;border-radius:7px;
+  font-size:13px;font-weight:700;line-height:1.45;color:#224f72;
+}
+body[data-document="trip"] #document-content .flight-mid{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:2px;padding-top:26px;color:#7395ad;
+}
+body[data-document="trip"] #document-content .flight-mid .flight-plane{
+  font-size:21px;line-height:1.2;
+}
+body[data-document="trip"] #document-content .flight-mid small{
+  width:80px;text-align:center;font-size:11px;line-height:1.3;white-space:nowrap;
+}
+body[data-document="trip"] #document-content .flight-next-day{
+  font-size:12px;line-height:1.45;color:#426e91;font-weight:700;
+}
+body[data-document="trip"] #document-content p.flight-time-note{
+  margin:8px 2px 28px;font-size:13px;line-height:1.6;color:#697f90;
+}
+@media(max-width:730px){
+  body[data-document="trip"] #document-content .flight-cards{grid-template-columns:minmax(0,1fr);gap:11px}
+  body[data-document="trip"] #document-content .flight-card{padding:15px}
+  body[data-document="trip"] #document-content .flight-clock{font-size:25px}
+}
