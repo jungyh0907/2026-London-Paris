@@ -923,8 +923,6 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 
 # 4. 파리 에펠커머스약국
 
-**Pharmacie Eiffel Commerce**
-
 ## 한눈에 보는 쇼핑 리스트
 
 [표 shopping-4](tables/shopping-04.json)
@@ -932,6 +930,8 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ---
 
 # 4-1. 매장 기본 정보
+
+**Pharmacie Eiffel Commerce**
 
 - **주소:** 13 Rue du Commerce, 75015 Paris, France
 - **위치:** 시타딘 투르 에펠 파리 숙소에서 도보로 방문 가능한 근처 약국
