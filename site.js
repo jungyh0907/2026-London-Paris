@@ -81,7 +81,7 @@
         isTripDayHeading(title) ||
         isRestaurantSection(title)
       );
-    return level===1&&/^[123]-[1-4]\./.test(title)
+    return level===1&&/^[1234]-[1-4]\./.test(title)
   }
 
   function draw(source){
@@ -108,7 +108,7 @@
       const end=boundary<headings.length?headings[boundary].index:clean.length;
       const body=clean.slice(section.end,end).replace(/^\n+/,'');
       const id='toggle-'+start;
-      const shoppingSubsection=document.body.dataset.document==='shopping'&&section.level===1&&/^[123]-[1-4]\./.test(section.title);
+      const shoppingSubsection=document.body.dataset.document==='shopping'&&section.level===1&&/^[1234]-[1-4]\./.test(section.title);
       const tripTitleOnly=document.body.dataset.document==='trip'&&section.level===2&&(isTripDayHeading(section.title)||isRestaurantSection(section.title)||section.title==='1) 런던 일정표'||section.title==='2) 파리 일정표');
       const titleOnly=tripTitleOnly||shoppingSubsection;
       const separator=document.body.dataset.document==='trip'&&/^(?:11\/)?24\s+화\s+—\s+런던\s+→\s+파리/.test(section.title)?'<hr class="country-separator">':'';
@@ -153,7 +153,7 @@
       if(document.body.dataset.document==='shopping'){
         let quickIndex=0;
         [...root.querySelectorAll('h1,h2,h3,h4,h5,h6')].forEach(heading=>{
-          if(!['1. 런던 Harrods 백화점','2. 파리 Lafayette 백화점','3. 파리 La Vallée Village 아울렛'].includes(heading.textContent.trim()))return;
+          if(!['1. 런던 Harrods 백화점','2. 파리 Lafayette 백화점','3. 파리 La Vallée Village 아울렛','4. 파리 에펠커머스약국'].includes(heading.textContent.trim()))return;
           let sibling=heading.nextElementSibling;
           const subtitle=sibling?.matches('h2')&&sibling.textContent.trim()==='한눈에 보는 쇼핑 리스트'?sibling:null;
           if(subtitle)sibling=subtitle.nextElementSibling;
