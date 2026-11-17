@@ -1,0 +1,19 @@
+{
+  "name": "2026 런던·파리 여행",
+  "short_name": "런던·파리 여행",
+  "description": "여행 일정·쇼핑·날씨 오프라인 보관",
+  "lang": "ko",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f2f6fa",
+  "theme_color": "#315d7c",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
