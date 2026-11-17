@@ -368,3 +368,16 @@ body[data-document="shopping"] #document-content .quick-list-fold{
 .flight-card-foot{margin-top:13px;padding-top:10px;border-top:1px solid #dce6ee;color:var(--muted);font-size:12px;line-height:1.6;word-break:keep-all}
 @media(max-width:760px){.flight-cards{grid-template-columns:1fr}.flight-route{grid-template-columns:minmax(0,1fr) 70px minmax(0,1fr)}.flight-card{padding:16px}.flight-time{font-size:28px}}
 @media(max-width:380px){.flight-summary{padding:14px}.flight-card{padding:11px}.flight-route{grid-template-columns:minmax(0,1fr) 50px minmax(0,1fr);gap:3px}.flight-time{font-size:24px}.flight-terminal{font-size:11px;padding:4px 5px}.flight-journey small{font-size:9px}}
+
+
+/* Offline download panel: same blue design as the existing trip pages. */
+.offline-panel{margin:0 0 20px;border:1px solid #d2e0eb;border-radius:14px;background:#fcfdff;padding:14px 17px;color:#29435c}
+.offline-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.offline-head strong{font-size:17px}
+.offline-state{font-size:12px;color:#426985;font-weight:700}
+.offline-panel p{font-size:13px;line-height:1.6;margin:8px 0}
+.offline-actions button{background:#315d7c;color:white;padding:10px 15px;border:0;border-radius:9px;font-size:14px;font-weight:700;cursor:pointer}
+.offline-actions button:disabled{opacity:.55;cursor:wait}
+.offline-progress progress{display:block;width:100%;height:9px;accent-color:#315d7c;margin:12px 0 4px}
+.offline-progress small{font-size:12px}
+.offline-panel .offline-hint{color:#657c91;margin-bottom:0}
