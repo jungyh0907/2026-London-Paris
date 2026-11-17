@@ -1010,7 +1010,7 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 
 **Avène Cicalfate+**
 
-![제품 대표 사진 4](https://www.pharmashopi.com/media/catalog/product/cache/e786a2ca762f3511f55e5fe0681ebb31/A/v/Avene-cicalfate-creme-reparatrice-100ml-1394802307-1-1.png)
+![제품 대표 사진 4](https://www.aveneusa.com/media/catalog/product/c/i/cicalfate__restorative_cream_40ml_2025.jpg?canvas=1000%3A1000&fit=bounds&height=1000&quality=100&width=1000)
 
 ### 어떤 제품?
 
@@ -1178,7 +1178,7 @@ SPF50+ 자외선 차단제. 제형·피부 타입별로 선택.
 
 **Ducray Anaphase+**
 
-![제품 대표 사진 12](https://www.nahdionline.com/_next/image?q=75&url=https%3A%2F%2Fecombe.nahdionline.com%2Fmedia%2Fcatalog%2Fproduct%2Fd%2Fu%2Fducray-anaphase-plus-shampoo-hair-loss-400-ml-0npng.png%3Fwidth%3D500%26height%3D500%26canvas%3D500%2C500%26optimize%3Dhigh%26bg-color%3D255%2C255%2C255%26fit%3Dbounds&w=256)
+![제품 대표 사진 12](https://media-pierre-fabre.wedia-group.com/api/wedia/dam/transform/u5wa3z31qn5se6jx6zmjwr9k8x8oqxwu9tmn4po/out?height=400&t=resize)
 
 ### 어떤 제품?
 
