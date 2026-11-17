@@ -174,6 +174,13 @@
           const bottom=document.createElement('button');bottom.className='fold-toggle fold-toggle-bottom';bottom.type='button';
           bottom.setAttribute('aria-expanded','false');bottom.setAttribute('aria-controls',id);bottom.textContent='전체 내용 펼쳐보기';
           heading.parentNode.insertBefore(fold,heading);
+          // Main shopping sections use an external divider; a Markdown rule
+          // inside the preceding collapsed subsection remains hidden.
+          if(heading.textContent.trim()==='4. 파리 에펠커머스약국'){
+            const divider=document.createElement('hr');
+            divider.className='shopping-section-separator';
+            fold.before(divider);
+          }
           headingWrap.append(heading);
           fold.append(title,content,bottom)
         })
