@@ -947,6 +947,8 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 
 **Nuxe Huile Prodigieuse**
 
+![제품 대표 사진 1](https://de.nuxe.com/cdn/shop/files/3264680009754-0A28025-VIEW_2-HP-CLASSIQUE_100ML-PACKSHOT_2000x2000_91659a92-4f93-4c29-b855-4765ac82d7bc.jpg?v=1718101269&width=2000)
+
 ### 어떤 제품?
 
 얼굴·몸·모발에 쓰는 멀티 드라이 오일. 프랑스 약국의 대표 쇼핑 아이템.
@@ -965,6 +967,8 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ## 2) 꼬달리 비노퍼펙트 세럼
 
 **Caudalie Vinoperfect Sérum**
+
+![제품 대표 사진 2](https://skin.pt/media/catalog/product/cache/e66117581d19d3a0fe35dfcf87b1a93f/6/6/6633370-caudalie_vinoperfect_serum_30ml_3_1.jpg)
 
 ### 어떤 제품?
 
@@ -985,6 +989,8 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 
 **Bioderma Sensibio H2O**
 
+![제품 대표 사진 3](https://i5.walmartimages.com/seo/Sensibio-H2O-Micellar-Water-Face-Cleanser-for-Sensitive-Skin-16-9-floz_1c68453f-4d2b-4856-824c-f1912f956456.18e6af59f25c8b04a929a112371f6fb6.jpeg)
+
 ### 어떤 제품?
 
 민감성 피부용 클렌징 워터. 500mL 듀오 세트 할인 여부 확인.
@@ -1003,6 +1009,8 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ## 4) 아벤느 시칼파트+ 크림
 
 **Avène Cicalfate+**
+
+![제품 대표 사진 4](https://www.pharmashopi.com/media/catalog/product/cache/e786a2ca762f3511f55e5fe0681ebb31/A/v/Avene-cicalfate-creme-reparatrice-100ml-1394802307-1-1.png)
 
 ### 어떤 제품?
 
@@ -1023,6 +1031,8 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 
 **Nuxe Rêve de Miel Lip Balm**
 
+![제품 대표 사진 5](https://medias.watsons.co.id/publishing/WTCID-54302-front-zoom.jpg?version=1728531357)
+
 ### 어떤 제품?
 
 건조한 입술용 고보습 립밤. 소형 선물로 좋음.
@@ -1041,6 +1051,8 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 ## 6) 유리아쥬 스틱 레브르
 
 **Uriage Stick Lèvres**
+
+![제품 대표 사진 6](https://img.ssgdfs.com/upload/C00001/goos/org/598/221025000150598.jpg?AR=0&SF=webp)
 
 ### 어떤 제품?
 
@@ -1061,6 +1073,8 @@ Harrods 공식 기준 **Ground Floor의 Chocolate Hall**에 자체 초콜릿과 
 
 **La Roche-Posay Anthelios UVMune 400**
 
+![제품 대표 사진 7](https://i.makeup.com.ua/bc/5/5e/5e6cpzrnlavg.jpg)
+
 ### 어떤 제품?
 
 SPF50+ 자외선 차단제. 제형·피부 타입별로 선택.
@@ -1079,6 +1093,8 @@ SPF50+ 자외선 차단제. 제형·피부 타입별로 선택.
 ## 8) 엠브리올리스 레 크렘 콩상트레
 
 **Embryolisse Lait-Crème Concentré**
+
+![제품 대표 사진 8](https://www.haitaoweb.com/media/catalog/product/3/3/3350900000011_2.jpg)
 
 ### 어떤 제품?
 
@@ -1099,6 +1115,8 @@ SPF50+ 자외선 차단제. 제형·피부 타입별로 선택.
 
 **Roger & Gallet Crème Mains**
 
+![제품 대표 사진 9](https://www.pharmaforce.fr/resize/600x600/media/finish/img/normal/38/3701436916572-rose-creme-mains-30ml-2x.jpg)
+
 ### 어떤 제품?
 
 프랑스 향기 브랜드의 향 좋은 핸드크림. 가벼운 선물로 적합.
@@ -1117,6 +1135,8 @@ SPF50+ 자외선 차단제. 제형·피부 타입별로 선택.
 ## 10) 비쉬 미네랄 89
 
 **Vichy Minéral 89**
+
+![제품 대표 사진 10](https://www.vichyusa.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-acd-vichy-master-catalog/default/dw2f50c315/product/Mineral89/M89-2026/Vichy-Mineral-89-Daily-Booster-PDP-Packshot-30ml-JPG.jpg)
 
 ### 어떤 제품?
 
@@ -1137,6 +1157,8 @@ SPF50+ 자외선 차단제. 제형·피부 타입별로 선택.
 
 **Klorane Shampooing Sec**
 
+![제품 대표 사진 11](https://ozchemist.com/cdn/shop/products/515Wx515H-null_b811623a-fb94-44b4-8987-74d5d5e1018c.jpg?v=1697690647)
+
 ### 어떤 제품?
 
 물 없이 머리 유분기를 정돈하는 드라이 샴푸.
@@ -1155,6 +1177,8 @@ SPF50+ 자외선 차단제. 제형·피부 타입별로 선택.
 ## 12) 듀크레이 아나파즈+ 샴푸
 
 **Ducray Anaphase+**
+
+![제품 대표 사진 12](https://www.nahdionline.com/_next/image?q=75&url=https%3A%2F%2Fecombe.nahdionline.com%2Fmedia%2Fcatalog%2Fproduct%2Fd%2Fu%2Fducray-anaphase-plus-shampoo-hair-loss-400-ml-0npng.png%3Fwidth%3D500%26height%3D500%26canvas%3D500%2C500%26optimize%3Dhigh%26bg-color%3D255%2C255%2C255%26fit%3Dbounds&w=256)
 
 ### 어떤 제품?
 
