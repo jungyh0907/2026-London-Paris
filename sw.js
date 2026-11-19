@@ -1,8 +1,8 @@
 /* 2026 London–Paris: offline-first for app files; explicit download for images. */
-const VERSION='20261119-world-clock-v1';
-const CORE=["./","index.html","shopping.html","weather.html","site.css","site.js","enhancements.js","trip.md","shopping-list.md","tables/trip-01.json","tables/trip-02.json","tables/trip-03.json","tables/trip-04.json","tables/trip-05.json","tables/trip-06.json","tables/trip-07.json","tables/trip-08.json","tables/trip-09.json","tables/shopping-01.json","tables/shopping-02.json","tables/shopping-03.json","tables/shopping-04.json","details/11-20.md","details/11-21.md","details/11-22.md","details/11-23.md","details/11-24.md","details/11-25.md","details/11-26.md","details/11-27.md","details/11-28.md","details/paris-restaurants.md","manifest.webmanifest","icon.svg"];
+const VERSION='20261119-low-data-v2';
+const CORE=["./","index.html","shopping.html","weather.html","site.css","site.js","enhancements.js","offline.js","weather-content.json","weather-days.json","trip.md","shopping-list.md","tables/trip-01.json","tables/trip-02.json","tables/trip-03.json","tables/trip-04.json","tables/trip-05.json","tables/trip-06.json","tables/trip-07.json","tables/trip-08.json","tables/trip-09.json","tables/shopping-01.json","tables/shopping-02.json","tables/shopping-03.json","tables/shopping-04.json","details/11-20.md","details/11-21.md","details/11-22.md","details/11-23.md","details/11-24.md","details/11-25.md","details/11-26.md","details/11-27.md","details/11-28.md","details/paris-restaurants.md","manifest.webmanifest","icon.svg"];
 const CORE_CACHE='trip-core-'+VERSION;
-const MEDIA_CACHE='trip-media-'+VERSION;
+const MEDIA_CACHE='trip-media-persistent-v1';
 const base=new URL('./',self.registration.scope);
 function local(path){return new URL(path,base).href;}
 self.addEventListener('install',event=>{
@@ -43,7 +43,15 @@ self.addEventListener('message',event=>{
           const same=u.origin===base.origin;
           if(same && !u.pathname.startsWith(base.pathname))throw Error('outside app scope');
           const cache=same?coreCache:mediaCache;
-          const response=await fetch(u.href,same?{cache:'reload'}:{mode:'no-cors',cache:'reload'});
+          // Previously viewed images are not fetched again, even when the
+          // user presses the offline-save button or the app is updated.
+          const stored=await caches.match(u.href);
+          if(stored){
+            if(!(await cache.match(u.href)))await cache.put(u.href,stored.clone());
+            saved++;
+            return;
+          }
+          const response=await fetch(u.href,same?{cache:'reload'}:{mode:'no-cors',cache:'default'});
           if(response.type!=='opaque'&&!response.ok)throw Error('HTTP '+response.status);
           await cache.put(u.href,response);
           saved++;
@@ -58,6 +66,12 @@ self.addEventListener('fetch',event=>{
   const req=event.request,u=new URL(req.url);
   if(req.method!=='GET'||!['http:','https:'].includes(u.protocol))return;
   const same=u.origin===base.origin&&u.pathname.startsWith(base.pathname);
+  // Weather requests only happen after the explicit refresh button is used.
+  // Never return an outdated cached API response to that refresh request.
+  if(u.hostname==='api.open-meteo.com'&&u.pathname==='/v1/forecast'){
+    event.respondWith(fetch(req));
+    return;
+  }
   if(same){
     // Cache-first guarantees pages and Markdown work while airplane mode is on.
     event.respondWith((async()=>{
@@ -78,8 +92,13 @@ self.addEventListener('fetch',event=>{
     // Third-party images and the Markdown renderer are cached explicitly.
     event.respondWith((async()=>{
       const cache=await caches.open(MEDIA_CACHE);
-      const saved=await cache.match(req,{ignoreSearch:false});
-      if(saved)return saved;
+      // Search all old media caches as well: app updates must never
+      // trigger duplicate downloads of images already opened once.
+      const saved=await caches.match(req,{ignoreSearch:false});
+      if(saved){
+        if(!(await cache.match(req)))cache.put(req,saved.clone()).catch(()=>{});
+        return saved;
+      }
       try{
         const response=await fetch(req);
         if(response.ok||response.type==='opaque')cache.put(req,response.clone()).catch(()=>{});
