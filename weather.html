@@ -72,7 +72,7 @@ body[data-document="weather"] main{width:min(calc(100% - 24px),1110px)}
 <section class="hero"><p>LONDON · PARIS · ALSACE · 2026</p><h1>여행 날씨</h1><div><strong>2026.11.20(금) ~ 11.28(토)</strong><br>날짜별 방문 지역 날씨와 옷차림</div></section>
 <section class="w-wrap"><div class="w-top"><div><p class="w-kicker">TRAVEL WEATHER CALENDAR</p><h2>2026년 11월 <small>20–28일</small></h2></div><button class="w-ref" type="button" id="weather-reload">↻ 예보 새로고침</button></div>
 <p class="w-intro" data-weather-field="calendar_intro">실제 여행 일정에 따라 출발지·경유지·도착지를 모두 표시합니다. 기온과 강수확률은 예보가 조회되면 새 수치로 갱신됩니다.</p>
-<div id="weather-status" class="w-status" role="status" aria-live="polite">예보 조회 중…</div>
+<div id="weather-status" class="w-status" role="status" aria-live="polite">저장된 예보 확인 중…</div>
 <section class="w-region-overview" aria-labelledby="w-region-title">
 <h3 id="w-region-title">방문 지역별 날씨 요약</h3>
 <p class="w-overview-desc" data-weather-field="overview_intro">여행 기간의 일별 예보를 평균한 기온입니다. 날짜별 예보가 갱신되면 함께 바뀝니다.</p>
@@ -161,6 +161,84 @@ const sun={
 const emoji=['☀️','⛅','⛅','☁️','🌦️','🌧️','🌨️','🌫️','⛈️'];
 const weatherCode=n=>n===0?0:[1,2].includes(n)?2:n===3?3:[45,48].includes(n)?7:[51,53,55,56,57,61,66,80].includes(n)?4:[63,65,67,81,82].includes(n)?5:[71,73,75,77,85,86].includes(n)?6:n>=95?8:3;
 const refs=new Map(),liveForecasts=new Map(),key=(c,d)=>c+'|'+d;
+const WEATHER_KEY='london-paris-weather-last-viewed-v1';
+let lastWeatherStamp='',weatherOrigin='reference';
+function loadSavedForecasts(){
+ try{
+  const saved=JSON.parse(localStorage.getItem(WEATHER_KEY)||'null');
+  if(!saved||saved.version!==1||typeof saved.data!=='object'||!saved.data)return;
+  for(const [name,record] of Object.entries(saved.data)){
+   if(!record||!Array.isArray(record.values)||record.values.length!==4||
+      !record.values.every(Number.isFinite))continue;
+   const arr=record.values.slice();
+   if(Array.isArray(record.sun)&&record.sun.length===2&&record.sun.every(x=>typeof x==='string'))arr.sun=record.sun;
+   liveForecasts.set(name,arr);
+  }
+  lastWeatherStamp=typeof saved.updatedAt==='string'?saved.updatedAt:'';
+  weatherOrigin=saved.origin==='previousCache'?'previousCache':'manual';
+ }catch(error){console.warn('Saved weather unavailable',error)}
+}
+function saveForecasts(){
+ const data={};
+ for(const [name,arr] of liveForecasts){
+  data[name]={values:arr.slice(0,4),sun:Array.isArray(arr.sun)?arr.sun:null};
+ }
+ try{
+  localStorage.setItem(WEATHER_KEY,JSON.stringify({version:1,updatedAt:lastWeatherStamp,origin:weatherOrigin,data}));
+  return true;
+ }catch(error){console.warn('Unable to save weather locally',error);return false}
+}
+function weatherStatus(){
+ if(lastWeatherStamp){
+  const stamp=new Intl.DateTimeFormat('ko-KR',{dateStyle:'short',timeStyle:'short',timeZone:'Asia/Seoul'}).format(new Date(lastWeatherStamp));
+  return '마지막 수동 조회: '+stamp+' (한국 시간) · 저장된 예보 표시 · 자동 갱신 없음';
+ }
+ if(liveForecasts.size)return '이전에 불러온 예보 표시 (조회 시각 확인 불가) · 자동 갱신 없음';
+ return '2026.11.14 참고 예보 표시 · 자동 갱신 없음 · 최신 날씨는 ‘예보 새로고침’을 누르세요';
+}
+function makeForecastURL(id){
+ const c=city[id],url=new URL('https://api.open-meteo.com/v1/forecast');
+ url.searchParams.set('latitude',String(c[1]));url.searchParams.set('longitude',String(c[2]));
+ url.searchParams.set('timezone',c[3]);url.searchParams.set('forecast_days','16');
+ url.searchParams.set('daily','temperature_2m_min,temperature_2m_max,precipitation_probability_max,weather_code,sunrise,sunset');
+ return url;
+}
+function absorbForecast(id,daily){
+ if(!daily||!Array.isArray(daily.time))return 0;
+ let updated=0;
+ for(const d of days){
+  const date='2026-11-'+String(d[0]).padStart(2,'0'),idx=daily.time.indexOf(date);
+  if(idx<0||!d[3].some(x=>x[0]===id))continue;
+  const lo=daily.temperature_2m_min?.[idx],hi=daily.temperature_2m_max?.[idx],pop=daily.precipitation_probability_max?.[idx];
+  if(!Number.isFinite(lo)||!Number.isFinite(hi)||!Number.isFinite(pop))continue;
+  const rise=daily.sunrise?.[idx],set=daily.sunset?.[idx];
+  const st=typeof rise==='string'&&typeof set==='string'?[rise.slice(11,16),set.slice(11,16)]:sun[key(id,d[0])];
+  liveForecasts.set(key(id,d[0]),Object.assign([Math.round(lo),Math.round(hi),Math.round(pop),weatherCode(daily.weather_code?.[idx])],{sun:st}));
+  updated++;
+ }
+ return updated;
+}
+async function restorePriorCachedForecasts(){
+ // Recover old visits without accessing the network. This runs only when
+ // this device has no manually saved weather record yet.
+ if(liveForecasts.size||!('caches' in window))return;
+ const ids=[...new Set(days.flatMap(d=>d[3].map(x=>x[0])))];
+ let restored=0;
+ for(const id of ids){
+  try{
+   const cached=await caches.match(makeForecastURL(id).href);
+   if(!cached)continue;
+   const body=await cached.json();
+   restored+=absorbForecast(id,body.daily);
+  }catch(error){}
+ }
+ if(restored){
+  weatherOrigin='previousCache';
+  lastWeatherStamp='';
+  saveForecasts();
+ }
+}
+loadSavedForecasts();
 const regions=[
  {name:'런던',dates:'11/20~24',items:[20,21,22,23,24].map(d=>['london',d]),hint:'구름·비가 잦아 방풍 겉옷과 우산이 유용합니다.'},
  {name:'파리',dates:'11/24~28',items:[24,25,26,27,28].map(d=>['paris',d]),hint:'쌀쌀한 아침·저녁과 비에 대비하세요.'},
@@ -220,8 +298,8 @@ function show(c,d){
  el.sun.textContent=s?'일출 '+s[0]+' · 일몰 '+s[1]:'일출·일몰 —';
  const sourceLive=!!directLive||(proxy&&!!nearbyLive);
  el.src.textContent=proxy
-   ?city[refCity][0]+' 기준 참고 · '+(sourceLive?'Open-Meteo':'11/14 예보')
-   :directLive?'Open-Meteo 최신 예보':directBackup?'11/14 확인 · Timeanddate':'지역 예보 조회 불가';
+   ?city[refCity][0]+' 기준 참고 · '+(sourceLive?'Open-Meteo 저장 예보':'11/14 예보')
+   :directLive?'Open-Meteo 저장 예보':directBackup?'11/14 확인 · Timeanddate':'지역 예보 조회 불가';
 }
 function renderForecasts(){
  for(const [day,,,stops] of days)for(const [id] of stops)show(id,day);
@@ -264,37 +342,26 @@ let sequence=0;
 async function reload(){
  const ticket=++sequence,ids=[...new Set(days.flatMap(d=>d[3].map(x=>x[0])))];
  button.disabled=true;button.textContent='조회 중…';
- note.textContent='예보 조회 중…';
- let ok=0,updated=0;
+ note.textContent='선택하신 최신 예보 조회 중…';
+ let updated=0;
  await Promise.all(ids.map(async id=>{
   try{
-   const c=city[id],url=new URL('https://api.open-meteo.com/v1/forecast');
-   url.searchParams.set('latitude',String(c[1]));url.searchParams.set('longitude',String(c[2]));
-   url.searchParams.set('timezone',c[3]);url.searchParams.set('forecast_days','16');
-   url.searchParams.set('daily','temperature_2m_min,temperature_2m_max,precipitation_probability_max,weather_code,sunrise,sunset');
-   const res=await fetch(url,{cache:'no-store'});if(!res.ok)throw Error('HTTP '+res.status);
-   const body=await res.json(),daily=body.daily;
-   if(!daily||!Array.isArray(daily.time))throw Error('No daily forecast');
+   const res=await fetch(makeForecastURL(id),{cache:'no-store'});
+   if(!res.ok)throw Error('HTTP '+res.status);
+   const body=await res.json();
    if(ticket!==sequence)return;
-   ok++;
-   for(const d of days){
-    const date='2026-11-'+String(d[0]).padStart(2,'0'),idx=daily.time.indexOf(date);
-    if(idx<0||!d[3].some(x=>x[0]===id))continue;
-    const lo=daily.temperature_2m_min?.[idx],hi=daily.temperature_2m_max?.[idx],pop=daily.precipitation_probability_max?.[idx];
-    if(!Number.isFinite(lo)||!Number.isFinite(hi)||!Number.isFinite(pop))continue;
-    const rise=daily.sunrise?.[idx],set=daily.sunset?.[idx];
-    const st=typeof rise==='string'&&typeof set==='string'?[rise.slice(11,16),set.slice(11,16)]:sun[key(id,d[0])];
-    liveForecasts.set(key(id,d[0]),Object.assign([Math.round(lo),Math.round(hi),Math.round(pop),weatherCode(daily.weather_code?.[idx])],{sun:st}));
-    updated++;
-   }
-   // A newly loaded nearby city can also improve dependent locations.
-   renderForecasts();
+   updated+=absorbForecast(id,body.daily);
   }catch(error){console.warn('Weather unavailable',id,error)}
  }));
  if(ticket!==sequence)return;
  button.disabled=false;button.textContent='↻ 예보 새로고침';
- const stamp=new Intl.DateTimeFormat('ko-KR',{dateStyle:'short',timeStyle:'short',timeZone:'Asia/Seoul'}).format(new Date());
- note.textContent=stamp+' 조회';
+ if(updated){
+  lastWeatherStamp=new Date().toISOString();
+  weatherOrigin='manual';
+  const saved=saveForecasts();
+  renderForecasts();
+  note.textContent=weatherStatus()+(saved?'':' · 기기 저장 실패 (페이지 종료 후 유지되지 않을 수 있음)');
+ }else note.textContent=weatherStatus()+' · 최신 예보 조회 실패, 기존 표시 유지';
 }
 // Pages CMS data changes are stored in JSON rather than in weather.html.
 function writeFormatted(node,value){
@@ -329,24 +396,29 @@ function validWeatherDays(data){
   new Set(data.map(row=>row.day)).size===9;
 }
 async function getEditedFile(path){
- const res=await fetch(path+'?ts='+Date.now(),{cache:'no-store'});
- if(!res.ok)throw Error(path+' HTTP '+res.status);
+ // No network calls on visit: read edited weather text/itinerary from
+ // CacheStorage if the PWA has already stored it, otherwise use inline data.
+ if(!('caches' in window))throw Error('CacheStorage not supported');
+ const res=await caches.match(new URL(path,location.href).href);
+ if(!res)throw Error('Not saved offline: '+path);
  return res.json();
 }
 button.addEventListener('click',reload);
 renderCalendar();
+note.textContent=weatherStatus();
 (async()=>{
  const [copy,calendarData]=await Promise.allSettled([
    getEditedFile('weather-content.json'),getEditedFile('weather-days.json')
  ]);
  if(copy.status==='fulfilled')applyWeatherContent(copy.value);
- else console.warn('CMS weather text unavailable; default content retained.',copy.reason);
  if(calendarData.status==='fulfilled'&&validWeatherDays(calendarData.value)){
   days=calendarData.value.slice().sort((a,b)=>a.day-b.day)
    .map(d=>[d.day,d.weekday,d.title,d.stops.map(stop=>[stop.city,stop.description])]);
   renderCalendar();
- }else console.warn('CMS weather itinerary unavailable; default itinerary retained.');
- reload();
+ }
+ await restorePriorCachedForecasts();
+ renderForecasts();
+ note.textContent=weatherStatus();
 })();
 })();
 </script></body></html>
