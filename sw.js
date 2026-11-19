@@ -45,7 +45,7 @@ self.addEventListener('message',event=>{
           const cache=same?coreCache:mediaCache;
           // Previously viewed images are not fetched again, even when the
           // user presses the offline-save button or the app is updated.
-          const stored=await caches.match(u.href);
+          const stored=same?null:await caches.match(u.href);
           if(stored){
             if(!(await cache.match(u.href)))await cache.put(u.href,stored.clone());
             saved++;
