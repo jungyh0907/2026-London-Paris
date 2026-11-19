@@ -381,3 +381,27 @@ body[data-document="shopping"] #document-content .quick-list-fold{
 .offline-progress progress{display:block;width:100%;height:9px;accent-color:#315d7c;margin:12px 0 4px}
 .offline-progress small{font-size:12px}
 .offline-panel .offline-hint{color:#657c91;margin-bottom:0}
+
+/* Compact three-country clocks, always a single horizontal row (320px+). */
+body[data-document="trip"] .world-clock{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;
+  margin:0 0 12px;padding:8px 5px;
+  border:1px solid #d2e0eb;border-radius:12px;background:#fcfdff;
+}
+.world-clock-place{
+  min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:0;padding:0 3px;text-align:center;line-height:1.3;white-space:nowrap;
+}
+.world-clock-place+.world-clock-place{border-left:1px solid #e0e8f0}
+.world-clock-country{font-size:12px;font-weight:700;color:#59748c}
+.world-clock-hour{display:flex;align-items:baseline;justify-content:center;gap:3px;white-space:nowrap;color:#244b6d}
+.clock-numbers{font-size:clamp(19px,3.5vw,23px);font-weight:750;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.clock-period{font-size:clamp(10px,1.7vw,12px);font-weight:700}
+.world-clock-date{font-size:12px;font-weight:600;color:#657c91;font-variant-numeric:tabular-nums}
+@media(max-width:380px){
+  body[data-document="trip"] .world-clock{padding:7px 2px}
+  .world-clock-place{padding:0 1px}
+  .world-clock-country,.world-clock-date{font-size:11px}
+  .clock-numbers{font-size:19px}
+  .clock-period{font-size:10px}
+}
