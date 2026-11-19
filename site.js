@@ -123,17 +123,19 @@
   }
 
   function addLastUpdated(){
-    fetch('last-updated.txt?ts='+Date.now(),{cache:'no-store'})
-      .then(response=>response.ok?response.text():'')
+    // Read an optional timestamp from local storage only. The file is not
+    // currently published, so do not issue a 404 network request per visit.
+    if(!('caches' in window))return;
+    caches.match(new URL('last-updated.txt',location.href).href)
+      .then(response=>response?.ok?response.text():'')
       .then(stamp=>{
         stamp=stamp.trim();
         if(!stamp)return;
         const updated=document.createElement('div');
         updated.className='last-updated';
         updated.textContent='Last updated: '+stamp;
-        root.prepend(updated)
-      })
-      .catch(()=>{})
+        root.prepend(updated);
+      }).catch(()=>{});
   }
 
   fetch(file+'?ts='+Date.now(),{cache:'no-store'}).then(response=>{if(!response.ok)throw new Error('content');return response.text()})
