@@ -156,12 +156,19 @@
         });
       };
       if('serviceWorker' in navigator && !navigator.serviceWorker.controller){
-        // First visit: allow installation to finish before the first photo
-        // request, so opened images are cached from their first viewing.
-        Promise.race([
-          navigator.serviceWorker.ready,
-          new Promise(resolve=>setTimeout(resolve,6000))
-        ]).then(activatePhotos,activatePhotos);
+        // On first visit, let the service worker control this tab before
+        // issuing any image requests. A bounded fallback keeps images
+        // visible even when service workers are unavailable or blocked.
+        let finished=false;
+        const release=()=>{
+          if(finished)return;
+          finished=true;
+          navigator.serviceWorker.removeEventListener('controllerchange',release);
+          activatePhotos();
+        };
+        navigator.serviceWorker.addEventListener('controllerchange',release);
+        if(navigator.serviceWorker.controller)release();
+        else setTimeout(release,8000);
       }else activatePhotos();
       // Undo accidental GFM strike elements while keeping their text and formatting.
       // Literal time/price ranges such as 13:30~14:30 must remain ordinary text.
